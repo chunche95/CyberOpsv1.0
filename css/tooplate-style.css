@@ -79,7 +79,7 @@ p {
   font-weight: normal;
   letter-spacing: 0.5px;
   padding: 0 25px;
-  background: #4dc47d;
+  background: #084088;
   border-radius: 1px;
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
@@ -154,7 +154,7 @@ html{
 }
 
 a {
-  color: #4dc47d;
+  color: #084088;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -263,7 +263,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar {
   margin-bottom: 0;
-  background-color: #4dc47d;
+  background-color: #084088;
   padding: 20px 0;
 }
 
@@ -333,7 +333,7 @@ a:hover, a:active, a:focus {
     background: 0 0; 
   }
   .custom-navbar.top-nav-collapse {
-    background: #4dc47d;
+    background: #084088;
     padding: 15px 0;
   }
 }
@@ -532,7 +532,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #contact {
-  background: url('../images/contact-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('../images/contact-f.jpg') 50% 0 repeat-y fixed;
   background-size: cover;
   background-position: center center;
 }
