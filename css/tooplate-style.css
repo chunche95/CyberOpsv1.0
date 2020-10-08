@@ -468,7 +468,11 @@ a:hover, a:active, a:focus {
 /*---------------------------------------
    content             
 -----------------------------------------*/
-
+.img-responsive {
+ height: 20em; 
+ width: 50em;
+ padding: 0px;
+}
 #content .item {
   display: block;
   width: 100%;
