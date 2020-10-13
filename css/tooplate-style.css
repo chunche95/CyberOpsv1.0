@@ -3,7 +3,7 @@
 body {
   background: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden;  
 }
 
 html, body {
@@ -752,4 +752,12 @@ footer .copyright-text {
   .project-info {
     padding: 5em 0;
   }
+}
+
+html.dark-mode {
+  filter: invert(100%);
+}
+
+html.dark-mode img{
+  filter: invert(100%);
 }
