@@ -435,6 +435,14 @@ a:hover, a:active, a:focus {
   border-radius: 5px;
 }
 
+.fotos {
+  width: 66.6666%;
+  height: auto;
+  padding: 5em;
+  border-radius: 5px;
+}
+
+
 .project-item {
   overflow: hidden;
   position: relative;
