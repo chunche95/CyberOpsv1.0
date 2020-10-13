@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ls capítulos/ >> capítulos/listado.html
+
 git add css/*
 git nota "Style"
 git sube
