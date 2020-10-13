@@ -761,3 +761,8 @@ html.dark-mode {
 html.dark-mode img{
   filter: invert(100%);
 }
+
+#dark-mode{
+  background: #000000;
+  filter: invert(50%);
+}
