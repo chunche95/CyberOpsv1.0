@@ -27,6 +27,18 @@ git add index.html
 git nota "Main page"
 git sube
 
+git add capítulos/*
+git nota "Chapters"
+git sube
+
+git add software/*
+git nota "SW"
+git sube
+
+git add docs/1/*
+git nota "Docs1"
+git sube
+
 git add README.md
 git nota "README"
 git sube
@@ -34,3 +46,7 @@ git sube
 git add up.sh
 git nota "GitHub"
 git sube
+
+sleep 5
+clear
+git status
