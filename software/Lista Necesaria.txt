@@ -1,3 +1,0 @@
-Software:
-
-- Instalar la última versión de Packet Tracer
