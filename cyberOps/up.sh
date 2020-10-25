@@ -1,6 +1,7 @@
 #!/bin/bash
-
+rm capítulos/listado.html
 ls capítulos/ >> capítulos/listado.html
+echo '<a href="capítulos/" target="_blank" rel="noopener noreferrer"></a>'>> capítulos/listado.html
 
 git add css/*
 git nota "Style"
