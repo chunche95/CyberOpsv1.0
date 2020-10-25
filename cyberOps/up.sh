@@ -1,6 +1,6 @@
 #!/bin/bash
 rm capítulos/listado.html
-ls capítulos/ >> capítulos/listado.html
+
 echo '
 <!DOCTYPE html>
 <html lang="es">
@@ -112,7 +112,10 @@ echo '
      </video>
 </section>
 
-<a href="capítulos/" target="_blank" rel="noopener noreferrer"></a>'>> capítulos/listado.html
+<a href="capítulos/" target="_blank" rel="noopener noreferrer">Capítulos</a>
+
+<p>'>> capítulos/listado.html
+ls capítulos/ >> capítulos/listado.html
 
 git add css/*
 git nota "Style"
