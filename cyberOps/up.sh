@@ -114,7 +114,7 @@ echo '
 
 <a href="capítulos/" target="_blank" rel="noopener noreferrer">Capítulos</a>
 
-<p>'>> capítulos/listado.html
+<p id="about" class="parallax-section">'>> capítulos/listado.html
 ls capítulos/ >> capítulos/listado.html
 
 git add css/*
