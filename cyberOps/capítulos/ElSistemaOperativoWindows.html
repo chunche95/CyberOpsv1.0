@@ -476,10 +476,10 @@
                         Hay dos elementos de registro importantesque se utilizan para iniciar automáticamente aplicaciones y servicios.
                         <ul>
                              <li>
-                                   <strong>HEY_LOCAL_MACHINE</strong>. Varios aspectos de la configuración de Windows se almacenan en esta clave, incluida la información sobre los servicios que comienzan con cada inicio.
+                                   <strong>HKEY_LOCAL_MACHINE</strong>. Varios aspectos de la configuración de Windows se almacenan en esta clave, incluida la información sobre los servicios que comienzan con cada inicio.
                              </li>
                              <li>
-                                   <strong>HEY_CURRENT_USER</strong>. En esta clave se almacenan variuos aspectos relacionados con el usuario que ha iniciado sesión, incluida la información sobre los servicios que se inician solo cuando el usuario inicia sesión en la computadora.
+                                   <strong>HKEY_CURRENT_USER</strong>. En esta clave se almacenan variuos aspectos relacionados con el usuario que ha iniciado sesión, incluida la información sobre los servicios que se inician solo cuando el usuario inicia sesión en la computadora.
                              </li>
                         </ul>
                         Las diferentes entradas en estas ubicaciones de registro definen qué servicios y aplicaciones se iniciarán, según lo indicado por su tipo de entrada. Estos tipos incluyen Run, RunOnce, RunServices, RunServicesOnce y Userinit. Estas entradas se pueden ingresar manualmente en el registro, pero es mucho más seguro usar la herramienta Msconfig.exe . Esta herramienta se utiliza para ver y cambiar todas las opciones de inicio de la computadora. Utilice el cuadro de búsqueda para buscar y abrir la herramienta Msconfig. <br>
@@ -522,6 +522,85 @@
                               <b>Hibernar.</b> Registra el estado actual de la computadora y el entorno del usuario y lo almacena en un archivo. La hibernación permite al usuario retomar muy rápidamente donde lo dejó con todos sus archivos y programas aún abiertos.
                          </li>
                     </ul>
+                   </p>
+                   <h2>Procesos, subprocesos y servicios</h2>
+                   <p>
+                        Una aplicación de Windows se compone de procesos. La aplicación puede tener uno o varios procesos dedicados a ella. Un proceso es cualquier programa que se esté ejecutando  actualmente. Cada proceso que se ejecuta se compone de al menos un hilo. Un hilo es parte del proceso que se puede ejecutar. El procesador realiza cálculos sobre el hilo. Para configurar los procesos de Windows, busque Administrador de tareas. La pestaña Procesos del Administrador se muestra en la figura.
+                        <div>
+                             <img src="../images/adm-tareas.PNG" alt="">
+                        </div>
+                        Todos los hilos dedicados a un proceso están contenidos en el mismo espacio de direcciones. Esto significa que estos subprocesos no pueden acceder al espacio de direcciones de ningún otro proceso. Esto evita la corrupción de otros procesos. Debido a que Windows realiza múltiples tareas, se pueden ejecutar varios subprocesos al mismo tiempo. La cantidad de subprocesos que se pueden ejecutar al mismo tiempo depende del número de procesadores de la computadora. <br>
+                        Algunos de los procesos que ejecuta Windows son servicios. Estos son programas que se ejecutan en segundo plano para admitir el sistema operativo y las aplicaciones. Se pueden configurar para que se inicien automáticamente cuando Windows arranca o se pueden iniciar manualmente. También se pueden detener, reiniciar o deshabilitar. <br>
+                        Los servicios brindan una funcionalidad de larga duración, como acceso inalámbrico o acceso a un servidor FTP. Para configurar los servicios de Windows, busque servicios. El subprograma del panel de control de Servicios de Windows se muestra en la figura.
+                         <div>
+                              <img src="../images/services.PNG" alt="">
+                         </div>          
+                         Tenga mucho cuidado al manipular la configuración de estos servicios. Algunos programas dependen de uno o más servicios para funcionar correctamente. Cerrar un servicio puede afectar negativamente a las aplicaciones u otros servicios.          
+                   </p>
+                   <h2>Asignación de memoria y asas</h2>
+                   <p>
+                    Una computadora funciona almacenando instrucciones en la RAM hasta que la CPU las procesa. El espacio de direcciones virtuales de un proceso es el conjunto de direcciones virtuales que puede utilizar el proceso. La dirección virtual no es la ubicación física real en la memoria, sino una entrada en una tabla de páginas que se utiliza para traducir la dirección virtual a la dirección física. <br>
+                    Cada proceso en una computadora con Windows de 32 bits admite un espacio de direcciones virtuales que permite direccionar hasta 4 gigabytes. Cada proceso en una computadora con Windows de 64 bits admite un espacio de direcciones virtuales de 8 terabytes. <br>                    
+                    Cada proceso de espacio de usuario se ejecuta en un espacio de direcciones privado, separado de otros procesos de espacio de usuario. Cuando el proceso del espacio de usuario necesita acceder a los recursos del kernel, debe utilizar un identificador de proceso. Esto se debe a que el proceso del espacio de usuario no puede acceder directamente a estos recursos del kernel. El identificador de proceso proporciona el acceso que necesita el proceso de espacio de usuario sin una conexión directa a él. <br>                    
+                    Una herramienta poderosa para ver la asignación de memoria es RAMMap, que se muestra en la figura. RAMMap es parte del conjunto de herramientas de Windows Sysinternals. Puede descargarse de Microsoft. RAMMap proporciona una gran cantidad de información sobre cómo Windows ha asignado la memoria del sistema al kernel, los procesos, los controladores y las aplicaciones. 
+                    <div>
+                         <img src="../images/ramMap.PNG" alt="">
+                    </div>
+                   </p>
+                   <h2>El registro de Windows</h2>
+                   <p>
+                    Windows almacena toda la información sobre el hardware, las aplicaciones, los usuarios y la configuración del sistema en una gran base de datos conocida como registro. También se registran las formas en que estos objetos interactúan, como qué archivos abre una aplicación y todos los detalles de las propiedades de las carpetas y aplicaciones. El registro es una base de datos jerárquica donde el nivel más alto se conoce como colmena, debajo de ella hay claves, seguidas de subclaves. 
+                    Los valores almacenan datos y se almacenan en las claves y subclaves. Una clave de registro puede tener hasta 512 niveles de profundidad. <br>
+                    La tabla enumera las cinco colmenas del registro de Windows. 
+                    <table>
+                         <tr>
+                              <td>Estructura de registro</td>
+                              <td>HKEY_CURRENT_USER(HKCU)</td>
+                              <td>HKEY_USERS(HKU)</td>
+                              <td>HKEY_CLASSES_ROOT(HKCR)</td>
+                              <td>HKEY_LOCAL_MACHINE(HKLM)</td>
+                              <td>HKEY_CURRENT_CONFIG(HKCC)</td>
+                         </tr>
+                         <tr>
+                              <td>Descripción</td>
+                              <td>
+                                   Contiene información sobre el usuario actualmente conectado.
+                              </td>
+                              <td>
+                                   Contiene información sobre todas las cuentas de usuario en el host.
+                              </td>
+                              <td>
+                                   Contiene información sobre los registros de vinculación e incrustación de objetos (OLE). OLE permite a los usuarios incrustrar objetos de otras aplicaciones (como una hoja de cálculo) en un solo documento (como un doc. Word).
+                              </td>
+                              <td>
+                                   Contiene información relacionada con el sistema.
+                              </td>
+                              <td>
+                                   Contiene información sobre el perfil de hardware actual.
+                              </td>
+                         </tr>
+                    </table>
+                    No se pueden crear nuevas colmenas. Las claves de registro y los valores de las colmenas se pueden crear, modificar o eliminar mediante una cuenta con privilegios administrativos. Como se muestra en la figura, la herramienta regedit.exe se utiliza para modificar el registro. Tenga mucho cuidado al utilizar esta herramienta. Los cambios menores en el registro pueden tener efectos masivos o incluso catastróficos.
+                    <div>
+                         <img src="../images/registro.PNG" alt="">
+                    </div>
+                    La navegación en el registro es muy similar al explorador de archivos de Windows. Use el panel izquierdo para navegar por las colmenas y la estructura debajo de él y use el panel derecho para ver el contenido del elemento resaltado en el panel izquierdo. Con tantas claves y subclaves, la ruta de la clave puede llegar a ser muy larga. La ruta se muestra en la parte inferior de la ventana como referencia. Debido a que cada clave y subclave es esencialmente un contenedor,
+                    la ruta se representa de manera muy similar a una carpeta en un sistema de archivos. La barra invertida ( \ ) se utiliza para diferenciar la jerarquía de la base de datos. <br>
+                    Las claves de registro pueden contener una subclave o un valor. Los diferentes valores que pueden contener las claves son los siguientes:
+                    <ul>
+                         <li>REG_BINARY. Números o valores booleanos.</li>
+                         <li>REG_DWORD. Números mayores de 32 bits o datos brutos.</li>
+                         <li>REG_SZ. Valores de cadena.</li>
+                    </ul>
+                    Debido a que el registro contiene casi toda la información del sistema operativo y del usuario, es fundamental asegurarse de que no se vea comprometido. Las aplicaciones potencialmente malintencionadas pueden agregar claves de registro para que se inicien cuando se inicia la computadora. Durante un arranque normal, el usuario no verá el inicio del programa porque la entrada está en el registro y la aplicación no muestra ninguna ventana o indicación de inicio cuando arranca la computadora. 
+                    Un keylogger, por ejemplo, sería devastador para la seguridad de una computadora si se iniciara desde el inicio sin el conocimiento o consentimiento del usuario. Cuando realice auditorías de seguridad normales o repare un sistema infectado, revise las ubicaciones de inicio de la aplicación dentro del registro para asegurarse de que cada elemento sea conocido y seguro de ejecutar.
+                    El registro también contiene la actividad que realiza un usuario durante el uso diario normal de la computadora. Esto incluye el historial de los dispositivos de hardware, incluidos todos los dispositivos que se han conectado a la computadora, incluido el nombre, el fabricante y el número de serie. Otra información, como qué documentos han abierto un usuario y un programa, dónde se encuentran y cuándo se accede a ellos, se almacena en el registro. Toda esta información es muy útil cuando 
+                    es necesario realizar una investigación forense.
+                   </p>
+                   <h2>Práctica de laboratorio: Exploración de procesos, subprocesos, manejadores y registro de Windows.</h2>
+                   <p>
+                    En esta práctica de laboratorio, explorará los procesos, subprocesos y manejadores utilizando Process Explorer en Sysinternals Suite. También utilizará el Registro de Windows para cambiar una configuración.
+                    <a href="../docs/3/3.2.11-lab---exploring-processes,-threads,-handles,-and-windows-registry.pdf" target="_blank" rel="noopener noreferrer">Exploración de procesos, subprocesos, controles y registro de Windows</a>
                    </p>
                </div>
                <ul class="section-btn">
