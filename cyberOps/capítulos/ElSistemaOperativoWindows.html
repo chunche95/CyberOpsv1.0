@@ -367,8 +367,68 @@
                    </p>
                    <h3>Sistema de archivos de Windows</h3>
                    <p>
-                        Un sistema de archivos es cómo se organiza la información en los medios de almacenamiento. Algunos sistemas de archivos pueden ser una mejor opción para usar que otros,
+                        Un sistema de archivos es cómo se organiza la información en los medios de almacenamiento. Algunos sistemas de archivos pueden ser una mejor opción para usar que otros, según el tipo de medio que se usará. La tabla enumera los sistemas de archivos que admite Windows.
+                        <table>
+                             <tr>
+                                  <td>
+                                        <strong>Sistema de archivos de Windows.</strong>
+                                  </td>
+                                  <td>
+                                        exFAT
+                                  </td>
+                                  <td>  
+                                        Sistema de archivos jerárquicoplus (HFS+)
+                                  </td>
+                                  <td>
+                                        Sistema de archivo (EXT)
+                                  </td>
+                                  <td>
+                                        Sistema de archivos de nueva tecnología (NTFS)
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td>
+                                        <strong>Descripción</strong>
+                                  </td>
+                                  <td>
+                                        Este es un sistema de archivos compatible con muchos sistemas operativos diferentes. Fat tiene limitaciones en la cantidad de particiones, tamaños de particiones y tamaños de archivo que puede abordar, porlo que generalmente ya no se usa para discos duros (HD) o unidades de estado sólido (SSD). <br>
+                                        Tanto FAT16 como FAT32 están disponibles para su uso, siendo FAT32 el más común porque tiene muchas menos restricciones que FAT16.
+                                  </td>
+                                  <td>
+                                        Este sistema de archivos se usa en computadoras Mac-OS X y permite nombres de archivos, tamaños de archivo y tamaños de partición mucho más largos que los sistemas de archivos anteriores. Aunque no es compatible con Windows sin un software especial, Windows puede leer datos de particiones HFS+.
+                                  </td>
+                                  <td>
+                                        Este sistema de archivos se usa con equipos sados en Lux Aunque no es comptible con Windows, Windows puede leer datosde particiones EXT con un softe especilal.
+                                  </td>
+                                  <td>
+                                        Este es el sistema de archivos más utilizado al instalar Windows. Todas las versiones de Windows y Linux admiten NTFS. Las PC's Mac-OS X solo pueden leer una partición NTFS. Puede escribir en una partición NTFS despuésde instalar controladores especiales.
+                                  </td>
+                             </tr>
+                        </table>
+                        NTFS es el sistema de archivos más usado para Windows por muchas razzones. NTFS admite archivos y particiones muy grandes y es uy compatible con otros SO's. NTFS también es muy confiable y admite funciones de recuperación, lo más importante es que admite muchas funciones de seguridad. El control de acceso a los datos se logra mediante descriptores 
+                        de seguridad. Estos descriptores de seguridad contienen la propiedad y los permisos los archivos hasta el nivel del archivo. NTFS también rastrea muchas marcas de tiempo para rastrear la actividad de los archivos. A veces denominadas MACE, las marcas de tiempo Modificar Acceso, Crear y Entrada modificada se usan a menudo en investigaciones forenses para determinar el historial de un archivo o carpeta. NTFS también admite 
+                        el cifrado del sistema de archivos para proteger todo el medio de almacenamiento. <br>
+                        Antes de poder utulizar un dispositivo de almacenamiento, como un disco, debe formatearse con un sstema de archivos. A su vez, antes de que un sistema de archivos pueda instalarse en un dispositivo de almacenamiento, es necesario particionar el dispositivo.  Un disco duro se divide en áreas llamadas particiones. 
+                        Cada partición es una unidad de almacenamiento lógica que se puede formatear para almacenar información, como archivos de datos o aplicaciones. Durante el proceso de instalación, la mayoría de los sistemas operativos particionan y formatean automáticamente el espacio disponible en el disco con un sistema de archivos como NTFS. <br>
+                        El formateo NTFS crea estructuras importantes en el disco para el almacenamiento de archivos y tablas para registrar las ubicaciones de los archivos:
+                        <ul>
+                             <li>
+                                   <strong>Sector de arranque de partición.</strong> Estos son los primeros 16 sectores de la unidad. Contiene la ubicación de la tabla maestra de archivos (MFT). Los últimos 16 sectores contienen una copia del sector de arranque.
+                             </li>
+                             <li>
+                                   <strong>Tabla maestra de archivos (MFT).</strong> Esta tabla contiene las ubicaciones de todos los archivos y directorios de la partición, incluidos los atributos de archivo, como información de seguridad y marcas de tiempo.
+                             </li>
+                             <li>
+                                   <strong>Archivo de sistema.</strong> Estos son archivos ocultos que almacenan información sobre otros volúmenes y atributos de archivo.
+                             </li>
+                             <li>
+                                   <strong>Área de archivos.</strong> El área principal de la partición donde se almacenan los archivos y directorios.
+                             </li>
+                        </ul>
+                        <strong>Nota:</strong> Al formatear una partición, es posible que los datos anteriores aún se puedan recuperar porque no todos los datos se eliminan por completo. Se puede examinar el espacio libre y se pueden recuperar archivos que pueden comprometer la seguridad. Se recomienda realizar una limpieza segura en una unidad que se está reutilizando. 
+                        El borrado seguro escribirá datos en todo el disco varias veces para garantizar que no queden datos.
                    </p>
+                   <h3></h3>
                </div>
                <ul class="section-btn">
                     <a href="ElSistemaOperativoWindows.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 4.</span></a>
