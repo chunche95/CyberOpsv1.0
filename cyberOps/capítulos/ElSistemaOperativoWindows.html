@@ -430,7 +430,46 @@
                    </p>
                    <h3>Flujos de datos alternativos</h3>
                    <p>
-                        NTFS almacena archivos como una serie de atributos, como el nombre del archivo o una marca de tiempo. Los datos que contiene el archivo se almacenan en el atributo $DATA  y se conocen como 
+                        NTFS almacena archivos como una serie de atributos, como el nombre del archivo o una marca de tiempo. Los datos que contiene el archivo se almacenan en el atributo $DATA  y se conocen como flujo de datos. Al usar NTFS, puede conectar flujos de datos alternativos (ADS) al archivo. A veces, esto lo usan aplicaciones que almacenan información adicional sobre el archivo.
+                        El ADS es un factor importante cuando se habla de malware. Esto se debe a que es fácil ocultar datos en un ADS. Un atacante podría almacenar código malicioso dentro de un ADS que luego se puede llamar desde un archivo diferente. <br>
+                        En el sistema de archivos NTFS, un archivo con ADS se identifica después del nombre de archivo y dos puntos, por ejemplo, Testfile.txt: ADS . Este nombre de archivo indica que un ADS llamado ADS está asociado con el archivo llamado Testfile.txt . Un ejemplo de ADS se muestra en la salida del comando.
+                        <div>
+                             <img src="../images/flujos-de-datos-alternativos.PNG" alt="">
+                        </div>
+                        En la salida:
+                        <ul>
+                             <li>El primer comando coloca el texto "DATOS ALTERNATIVOS AQUÍ" en un ADS del archivo Testfile.txt llamado "ADS"</li>
+                             <li>Después de eso, dir, muestra que el archivo fue creado,pero el ADS no es visible.</li>
+                             <li>El siguiente comando 'more &gt; Testfile.txt', muestra que hay datos en testfile.txt: flujo de datos ADS.</li>
+                             <li>El último comando muestra el ADS del archivo Testfile.txt porque el modificador '/r' se usó con el comando dir.</li>
+                        </ul>
+                   </p>
+                   <h3>Proceso de arranque de Windows</h3>
+                   <p>
+                        Muchas acciones ocurren entre el momento en que se presiona el botón de encendido de la computadora y Windows está completamente cargado, como se muestra en la figura.
+                        <div>
+                             <img src="../images/Proceso-de-arranque-windows.PNG" alt="">
+                             <hr>
+                             <img src="../images/tiempo-de-arranque-de-sistema.PNG" alt="">
+                        </div>
+                        Esto se conoce como el proceso de inicio de Windows. <br>
+                        Existen dos tipos de wirmware de computadora:
+                        <ul>
+                             <li>
+                                   <b>Sistema básico de entrada y salida (BIOS).</b> El firmware de la BIOS se creó a principios de la década de 1980 y funciona de la misma manera que cuando se creó. A medida que evolucionaron las computadoras, se hizo difícil para el firmware del BIOS admitir todas las nuevas funciones solicitadas por los usuarios.
+                             </li>
+                             <li>
+                                   <b>Interfaz de firmware extensible unificada (UEFI).</b> UEFI se diseño para reemplazar BIOS y admitir las nuevas funciones.
+                             </li>
+                        </ul>
+                        En el firmware del BIOS, el proceso comienza con la fase de inicialización del BIOS. Esto es cuando se inicializan los dispositivos de hardware y se realiza una autoprueba de encendido (POST) para asegurarse de que todos estos dispositivos se estén comunicando. Cuando se descubre el disco del sistema, la POST finaliza. La última instrucción en la POST es buscar el registro de arranque maestro (MBR).
+                        El MBR contiene un pequeño programa que se encarga de localizar y cargar el sistema operativo. El BIOS ejecuta este código y el sistema operativo comienza a cargarse.
+                        A diferencia del firmware del BIOS, el firmware UEFI tiene mucha visibilidad del proceso de arranque. UEFI arranca cargando archivos de programa EFI, almacenados como archivos .efi en una partición de disco especial, conocida como EFI System Partition (ESP).
+                        Nota : una computadora que usa UEFI almacena el código de arranque en el firmware. Esto ayuda a aumentar la seguridad de la computadora en el momento del arranque porque la computadora pasa directamente al modo protegido.
+                        Ya sea que el firmware sea BIOS o UEFI, después de encontrar una instalación válida de Windows, se ejecuta el archivo Bootmgr.exe . Bootmgr.exe cambia el sistema del modo real al modo protegido para que se pueda utilizar toda la memoria del sistema.
+                        Bootmgr.exe lee la base de datos de configuración de arranque (BCD). El BCD contiene cualquier código adicional necesario para iniciar la computadora, junto con una indicación de si la computadora está saliendo de la hibernación o si se trata de un inicio en frío. Si el equipo sale de la hibernación, el proceso de arranque continúa con Winresume.exe . Esto permite que la computadora lea el archivo Hiberfil.sys que contiene el estado de la computadora cuando se puso en hibernación.
+                        Si la computadora se inicia desde un inicio en frío, entonces se carga el archivo Winload.exe . El archivo Winload.exe crea un registro de la configuración del hardware en el registro. El registro es un registro de todas las configuraciones, opciones, hardware y software que tiene la computadora. El registro se explorará en profundidad más adelante en este capítulo. Winload.exe también utiliza la firma de código en modo kernel (KMCS) para asegurarse de que todos los controladores estén firmados digitalmente. Esto asegura que los controladores sean seguros para cargar cuando se inicia la computadora.
+                        Una vez examinados los controladores, Winload.exe ejecuta Ntoskrnl.exe, que inicia el kernel de Windows y configura HAL. Finalmente, el Subsistema de administrador de sesión (SMSS) lee el registro para crear el entorno de usuario, iniciar el servicio Winlogon y preparar el escritorio de cada usuario a medida que inician sesión.
                    </p>
                </div>
                <ul class="section-btn">
