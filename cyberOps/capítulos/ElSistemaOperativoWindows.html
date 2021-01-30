@@ -471,6 +471,58 @@
                         Si la computadora se inicia desde un inicio en frío, entonces se carga el archivo Winload.exe . El archivo Winload.exe crea un registro de la configuración del hardware en el registro. El registro es un registro de todas las configuraciones, opciones, hardware y software que tiene la computadora. El registro se explorará en profundidad más adelante en este capítulo. Winload.exe también utiliza la firma de código en modo kernel (KMCS) para asegurarse de que todos los controladores estén firmados digitalmente. Esto asegura que los controladores sean seguros para cargar cuando se inicia la computadora.
                         Una vez examinados los controladores, Winload.exe ejecuta Ntoskrnl.exe, que inicia el kernel de Windows y configura HAL. Finalmente, el Subsistema de administrador de sesión (SMSS) lee el registro para crear el entorno de usuario, iniciar el servicio Winlogon y preparar el escritorio de cada usuario a medida que inician sesión.
                    </p>
+                   <h2>Inicio de Windows</h2>
+                   <p>
+                        Hay dos elementos de registro importantesque se utilizan para iniciar automáticamente aplicaciones y servicios.
+                        <ul>
+                             <li>
+                                   <strong>HEY_LOCAL_MACHINE</strong>. Varios aspectos de la configuración de Windows se almacenan en esta clave, incluida la información sobre los servicios que comienzan con cada inicio.
+                             </li>
+                             <li>
+                                   <strong>HEY_CURRENT_USER</strong>. En esta clave se almacenan variuos aspectos relacionados con el usuario que ha iniciado sesión, incluida la información sobre los servicios que se inician solo cuando el usuario inicia sesión en la computadora.
+                             </li>
+                        </ul>
+                        Las diferentes entradas en estas ubicaciones de registro definen qué servicios y aplicaciones se iniciarán, según lo indicado por su tipo de entrada. Estos tipos incluyen Run, RunOnce, RunServices, RunServicesOnce y Userinit. Estas entradas se pueden ingresar manualmente en el registro, pero es mucho más seguro usar la herramienta Msconfig.exe . Esta herramienta se utiliza para ver y cambiar todas las opciones de inicio de la computadora. Utilice el cuadro de búsqueda para buscar y abrir la herramienta Msconfig. <br>
+                        La herramienta Msconfig abre la ventana Configuración del sistema. Hay cinco pestañas que contienen las opciones de configuración <br>
+                        <div>
+                             <img src="../images/msconfig.PNG" alt=""> <br>
+                             Aquí se pueden elegir tres tipos de inicio diferentes. Carga normal todos los controladores y servicios. El diagnóstico solo carga controladores y servicios básicos. Selectivo permite al usuario elegir qué cargar al inicio.
+                        </div>                        
+                         <div>
+                              <img src="../images/msconfig-arranque.PNG" alt=""> <br>
+                              Cualquier sistema operativo instalado se puede elegir aquí para comenzar. También hay opciones para el inicio seguro, que se utiliza para solucionar problemas de inicio.
+                         </div>
+                         <div>
+                              <img src="../images/msconfig-servicios.PNG" alt=""> <br>
+                              Todos los servicios instalados se enumeran aquí para que se puedan elegir para comenzar al inicio.
+                         </div>
+                         <div>
+                              <img src="../images/msconfig-inicio.PNG" alt=""> <br>
+                              Todas las aplicaciones y servicios que están configurados para comenzar automáticamente al inicio se pueden habilitar o deshabilitar abriendo el administrador de tareas desde esta pestaña.
+                         </div>
+                         <div>
+                              <img src="../images/msconfig-herramientas.PNG" alt=""> <br>
+                              Muchas herramientas comunes del sistema operativo se pueden iniciar directamente desde esta pestaña.
+                         </div>
+
+                   </p>
+                   <h2>Apagado de Windows</h2>
+                   <p>
+                    Siempre es mejor realizar un apagado adecuado para apagar la computadora. Los archivos que quedan abiertos, los servicios que se cierran fuera de servicio y las aplicaciones que se cuelgan pueden dañarse si se apaga la alimentación sin informar primero al sistema operativo. La computadora necesita tiempo para cerrar cada aplicación, apagar cada servicio y registrar cualquier cambio de configuración antes de que se pierda la energía. <br>
+                    Durante el apagado, la computadora cerrará primero las aplicaciones en modo de usuario, seguidas de los procesos en modo kernel. Si un proceso de modo de usuario no responde dentro de un cierto período de tiempo, el sistema operativo mostrará una notificación y permitirá al usuario esperar a que la aplicación responda o finalizar el proceso por la fuerza. Si un proceso en modo kernel no responde, parecerá que el apagado se cuelga y puede que sea necesario apagar la computadora con el botón de encendido. <br>
+                    Hay varias formas de apagar una computadora con Windows: las opciones de energía del menú Inicio, el comando de línea de comando apagar y usar Ctrl + Alt + Supr y hacer clic en el ícono de energía. Hay tres opciones diferentes entre las que elegir al apagar la computadora:
+                    <ul>
+                         <li>
+                              <b>Apagar.</b> Apaga el equipo.
+                         </li>
+                         <li>
+                              <b>Reiniciar.</b> Reinicia la computadora (apague y encienda).
+                         </li>
+                         <li>
+                              <b>Hibernar.</b> Registra el estado actual de la computadora y el entorno del usuario y lo almacena en un archivo. La hibernación permite al usuario retomar muy rápidamente donde lo dejó con todos sus archivos y programas aún abiertos.
+                         </li>
+                    </ul>
+                   </p>
                </div>
                <ul class="section-btn">
                     <a href="ElSistemaOperativoWindows.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 4.</span></a>
