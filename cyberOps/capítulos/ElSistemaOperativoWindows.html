@@ -338,7 +338,36 @@
                    </p>
                    <h3>Capa de abstracción de hardware</h3>
                    <p>
-                        Las computadoras con Windows usan muchos tipos diferentes de hardware. El sistema operativo puede instalarse en una computadora comprada o en un computador ensamblado por el usuario. 
+                        Las computadoras con Windows usan muchos tipos diferentes de hardware. El sistema operativo puede instalarse en una computadora comprada o en un computador ensamblado por el usuario.  Cuando se instala el sistema operativo, debe aislarse de las diferencias 
+                        de hardware. La arquitectura básica de Windows se muestra en la figura.
+                        <div>
+                              <img src="../images/arquitectura-basica-windows.PNG" alt="">
+                         </div>
+                         Una capa de abstracción de hardware (HAL) es un software que maneja toda la comunicación entre el hardware y el kernel. El kernel es el núcleo del sistemap operativo y tiene control sobre toda la computadora. Maneja todas las solicitudes de entrada y salida, la memoria y todos los 
+                         periféricos conectados a la PC.
+                         En algunos casos, el kernel aún se comunica con el hardware directamente, por lo que no es completamente independiente de HAL. HAL también necesita el kernel para realizar algunas funciones.
+                   </p>
+                   <h3>Modo de usuario y modo de kernel</h3>
+                   <p>
+                        Como se muestra en la figura siguiente, hay dos modos diferentes en los que una CPU funciona cuando la computadora tiene Windows instalado: el modo usuario y el modo kernel.
+                        <div>
+                             <img src="../images/mod-user-and-kernel.PNG" alt="">
+                        </div>
+                        Las aplicaciones instaladas se ejecutan en modo de usuario y el código del sistema operativo se ejecuta en modo de kernel. El código que se ejecuta en modo kernel tiene acceso sin restricciones al hardware subyace y es capaz de ejecutar cualquier instrucción de la CPU. El código del modo 
+                        kernel también puede hacer referencia a cualquier dirección de memoria directamente. <br>
+                        Generalmente reservado para las funciones más confiables del SO, los bloques en el código que se ejecuta en modo kernel detienen el funcionamiento de toda la computadora. Por el contrario, los programas, como las aplicaciones de usuario, se ejecutan en modo de usuario y no tienen acceso directo 
+                        a ubicaciones de hardware o memoria. El código de modo de usuario debe pasar por el sistema operativo para acceder a los recursos de hardware. Debido al aislamiento proporcionado por el modo de usuario, los bloques en el modo usuario están restringidos solo a la aplicación y son recuperables. La 
+                        mayoría de los programas de Windows se ejecutan en modo de usuario, Controladores de dispositivo.
+                        <hr>
+                        Todo el código que se ejecuta en modo kernel usa el mismo espacio de direcciones. Los controladores en modo kernel no están aislados del sistema operativo. Si ocurre un error con el controlador ejecutándose en modo kernel y escribe en el espacio de direcciones incorrecto, el SO u otro controlador en modo kernel podría verse 
+                        afectados negativamente. En este sentido, el controlador podría bloquearse, provocando que todo el sistema operativo se bloquee.
+                        <hr>
+                        Cuando se ejecuta el código del modo de usuario, el kernel le otorga su propio espacio de direcciones restringido, junto con un proceso creado específicamente para la aplicación. El motivo de esta funcionalidad ees principalmente patra evitar que las aplicacionescambien el código del sistema operativo que se ejecuta 
+                        al mismo tiempo. Al tener su propio proceso, esa aplicación tiene su propio espacio de direcciones privadas, lo que hace que otras aplicaciones no puedan modificar los datos que contiene. Esto también ayuda a evitar que el SO y otras aplicaciones se bloqueen si esa aplicación falla.
+                   </p>
+                   <h3>Sistema de archivos de Windows</h3>
+                   <p>
+                        Un sistema de archivos es cómo se organiza la información en los medios de almacenamiento. Algunos sistemas de archivos pueden ser una mejor opción para usar que otros,
                    </p>
                </div>
                <ul class="section-btn">
