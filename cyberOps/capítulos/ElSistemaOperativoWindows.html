@@ -859,9 +859,113 @@ Gestión : política de grupo y control de servicios de dominio de Active Direct
                     También es posible crear una vista personalizada. Esto es útil cuando se buscan ciertos tipos de eventos, se encuentran eventos que ocurrieron durante un período de tiempo determinado, se muestran eventos de cierto nivel y muchos otros criterios. Hay una vista personalizada incorporada llamada Eventos administrativos que muestra todos los eventos críticos, de error y de advertencia de todos los registros administrativos. Esta es una buena vista para empezar cuando se intenta solucionar un problema. <br>
                     Los registros de eventos de seguridad se encuentran en Registros de Windows. Usan ID de eventos para identificar el tipo de evento.
                    </p>
+                   <h2>Gestión de actualizaciones de Windows</h2>
+                    <p>
+                         Ningún software es perfecto y el sistema operativo Windows no es una excepción. Los atacantes constantemente encuentran nuevas formas de poner en peligro las computadoras y explotar el código incorrecto. Algunos de estos ataques se producen tan rápidamente que aún no se han diseñado ni distribuido las defensas contra ellos. Estos se denominan exploits de día cero. Microsoft y los desarrolladores de software de seguridad siempre intentan adelantarse a los atacantes, pero no siempre tienen éxito. Para garantizar el nivel más alto de protección contra estos ataques, asegúrese siempre de que Windows esté actualizado con los últimos paquetes de servicios y parches de seguridad. <br>
+                         Los parches son actualizaciones de código que proporcionan los fabricantes para evitar que un virus o gusano recién descubierto realice un ataque exitoso. De vez en cuando, los fabricantes combinan parches y actualizaciones en una aplicación de actualización integral llamada service pack. Muchos ataques de virus devastadores podrían haber sido mucho menos graves si más usuarios hubieran descargado e instalado el último paquete de servicios. Es muy conveniente que las empresas utilicen sistemas que distribuyan, instalen y rastreen automáticamente las actualizaciones de seguridad. <br>
+                         Windows comprueba periódicamente el sitio web de Windows Update en busca de actualizaciones de alta prioridad que puedan ayudar a proteger una computadora de las últimas amenazas de seguridad. Estas actualizaciones incluyen actualizaciones de seguridad, actualizaciones críticas y paquetes de servicios. Dependiendo de la configuración que elija, Windows descarga e instala automáticamente las actualizaciones de alta prioridad que su computadora necesita o le notifica cuando estas actualizaciones están disponibles. Para configurar los ajustes para la actualización de Windows, busque Windows Update y haga clic en la aplicación. <br>
+                         El estado de la actualización, que se muestra en la figura, le permite buscar actualizaciones manualmente y ver el historial de actualizaciones de la computadora. <br>
+                         También hay configuraciones para las horas en las que la computadora no se reiniciará automáticamente, por ejemplo, durante el horario comercial habitual. También puede elegir cuándo reiniciar la computadora después de una actualización, si es necesario, con las opciones de Reinicio. Las opciones avanzadas también están disponibles para elegir cómo se instalan las actualizaciones y cómo se actualizan otros productos de Microsoft.
+                    </p>
+                    <h2>Política de seguridad local</h2>
+                    <p>
+                         Una política de seguridad es un conjunto de objetivos que garantiza la seguridad de una red, los datos y los sistemas informáticos de una organización. La política de seguridad es un documento en constante evolución basado en los cambios en la tecnología, el negocio y los requisitos de los empleados. <br>
+                         En la mayoría de las redes que usan computadoras con Windows, Active Directory está configurado con dominios en un servidor Windows. Las computadoras con Windows se unen al dominio. El administrador configura una Política de seguridad de dominio que se aplica a todas las computadoras que se unen al dominio. Las políticas de cuenta se establecen automáticamente cuando un usuario inicia sesión en una computadora que es miembro de un dominio. La Política de seguridad local de Windows, que se muestra en la figura, se puede utilizar para equipos independientes que no forman parte de un dominio de Active Directory. <br>
+                         Para abrir el subprograma de Política de seguridad local, busque Política de seguridad local y haga clic en el programa. <br>
+                         Las pautas de contraseña son un componente importante de una política de seguridad. Cualquier usuario que deba iniciar sesión en una computadora o conectarse a un recurso de red debe tener una contraseña. Las contraseñas ayudan a prevenir el robo de datos y actos maliciosos. Las contraseñas también ayudan a confirmar que el registro de eventos es válido al garantizar que el usuario sea la persona que dice ser. En la Política de seguridad local, la Política de contraseñas se encuentra en Políticas de cuenta y define los criterios para las contraseñas para todos los usuarios en la computadora local. <br>
+                         Utilice la Política de bloqueo de cuenta en Políticas de cuenta para evitar intentos de inicio de sesión por fuerza bruta. Por ejemplo, puede configurar la política para permitir que el usuario ingrese un nombre de usuario y / o contraseña incorrectos cinco veces. Después de cinco intentos, la cuenta se bloquea durante 30 minutos. Después de 30 minutos, el número de intentos se restablece a cero y el usuario puede intentar iniciar sesión nuevamente. <br>
+                         Es importante asegurarse de que las computadoras estén seguras cuando los usuarios no estén. Una política de seguridad debe contener una regla sobre la necesidad de que una computadora se bloquee cuando se inicia el protector de pantalla. Esto asegurará que después de un breve período fuera de la computadora, el protector de pantalla se inicie y luego la computadora no se pueda usar hasta que el usuario inicie sesión. <br>
+                         Si la política de seguridad local en todos los equipos independientes es la misma, utilice la función de política de exportación. Guarde la política con un nombre, como workstation.inf. Copie el archivo de política en un medio externo o unidad de red para usarlo en otras computadoras independientes. Esto es particularmente útil si el administrador necesita configurar políticas locales extensas para los derechos de usuario y las opciones de seguridad. <br>
+                         El subprograma de Política de seguridad local contiene muchas otras configuraciones de seguridad que se aplican específicamente a la computadora local. Puede configurar derechos de usuario, reglas de firewall e incluso la capacidad de restringir los archivos que los usuarios o grupos pueden ejecutar con AppLocker.
+                    </p>
+                    <h2>Windows Defender</h2>
+                    <p>
+                         El malware incluye virus, gusanos, troyanos, registradores de pulsaciones de teclas, spyware y adware. Estos están diseñados para invadir la privacidad, robar información, dañar la computadora o corromper datos. Es importante que proteja las computadoras y los dispositivos móviles mediante un software antimalware de buena reputación. Están disponibles los siguientes tipos de programas antimalware:
+                         <ul>
+                             <li>Protección antivirus : este programa supervisa continuamente la presencia de virus. Cuando se detecta un virus, se advierte al usuario y el programa intenta poner en cuarentena o eliminar el virus.</li>
+                             <li>Protección contra programas publicitarios: este programa busca continuamente programas que muestren publicidad en su computadora.</li>
+                             <li>Protección contra phishing : este programa bloquea las direcciones IP de sitios web de phishing conocidos y advierte al usuario sobre sitios sospechosos.</li>
+                             <li>Protección contra software espía : este programa busca registradores de pulsaciones de teclas y otros programas espía.</li>
+                             <li>Fuentes confiables / no confiables : este programa le advierte sobre programas inseguros que se van a instalar o sitios web inseguros antes de visitarlos.</li>
+                         </ul>
+                         Pueden ser necesarios varios programas diferentes y varios análisis para eliminar completamente todo el software malicioso. Ejecute solo un programa de protección contra malware a la vez. <br>
+                         Varias organizaciones de seguridad de renombre como McAfee, Symantec y Kaspersky ofrecen protección integral contra malware para computadoras y dispositivos móviles. Windows tiene protección antivirus y antispyware incorporada llamada Windows Defender, como se muestra en la figura. Windows Defender está activado de forma predeterminada para proporcionar protección en tiempo real contra infecciones. <br>
+                         Para abrir Windows Defender, búsquelo y haga clic en el programa. Aunque Windows Defender funciona en segundo plano, puede realizar análisis manuales de la computadora y los dispositivos de almacenamiento. También puede actualizar manualmente las definiciones de virus y software espía en la pestaña Actualizar . Además, para ver todos los elementos que se encontraron durante exploraciones anteriores, haga clic en la pestaña Historial.
+                    </p>
+                    <h2>Firewall de Windows Defender</h2>
+                    <p>
+                         Un firewall niega selectivamente el tráfico a una computadora o segmento de red. Los cortafuegos generalmente funcionan abriendo y cerrando los puertos utilizados por varias aplicaciones. Al abrir solo los puertos necesarios en un firewall, está implementando una política de seguridad restrictiva. Se deniega cualquier paquete no permitido explícitamente. Por el contrario, una política de seguridad permisiva permite el acceso a través de todos los puertos, excepto aquellos denegados explícitamente. En el pasado, el software y el hardware se enviaban con configuraciones permisivas. 
+                         Como los usuarios se olvidaron de configurar su equipo, la configuración permisiva predeterminada dejó muchos dispositivos expuestos a los atacantes. La mayoría de los dispositivos ahora se envían con configuraciones lo más restrictivas posible, al mismo tiempo que permiten una configuración fácil. <br>
+                         Para permitir el acceso del programa a través del Firewall de Windows Defender, busque Paneles de control . En Sistemas y seguridad , busque Firewall de Windows Defender . Haga clic en Permitir una aplicación o función a través del Firewall de Windows Defender , como se muestra en la figura. <br>
+                         Si desea utilizar un firewall de software diferente, deberá deshabilitar el Firewall de Windows. Para desactivar el Firewall de Windows, haga clic en Activar o desactivar el Firewall de Windows. <br>
+                         <div>
+                              <img src="../images/firewall.PNG" alt="">
+                         </div>
+                         Se pueden encontrar muchas configuraciones adicionales en Configuración avanzada . Aquí puede crear reglas de tráfico entrante o saliente basadas en diferentes criterios. También puede importar y exportar políticas o monitorear diferentes aspectos del firewall. <br>
+                    </p>
+                    <h2>Resumen del sistema operativo Windows</h2>
+                    <h3>¿Qué aprendí en este módulo?</h3>
+                    <p>
+                         <pre>
+<strong>Historial de Windows</strong>
+Las primeras computadoras requerían un sistema operativo de disco (DOS) para crear y administrar archivos. Microsoft desarrolló MS-DOS como una interfaz de línea 
+de comandos (CLI) para acceder a la unidad de disco y cargar los archivos del sistema operativo. Las primeras versiones de Windows consistían en una interfaz gráfica 
+de usuario (GUI) que se ejecutaba en MS-DOS. Sin embargo, las versiones modernas de Windows controlan directamente la computadora y su hardware y admiten múltiples procesos de usuario. 
+Esto es muy diferente al proceso único, usuario único MS-DOS. Desde 1993, ha habido más de 20 versiones de Windows que se basan en el sistema operativo NT. <br>
+Los usuarios usan una GUI de Windows para trabajar con archivos de datos y software. La GUI tiene un área principal que se conoce como Escritorio y una barra de 
+tareas situada debajo del escritorio. La barra de tareas incluye el menú Inicio, iconos de inicio rápido y un área de notificación. Windows tiene muchas vulnerabilidades. 
+Las recomendaciones para proteger el sistema operativo Windows incluyen el uso de protección contra virus o malware, el uso de contraseñas seguras, 
+el uso de firewall y el uso limitado de la cuenta de administrador, entre otras.
+
+<strong>Arquitectura y operaciones de Windows</strong>
+Windows consta de una capa de abstracción de hardware (HAL) que es un software que maneja toda la comunicación entre el hardware y el kernel. 
+El núcleo tiene control sobre toda la computadora y maneja las solicitudes de entrada y salida, la memoria y todos los periféricos conectados a la computadora. 
+Windows funciona en dos modos diferentes. El primero es el modo de usuario. La mayoría de los programas de Windows se ejecutan en modo de usuario. 
+El segundo es el modo kernel. Permite el acceso directo del código del sistema operativo al hardware de la computadora. Windows admite varios sistemas 
+de archivos diferentes, pero NTFS es el más utilizado. <br>
+Los volúmenes NTFS incluyen el sector de arranque de la partición, la tabla maestra de archivos, los archivos del sistema y el área de archivos. 
+Cuando una computadora arranca, primero accede a la información del sistema y al código que se almacena en el hardware del BIOS. 
+El código de arranque del BIOS realiza una autoprueba del sistema denominada POST, localiza y carga el sistema operativo Windows y carga otros programas 
+asociados para iniciar el sistema operativo. Windows siempre debe cerrarse correctamente. <br>
+Una computadora funciona almacenando instrucciones en la RAM hasta que la CPU las procesa. 
+Cada proceso en una computadora con Windows de 32 bits admite un espacio de direcciones virtuales que permite direccionar hasta 4 gigabytes. 
+Cada proceso en una computadora con Windows de 64 bits admite un espacio de direcciones virtuales de hasta 8 terabytes. Windows almacena toda 
+la información sobre el hardware, las aplicaciones, los usuarios y la configuración del sistema en una gran base de datos conocida como registro. 
+El registro es una base de datos jerárquica donde el nivel más alto se conoce como colmena, debajo de ella hay claves, seguidas de subclaves. <br>
+Hay cinco secciones de registro que contienen datos sobre la configuración y el funcionamiento de Windows. Hay cientos de claves y subclaves.
+
+<strong>Configuración y supervisión de Windows</strong>
+Por razones de seguridad, no es recomendable iniciar sesión en Windows utilizando la cuenta de administrador o una cuenta con privilegios administrativos. 
+No otorgue privilegios administrativos a los usuarios estándar. No habilite la cuenta de Invitados a menos que la computadora sea utilizada por muchas 
+personas diferentes que no tengan cuentas. Utilice grupos de Windows para facilitar la administración de usuarios. Los usuarios y grupos locales se 
+administran con el subprograma del panel de control lusrmgr.msc. <br>
+Puede usar la CLI o Windows PowerShell para ejecutar comandos. PowerShell se puede utilizar para crear scripts para automatizar tareas que la CLI normal no puede automatizar.
+ El Instrumental de administración de Windows (WMI) se utiliza para administrar equipos remotos. El comando 'netn se puede combinar con interruptores para 
+ enfocarse en una salida específica. El Administrador de tareas proporciona mucha información sobre lo que se está ejecutando y el rendimiento general de la computadora. 
+ El Monitor de recursos proporciona información más detallada sobre el uso de recursos. El Centro de redes y recursos compartidos 
+se utiliza para configurar las propiedades de red de Windows y probar la configuración de red. 
+El protocolo Server Message Block (SMB) se utiliza para compartir recursos de red, como archivos en hosts remotos. El formato de Convención de nomenclatura universal (UNC) 
+se utiliza para conectarse a los recursos. Windows Server es una edición de Windows que se utiliza principalmente en centros de datos. Proporciona servicios de red, archivos, 
+web y administración a una red o dominio de Windows.
+
+<strong>Seguridad de Windows</strong>
+El malware puede abrir puertos de comunicación para comunicarse y propagarse. El netstat de Windows
+El comando muestra todos los puertos de comunicación abiertos en una computadora y también puede mostrar los procesos de software que están asociados con los puertos. 
+Esto permite identificar y cerrar software desconocido potencialmente malicioso. El Visor de eventos de Windows proporciona acceso a numerosos eventos registrados 
+relacionados con el funcionamiento de una computadora. Windows registra eventos de Windows y eventos de aplicaciones y servicios. Los niveles de gravedad de los eventos 
+registrados varían a través de los niveles de información, advertencia, error o crítico. <br>
+Es muy importante mantener Windows actualizado para protegerse contra nuevas amenazas de seguridad. <br>
+Los parches de software, las actualizaciones y los paquetes de servicios abordan las vulnerabilidades de seguridad a medida que se descubren. Windows debe configurarse 
+para descargar e instalar automáticamente las actualizaciones a medida que estén disponibles.
+                         </pre>
+                    </p>
+                    <h2>Examen</h2>
+                    <p>
+                         <video src="../videos/CyberOps-Associate--Windows-Configuration-and-Monitoring.mp4" muted autoplay></video>
+                    </p>
                </div>
                <ul class="section-btn">
-                    <a href="ElSistemaOperativoWindows.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 4.</span></a>
+                    <a href="LinuxGeneral.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 4.</span></a>
                </ul>
           </div>
      </div>
