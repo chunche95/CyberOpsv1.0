@@ -802,8 +802,62 @@ Permite saber si un proceso no autorizado está accediendo a la red, escuchando 
                     </p>
                     <h2>Redes</h2>
                     <p>
-                         Una de las características más importantes de cualquier sistema operativo es la capacidad de la computadora para conectarse a una red. Sin esta función, no hay acceso a los recursos de la red ni a Internet. Para configurar las propiedades de red de Windows y probar la configuración de red, se utiliza el Centro de redes y recursos compartidos. La forma más sencilla de ejecutar esta herramienta es buscarla y hacer clic en ella. Utilice el Centro de redes y recursos compartidos para verificar o crear conexiones de red, configurar el uso compartido de redes y cambiar la configuración del adaptador de red
+                         Una de las características más importantes de cualquier sistema operativo es la capacidad de la computadora para conectarse a una red. Sin esta función, no hay acceso a los recursos de la red ni a Internet. Para configurar las propiedades de red de Windows y probar la configuración de red, se utiliza el Centro de redes y recursos compartidos. La forma más sencilla de ejecutar esta herramienta es buscarla y hacer clic en ella. Utilice el Centro de redes y recursos compartidos para verificar o crear conexiones de red, configurar el uso compartido de redes y cambiar la configuración del adaptador de red.
+                         <h4>nslookup y netstat</h4>
+                         El sistema de nombres de dominio (DNS) también debe probarse porque es esencial encontrar la dirección de los hosts traduciéndola de un nombre, como una URL. Utilice el comando nslookup para probar DNS. Escriba nslookup cisco.com en el símbolo del sistema para encontrar la dirección del servidor web de Cisco. Cuando se devuelve la dirección, sabe que el DNS funciona correctamente. También puede verificar qué puertos están abiertos, dónde están conectados y cuál es su estado actual. Escriba netstat en la línea de comando para ver los detalles de las conexiones de red activas, como se muestra en el resultado del comando. 
+                         El comando netstat se examinará más adelante en este módulo.
                     </p>
+                   </p>
+                   <h2>Acceso a los recursos de la red</h2>
+                   <p>
+                    Al igual que otros sistemas operativos, Windows utiliza redes para muchas aplicaciones diferentes, como servicios web, de correo electrónico y de archivos. Desarrollado originalmente por IBM, Microsoft ayudó en el desarrollo del protocolo Server Message Block (SMB) para compartir recursos de red. SMB se usa principalmente para acceder a archivos en hosts remotos. El formato de Convención de nomenclatura universal (UNC) se utiliza para conectarse a recursos, por ejemplo: <br>
+                    <b>\\ServerName\sharename\archivo</b>
+                    En la UNC, servername es el servidor que aloja el recurso. Puede ser un nombre DNS, un nombre NetBIOS o simplemente una dirección IP. El nombre compartido es la raíz de la carpeta en el sistema de archivos del host remoto, mientras que el archivo es el recurso que el host local está tratando de encontrar. El archivo puede estar más profundo dentro del sistema de archivos y será necesario indicar esta jerarquía. <br>
+                    Al compartir recursos en la red, será necesario identificar el área del sistema de archivos que se compartirá. El control de acceso se puede aplicar a las carpetas y archivos para restringir a los usuarios y grupos a funciones específicas como leer, escribir o denegar. También hay recursos compartidos especiales que Windows crea automáticamente. Estas acciones se denominan acciones administrativas. Una acción administrativa se identifica mediante el signo de dólar ($) que viene después del nombre de la acción. 
+                    Cada volumen de disco tiene un recurso compartido administrativo, representado por la letra del volumen y el $, como C $, D $ o E $. La carpeta de instalación de Windows se comparte como admin $, la carpeta de las impresoras se comparte como print $ y hay otros recursos compartidos administrativos que se pueden conectar. Solo los usuarios con privilegios administrativos pueden acceder a estos recursos compartidos. <br>
+                    La forma más fácil de conectarse a un recurso compartido es escribir el UNC del recurso compartido en el Explorador de archivos de Windows, en el cuadro en la parte superior de la pantalla que muestra la lista de rutas de navegación de la ubicación actual del sistema de archivos. Cuando Windows intente conectarse al recurso compartido, se le pedirá que proporcione las credenciales para acceder al recurso. Recuerde que debido a que el recurso está en una computadora remota, las credenciales deben ser para la computadora remota, no para la computadora local. <br>
+                    Además de acceder a recursos compartidos en hosts remotos, también puede iniciar sesión en un host remoto y manipular esa computadora, como si fuera local, para realizar cambios de configuración, instalar software o solucionar un problema. En Windows, esta función utiliza el Protocolo de escritorio remoto (RDP). Al investigar incidentes de seguridad, un analista de seguridad usa RDP a menudo para acceder a computadoras remotas. Para iniciar RDP y conectarse a una computadora remota, busque escritorio remoto y haga clic en la aplicación. La ventana Conexión a Escritorio remoto se muestra en la figura. <br>
+                    <div>
+                         <img src="../images/remoteDesktop.PNG" alt="">
+                    </div>
+                    Debido a que RDP está diseñado para permitir que los usuarios remotos controlen hosts individuales, es un objetivo natural para los actores de amenazas. Se debe tener cuidado al activar RDP, especialmente en versiones heredadas de Windows sin parches, como las que todavía se encuentran en los sistemas de control industrial. Se debe tener cuidado para limitar la exposición de RDP a Internet, y se deben utilizar enfoques de seguridad y políticas de control de acceso, como Zero Trust, para limitar el acceso a hosts internos. <br>
+                   </p>
+                   <h2>Servidor de Windows</h2>
+                   <p>
+                    La mayoría de las instalaciones de Windows se realizan como instalaciones de escritorio en equipos de escritorio y portátiles. Existe otra edición de Windows que se usa principalmente en centros de datos llamada Windows Server. Esta es una familia de productos de Microsoft que comenzó con Windows Server 2003. Windows Server aloja muchos servicios diferentes y puede cumplir diferentes roles dentro de una empresa. <br>
+                    Nota : aunque existe un Windows Server 2000, se considera una versión de cliente de Windows NT 5.0. Windows Server 2003 es un servidor basado en NT 5.2 y comienza una nueva familia de versiones de Windows Server. <br>
+                    Estos son algunos de los servicios que proporciona Windows Server:
+                    <pre>
+Servicios de red : DNS, DHCP, servicios de terminal, controlador de red y virtualización de red Hyper-V.
+Servicios de archivos : SMB, NFS y DFS.
+Servicios web : FTP, HTTP y HTTPS.
+Gestión : política de grupo y control de servicios de dominio de Active Directory.
+                    </pre>
+                   </p>
+                   <h2>Laboratorios.</h2>
+                   <p>
+                         <a href="../docs/3/3.3.10-lab---create-user-accounts.pdf" target="_blank" rel="noopener noreferrer">Create user accounts</a>
+                         <a href="../docs/3/3.3.11-lab---using-windows-powershell.pdf" target="_blank" rel="noopener noreferrer">- Using Windows PowerShell</a>
+                         <a href="../docs/3/3.3.12-lab---windows-task-manager.pdf" target="_blank" rel="noopener noreferrer">Windows Task Manager</a>
+                         <a href="../docs/3/3.3.13-lab---monitor-and-manage-system-resources-in-windows.pdf" target="_blank" rel="noopener noreferrer">Monitor and Manage System Resources in Windows</a>                          
+                   </p>
+                   <h2>El comando netstat</h2>
+                   <p>
+                    Cuando hay malware en una computadora, a menudo abre puertos de comunicación en el host para enviar y recibir datos. El comando <code>netstat</code> se puede utilizar para buscar conexiones entrantes o salientes que no están autorizadas. Cuando se usa solo, el comando netstat mostrará todas las conexiones TCP activas. <br>
+                    Al examinar estas conexiones, es posible determinar cuáles de los programas están escuchando conexiones que no están autorizadas. Cuando se sospecha que un programa es malware, se puede realizar una pequeña investigación para determinar su legitimidad. Desde allí, el proceso se puede cerrar con el Administrador de tareas y se puede usar un software de eliminación de malware para limpiar la computadora. <br>
+                    Para facilitar este proceso, puede vincular las conexiones a los procesos en ejecución que las crearon en el Administrador de tareas. Para hacer esto, abra un símbolo del sistema con privilegios administrativos e ingrese el comando <code>netstat -abno</code> , como se muestra en el resultado del comando. <br>
+                    <div>
+                         <img src="../images/netstat-abno.PNG" alt="">
+                    </div>
+                    <b>Nota:</b> Si no está en modo administrador, aparecerá el mensaje "La operación solicitada requiere elevación". Busque el símbolo del sistema. Haga clic con el botón derecho en Símbolo del sistema y elija Ejecutar como administrador. <br>
+                    Al examinar las conexiones TCP activas, un analista debería poder determinar si hay programas sospechosos que estén escuchando conexiones entrantes en el host. También puede rastrear ese proceso hasta el Administrador de tareas de Windows y cancelar el proceso. Puede haber más de un proceso listado con el mismo nombre. Si este es el caso, use el PID para encontrar el proceso correcto. Cada proceso que se ejecuta en la computadora tiene un PID único. Para mostrar los PID de los procesos en el Administrador de tareas, abra el Administrador de tareas , haga clic con el botón derecho en el encabezado de la tabla y seleccione PID.
+                   </p>
+                   <h2>Visor de eventos</h2>
+                   <p>
+                    El Visor de eventos de Windows registra el historial de eventos de aplicaciones, seguridad y sistema. Estos archivos de registro son una valiosa herramienta para la resolución de problemas porque proporcionan la información necesaria para identificar un problema. <br>
+                    Windows incluye dos categorías de registros de eventos: registros de Windows y registros de aplicaciones y servicios. Cada una de estas categorías tiene varios tipos de registros. Los eventos que se muestran en estos registros tienen un nivel: información, advertencia, error o crítico. También tienen la fecha y hora en que ocurrió el evento, junto con la fuente del evento y una identificación que se relaciona con ese tipo de evento. <br>
+                    También es posible crear una vista personalizada. Esto es útil cuando se buscan ciertos tipos de eventos, se encuentran eventos que ocurrieron durante un período de tiempo determinado, se muestran eventos de cierto nivel y muchos otros criterios. Hay una vista personalizada incorporada llamada Eventos administrativos que muestra todos los eventos críticos, de error y de advertencia de todos los registros administrativos. Esta es una buena vista para empezar cuando se intenta solucionar un problema. <br>
+                    Los registros de eventos de seguridad se encuentran en Registros de Windows. Usan ID de eventos para identificar el tipo de evento.
                    </p>
                </div>
                <ul class="section-btn">
