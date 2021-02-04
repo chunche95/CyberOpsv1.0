@@ -72,7 +72,7 @@
                          <h1>Descripción general de Linux</h1>
                          <p>
                             Linux es un sistema operativo de código abierto que es rápido, potente y altamente personalizable. Está diseñado para uso en red como cliente o servidor. Linux es muy querido por una gran comunidad de usuarios, incluido el personal de ciberseguridad. <br>
-                            Estudie este módulo para aprender información básica sobre el sistema operativo Linux y aprender algunas habilidades de Linux. Las habilidades de Linux son muy deseables en la profesión de operaciones de ciberseguridad.                            
+                            Estudie este módulo para aprender información básica sobre el sistema operativo Linux y aprender algunas habilidades de Linux. Las habilidades de Linux son muy deseables en la profesión de operaciones de ciberseguridad.
                         </p>
                          <ul class="section-btn">
                               <a href="#about" class="smoothScroll"><span data-hover="Empecemos.">Empecemos.</span></a>
@@ -99,8 +99,64 @@
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <div class="about-info">
                          <h3>Introducción</h3>
+                         <h4>¿Qué aprenderé en este módulo?</h4>
                          <p>
-                            
+                            <b>Título del módulo</b>: Descripción general de Linux. <br>
+                            <b>Objetivo del módulo</b>: Implementar la seguridad básica de Linux.
+                            <table>
+                                 <tr>
+                                   <td>
+                                        <b>Título del tema</b>
+                                   </td>
+                                   <td>
+                                        <a href="#linux">Conceptos básicos de Linux.</a>
+                                   </td>
+                                   <td>
+                                        <a href="#shell">Trabajando en el Shell de Linux.</a>
+                                   </td>
+                                   <td>
+                                        <a href="#cliente_y_servidor">Clientes y servidores Linux.</a>
+                                   </td>
+                                   <td>
+                                        <a href="#admin">Administración básica del servidor.</a>
+                                   </td>
+                                   <td> 
+                                        <a href="#sys">El sistema de archivos de linux.</a>
+                                   </td>
+                                   <td>
+                                        <a href="#GUI">Trabajando en la GUI de Linux.</a>
+                                   </td>
+                                   <td>
+                                        <a href="#host">Trabajando en un host de Linux.</a>
+                                   </td>
+                                 </tr>
+                                 <tr>
+                                   <td>
+                                        <b>Objetivo del tema</b>
+                                   </td>
+                                   <td>
+                                        Explique por qué las habilidades de Linux son esenciales para el monitoreo e investigación de la seguridad de la red.
+                                   </td>
+                                   <td>
+                                        Utilice el shell de linux para manipular archivos de texto.
+                                   </td>
+                                   <td>
+                                        Explique cómo funcionan las redes cliente-servidor.
+                                   </td>
+                                   <td>
+                                        Explique cómo un administrador de Linux ubica y manipula los archivos de registro de seguridad.
+                                   </td>
+                                   <td>
+                                        Administra el sistema de archivos y los permisos de Linux.
+                                   </td>
+                                   <td>
+                                        Explique los componentes básicos de la GUI de Linux.
+                                   </td>
+                                   <td>
+                                        Use herramientas para detectar malware en un host Linux.
+                                   </td>
+                                 </tr>
+                            </table>
                          </p>
                     </div>
                </div>
@@ -115,9 +171,229 @@
           <div class="">
                <!-- CONTENTS ITEM -->
                <div class="container">
-                    <h2>Historias de guerra.</h2>
+                    <h2  id="linux" name="linux">¿Qué es Linux?</h2>
                     <p>
+                         Linux es un sistema operativo que se creó en 1991. Linux es de código abierto, rápido, confiable y pequeño. Requiere muy pocos recursos de hardware para ejecutarse y es altamente personalizable. A diferencia de otros sistemas operativos como Windows y Mac OS X, Linux fue creado y actualmente es mantenido por una comunidad de programadores. Linux es parte de varias plataformas y se puede encontrar en dispositivos en cualquier lugar, desde "relojes de pulsera hasta supercomputadoras". <br>
+                         Otro aspecto importante de Linux es que está diseñado para conectarse a la red, lo que simplifica mucho la escritura y el uso de aplicaciones basadas en red. Debido a que Linux es de código abierto, cualquier persona o empresa puede obtener el código fuente del kernel, inspeccionarlo, modificarlo y volver a compilarlo a voluntad. También se les permite redistribuir el programa con o sin cargos. <br>
+                         Una distribución de Linux es el término que se utiliza para describir paquetes creados por diferentes organizaciones. Las distribuciones (o distribuciones) de Linux incluyen el kernel de Linux con herramientas y paquetes de software personalizados. Si bien algunas de estas organizaciones pueden cobrar por su soporte de distribución de Linux (orientado a empresas basadas en Linux), la mayoría de ellas también ofrecen su distribución de forma gratuita sin soporte. Debian, Red Hat, Ubuntu, CentOS y SUSE son solo algunos ejemplos de distribuciones de Linux. 
+                    </p>
+                    <h2>El valor de Linux</h2>
+                    <p>
+                         Linux es a menudo el sistema operativo de elección en el Centro de operaciones de seguridad (SOC). Estas son algunas de las razones para elegir Linux:
+                         <ul>
+                              <li>
+                                   Linux es de código abierto : cualquier persona puede adquirir Linux sin cargo y modificarlo para que se ajuste a sus necesidades específicas. Esta flexibilidad permite a los analistas y administradores crear un sistema operativo a medida específicamente para el análisis de seguridad.
+                              </li>
+                              <li>
+                                   La CLI de Linux es muy poderosa : si bien una GUI facilita la realización de muchas tareas, agrega complejidad y requiere más recursos informáticos para ejecutarse. La interfaz de línea de comandos de Linux (CLI) es extremadamente poderosa y permite a los analistas realizar tareas no solo directamente en una terminal, sino también de forma remota.El usuario tiene más control sobre el sistema operativo : el usuario administrador en Linux, conocido como usuario root o superusuario,
+                                   tiene poder absoluto sobre la computadora. A diferencia de otros sistemas operativos, el usuario root puede modificar cualquier aspecto de la computadora con unas pocas teclas. Esta capacidad es especialmente valiosa cuando se trabaja con funciones de bajo nivel, como la pila de red. Permite al usuario root tener un control preciso sobre la forma en que el sistema operativo maneja los paquetes de red.
+                              </li>
+                              <li>
+                                   Permite un mejor control de la comunicación de la red : el control es una parte inherente de Linux. Debido a que el sistema operativo se puede ajustar en prácticamente todos los aspectos, es una gran plataforma para crear aplicaciones de red. Esta es la misma razón por la que muchas excelentes herramientas de software basadas en red están disponibles solo para Linux.
+                              </li>
+                         </ul>                         
+                    </p>
+                    <h2>Linux en el SOC</h2>
+                    <p>
+                         La flexibilidad proporcionada por Linux es una gran característica para el SOC. Todo el sistema operativo se puede adaptar para convertirse en la plataforma de análisis de seguridad perfecta. Por ejemplo, los administradores pueden agregar solo los paquetes necesarios al sistema operativo, haciéndolo ágil y eficiente. Se pueden instalar y configurar herramientas de software específicas para que funcionen en conjunto, lo que permite a los administradores crear una computadora personalizada que 
+                         se adapte perfectamente al flujo de trabajo de un SOC. <br>
+                         La figura muestra a SGUIL, que es la consola del analista de ciberseguridad en una versión especial de Linux llamada Security Onion. Security Onion es un conjunto de herramientas de código abierto que trabajan juntas para el análisis de seguridad de la red. Trabajaremos con Security Onion más adelante en este curso.
+                         <div>
+                              <img src="../images/securityOnion.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>Herramientas Linux</h2>
+                    <p>
+                         Además de  las herramientas específicas de SOC, las PC Linux que se usan en el SOC a menudo contienen herramientas de prueba de penetración. También conocida como PenTesting, una prueba de penetración es el proceso de buscar vulnerabilidades en una red o computadora atacándola. 
+                         Los generadores de paquetes, los escáneres de puertos y los exploits de prueba de concepto son ejemplos de herramientas de PenTesting. <br>
+                         Kali Linuz es una distribución de Linux que agrupa muchas herramientas de penetración en una única distribución de Linux. 
+                    </p>
+                    <h2 id="shell">El Shell de Linux</h2>
+                    <p>
+                         En Linux, el usuario se comunica con el sistema operativo mediante la CLI o la GUI. Linux a menudo se inicia en la GUI de forma predeterminada. Esto oculta la CLI al usuario. Una forma de acceder a la CLI desde la GUI es a través de una aplicación de emulador de terminal. Estas aplicaciones proporcionan acceso de usuario a la CLI y, a menudo, se denominan como una variación de la palabra "terminal". En Linux, los emuladores de terminal más populares son Terminator, eterm, xterm, konsole y gnome-terminal. <br>
+                         Fabrice Bellard ha creado JSLinux que permite que una versión emulada de Linux se ejecute en un navegador. Búscalo en Internet. Abra una consola de Linux en JSLinux y escriba el comando ls para enumerar el contenido del directorio actual. Mantenga la pestaña abierta si desea probar algunos de los otros comandos discutidos en este capítulo. <br>
+                         La figura muestra gnome-terminal, un popular emulador de terminal de Linux. <br>
+                         <div>
+                              <img src="../images/gnomeTerminal.PNG" alt="">
+                         </div>
+                         <b>Nota:</b> Los términos shell, consola, ventana de consola, terminal CLI y ventana de terminal a menudo se usan indistintamente.
+                    </p>
+                    <h2>Comandos básicos</h2>
+                    <p>
+                         Los comandos de Linux son programas creados para realizar una tarea específica. Utilice el comando man (abreviatura de manual) para obtener documentación sobre los comandos. Como ejemplo, man ls proporciona documentación sobre el comando ls del manual del usuario. <br>
+                         Debido a que los comandos son programas almacenados en el disco, cuando un usuario escribe un comando, el shell debe encontrarlo en el disco antes de que pueda ejecutarse. El shell buscará comandos escritos por el usuario en directorios específicos e intentará ejecutarlos. La lista de directorios comprobados por el shell se llama ruta. La ruta contiene muchos directorios que se usan comúnmente para almacenar comandos. 
+                         Si un comando no está en la ruta, el usuario debe especificar su ubicación, o el shell no podrá encontrarlo. Los usuarios pueden agregar fácilmente directorios a la ruta, si es necesario. <br>
+                         Para invocar un comando a través del shell, simplemente escriba su nombre. El shell intentará encontrarlo en la ruta del sistema y ejecutarlo. <br>
+                         La siguiente lista enumera los comandos básicos de Linux y sus funciones.
+<pre>
+mv
+Mueve o cambia el nombre de archivos y directorios
 
+chmod     
+Modifica los permisos de archivos
+
+chown     
+Cambia la propiedad de un archivo
+
+dd     
+Copia datos de una entrada a una salida
+
+pwd     
+Muestra el nombre del directorio actual.
+
+PD     
+Enumera los procesos que se están ejecutando actualmente en el sistema.
+
+su     
+Simula un inicio de sesión como otro usuario o para convertirse en superusuario
+
+sudo     
+Ejecuta un comando como superusuario, de forma predeterminada, u otro usuario designado
+
+grep     
+Se utiliza para buscar cadenas específicas de caracteres dentro de un archivo u otras salidas de comando. 
+Para buscar en la salida de un comando anterior, grep debe conectarse al final del comando anterior.
+
+ifconfig     
+Se utiliza para mostrar o configurar información relacionada con la tarjeta de red. Si se emite sin parámetros, 
+ifconfig mostrará la configuración actual de las tarjetas de red. 
+Nota: aunque todavía se usa ampliamente, este comando está en desuso. En su lugar, utilice la dirección IP.
+
+apt-get     
+Se utiliza para instalar, configurar y eliminar paquetes en Debian y sus derivados. 
+Nota: apt-get es una interfaz de línea de comandos fácil de usar para dpkg, el administrador de paquetes de Debian. 
+El combo dpkg y apt-get es el sistema de administración de paquetes predeterminado en todos los derivados de Debian Linux, 
+incluido Raspbian.
+
+iwconfig     
+Se utiliza para mostrar o configurar información relacionada con la tarjeta de red inalámbrica. Similar a ifconfig, 
+iwconfig mostrará información inalámbrica cuando se emita sin parámetros.
+
+shutdown
+Apaga el sistema, se puede indicar al apagado que realice una serie de tareas relacionadas con el apagado, como reiniciar, 
+detener, poner en suspensión o expulsar a todos los usuarios conectados actualmente.
+
+passwd 
+Se usa para cambiar la contraseña. Si no se proporcionan parámetros, passwd cambia la contraseña del usuario actual. 
+
+cat 
+Se usa para enumerar el contenido de un archivo y espera el nombre del archivo como parámetro. 
+El comando cat se usa generalmente en archivos de texto.
+
+man
+Se usa para mostrar la documentación de un comando específico. 
+</pre>                         
+                    </p>
+                    <h2>Comandos de archivo y directorio</h2>
+                    <p>
+                         Muchas herramientas de línea de comandos se incluyen en Linux de forma predeterminada. Para ajustar la operación del comando, los usuarios pueden pasar parámetros e interrupciones junto con el comando. La tabla siguiente enumera algunos de los comandos más comunes relacionados con archivos y directorios. 
+                         <table>
+                              <tr>
+                                   <td>
+                                        <b>Comando</b>
+                                   </td>
+                                   <td>
+                                        <b>Descripción</b>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        ls
+                                   </td>
+                                   <td>
+                                        Muestra los ficheros que se encuentran en el directorio actual.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        cd
+                                   </td>
+                                   <td>
+                                        Cambia la posición del directorio actual.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        mkdir
+                                   </td>
+                                   <td>
+                                        Crea una nueva carpeta en la posición del directorio actual.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        cp
+                                   </td>
+                                   <td>
+                                        Copia los ficheros de origen en una ruta destino.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        mv
+                                   </td>
+                                   <td>
+                                        Mueve ficheros a un directorio diferente.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        rm
+                                   </td>
+                                   <td>
+                                        Borra ficheros/archivos.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        grep
+                                   </td>
+                                   <td>
+                                        Busqueda por una cadena de caracteres específica dentro de un fichero  u otras salidas de comandos.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        cat
+                                   </td>
+                                   <td>
+                                        Muestra el contenido de un fichero y espera el nombre de un fichero como parámetro.
+                                   </td>
+                              </tr>
+                         </table>
+                    </p>
+                    <h2>Trabajar con archivos de texto</h2>
+                    <p>
+                         Linux tiene editores de texto diferentes, con varias características y funciones. Algunos editores de texto incluyen interfaces gráficas, mientras que otros son herramientas solo de línea de comandos. 
+                         Cada editor de texto incluye un conjunto de funciones diseñado para admitir un tipo específico de tarea. Algunos editores de texto se centran en el programador e incluyen funciones como resalto de sintaxis, 
+                         comprobación de corchetes y paréntesis, y otras funciones centradas en la programación. <br>
+                         Si bien los editores de texto gráficos son convenientes y fáciles de usar, los editores de texto basados en líneas de comandos son muy importantes para los usuarios de Linux. El principal beneficio de los editores 
+                         de texto basados en línea de comandos es que permiten la edición de archivos de texto desde una computadora remota. <br>
+                         Considere el siguiente escenario: un usuario debe realizar tareas administrativas en una computadora Linux pero no está sentado frente a ese equipo. Usando SSH, el usuario inicia una shell remoto a la computadora remota. 
+                         bajo el shell remotor basado en texto, la interfaz gráfica no está disponible, lo que hace que sea imposible confiar en herramientas como los editores de texto gráficos. En este tipo de situaciones, los programas basados 
+                         en texto son cruciales. <br>
+                         Debido a la falta de soporte gráfico, nano ( o GNU nano) solo se puede controlar con el teclado. Por ejemplo, CTRL + O guarda el archivo actual, CTRL + W abre el menú de búsqueda. GNU nano usa una barra de atajos de dos líneas 
+                         en la parte inferior de la pantalla, donde se enumeran los comandos para el contexto actual. Presionando CTRL + G para la pantalla de ayuda y una lista completa de comandos.
+                    </p>
+                    <h2>La importancia de los archivos de texto en Linux</h2>
+                    <p>
+                         En Linux, todo se trata como un archivo. Esto incluye la memoria, los discos, el monitor y los directorios. Por ejemplo, desde el punto de vista del sistema operativo, mostrar información en la pantalla significa escribir 
+                         en el archivo que representa el dispositivo de pantalla. No debería sorprender que la propia computadora esté configurada a través de archivos. Conocidos como archivos de configuración, generalmente son archivos de texto 
+                         que se utilizan para almacenar ajustes y configuraciones para aplicaciones o servicios específicos. Prácticamente todo en Linux se basa en archivos de configuración para funcionar. Algunos servicios no tienen uno, sino varios archivos de configuración. <br>
+                         Los usuarios con los niveles de permiso adecuados pueden utilizar editores de texto para cambiar el contenido de los archivos de configuración. Una vez realizados los cambios, el archivo se guarda y puede ser utilizado por el servicio o la aplicación relacionados. 
+                         Los usuarios pueden especificar exactamente cómo quieren que se comporte cualquier aplicación o servicio. Cuando se inician, los servicios y las aplicaciones verifican el contenido de archivos de configuración específicos para ajustar su comportamiento en consecuencia. <br>
+                         En la figura, el administrador abrió el archivo de configuración del host en nano para editarlo. El archivo de host contiene asignaciones estáticas de direcciones IP de host a nombres. Los nombres sirven como atajos que permiten conectarse 
+                         a otros dispositivos usando un nombre en lugar de una dirección IP. Solo el superusuario puede cambiar el archivo de host.
+                         <b>Nota:</b> El administrador usó el comando sudo nano / etc / hosts para abrir el archivo. El comando <b>sudo</b> (abreviatura de "superuser do") invoca el privilegio de superusuario para usar el editor de texto nano para abrir el archivo host.
+                    </p>
+                    <h2>Prácticas de laboratorio.</h2>
+                    <h3>Trabajo con archivos de texto en la CLI</h3>
+                    <p>
+                         <a href="../docs/4/4.2.6-lab---working-with-text-files-in-the-cli.pdf" target="_blank" rel="noopener noreferrer">Trabajar con archivos de texto en la CLI</a>
+                    </p>
+                    <h3>Familiarización con el shell de Linux.</h3>
+                    <p>
+                         <a href="../docs/4/4.2.7-lab---getting-familiar-with-the-linux-shell.pdf" target="_blank" rel="noopener noreferrer">Familiarización con el shell de Linux</a>
                     </p>
                </div>
                <ul class="section-btn">
