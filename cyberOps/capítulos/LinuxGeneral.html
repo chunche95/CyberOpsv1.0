@@ -395,9 +395,105 @@ Se usa para mostrar la documentación de un comando específico.
                     <p>
                          <a href="../docs/4/4.2.7-lab---getting-familiar-with-the-linux-shell.pdf" target="_blank" rel="noopener noreferrer">Familiarización con el shell de Linux</a>
                     </p>
+                    <h2 id="cliente_y_servidor">Clientes y servidores Linux</h2>
+                    <h3>Introducción a las comunicaciones cliente-servidor.</h3>
+                    <p>
+                         Los servidores son computadoras con software instalado que les permite brindar servicios a los clientes a través de la red. Existen muchos tipos de servicios. Algunos proporcionan recursos externos como archivos, mensajes de correo electrónico o páginas web a los clientes que lo soliciten.
+                         Otros servicios ejecutan tareas de mantenimiento como administración de registros, administración de memoria, escaneo de disco y más. Cada servicio requiere un software de servidor independiente. Por ejemplo, el servidor de la figura utiliza software de servidor de archivos para brindar a los clientes la capacidad de recuperar y enviar archivos.
+                         Las comunicaciones cliente-servidor se tratan con más detalle más adelante en el curso. <br>
+                         La imagen es un diagrama que muestra un servidor enviando archivos a un cliente. Los recursos se almacenan en el servidor. Un cliente es una combinación de hardware/software que la gente usa directamente. Los archivos se descargan del servidor al cliente.
+                         <div>
+                              <img src="../images/cliente-servidor.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>Servidores, servicios y sus puertos</h2>
+                    <p>
+                         Para que una computadora pueda ser el servidor de múltiples servicios, se utilizan puertos. Un puerto es un recurso de red reservado utilizado por un servicio. Se dice que un servidor está "escuchando" en un puerto cuando se ha asociado a ese puerto. <br>
+                         Si bien el administrador puede decidir qué puerto usar con cualquier servicio dado, muchos clientes están configurados para usar un puerto específico de forma predeterminada. Es una práctica común dejar el servicio ejecutándose en su puerto predeterminado. La tabla enumera algunos puertos de uso común y sus servicios. Estos también se denominan "puertos conocidos".
+                         <div>
+                              <img src="../images/puertos.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>Clientes</h2>
+                    <p>
+                         Los clientes son programas o aplicaciones diseñados para comunicarse con un tipo específico de servidor. También conocidas como aplicaciones de cliente, los clientes utilizan un protocolo bien definido para comunicarse con el servidor. Los navegadores web son clientes web que se utilizan para comunicarse con servidores web a través del 
+                         Protocolo de transferencia de hipertexto (HTTP) en el puerto 80. El cliente del Protocolo de transferencia de archivos (FTP) es un software que se utiliza para comunicarse con un servidor FTP. La figura muestra un cliente cargando archivos a un servidor.
+                         <div>
+                              <img src="../images/clientes.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>Práctica de laboratorio: Servidores Linux.</h2>
+                    <p>
+                         <a href="../docs/4/4.3.4-lab---linux-servers.pdf" target="_blank" rel="noopener noreferrer">Servidores Linux</a>
+                    </p>
+                    <h2 id="admin">Administración básica del servidor</h2>
+                    <h3>Archivos de configuración de servicios</h3>
+                    <p>
+                         En Linux, los servicios se administran mediante archivos de configuración. Las opciones comunes en los archivos de configuración son el número de puerto, la ubicación de los recursos alojados y los detalles de autorización del cliente. Cuando se inicia el servicio, busca sus archivos de configuración, 
+                         los carga en la memoria y se ajusta de acuerdo con la configuración de los archivos. Las modificaciones del archivo de configuración a menudo requieren reiniciar el servicio antes de que los cambios surtan efecto.
+                         Debido a que los servicios a menudo requieren privilegios de superusuario para ejecutarse, los archivos de configuración de servicios a menudo requieren privilegios de superusuario para editar.
+                         La salida del comando muestra una parte del archivo de configuración de Nginx, que es un servidor web ligero para Linux.
+                         <div>
+                              <img src="../images/nginx.conf.PNG" alt="">
+                         </div>
+                         La siguiente salida del comando muestra el archivo de configuración para el protocolo de tiempo de red (NTP).
+                         <div>
+                              <img src="../images/ntp.conf.PNG" alt="">
+                         </div>
+                         La última salida del comando muestra el archivo de configuración de Snort, un sistema de detección de intrsiones (IDS) basado en Linux. 
+                         <div>
+                              <img src="../images/snort.conf.PNG" alt="">
+                         </div>
+                         No existe una regla para un formato de archivo de configuración; es la elección del desarrollador del servicio. Sin embargo, a menudo se utiliza el formato opción = valor. 
+                         Por ejemplo, en la última salida del comando, la variable ipvar está configurada con varias opciones.
+                         La primera opción, HOME _ NET, tiene el valor 209.165.200.224/27. El carácter de almohadilla (#) se utiliza para indicar comentarios.
+                    </p>
+                    <h2>Hardening devices</h2>
+                    <p>
+                         El endurecimiento del dispositivo implica implementar métodos probados para asegurar el dispositivo y proteger su acceso administrativo. 
+                         Algunos de estos métodos implican mantener contraseñas, configurar funciones mejoradas de inicio de sesión remoto e implementar un inicio de sesión seguro con SSH. 
+                         La definición de roles administrativos en términos de acceso es otro aspecto importante de la protección de los dispositivos de infraestructura porque no todo el personal de tecnología de la información debe tener el mismo nivel de acceso a los dispositivos de infraestructura.
+                         Dependiendo de la distribución de Linux, muchos servicios están habilitados de forma predeterminada. Algunas de estas funciones están habilitadas por motivos históricos,
+                         pero ya no son necesarias. Detener dichos servicios y asegurarse de que no se inicien automáticamente en el momento del arranque es otra técnica de refuerzo del dispositivo.
+                         Las actualizaciones del sistema operativo también son extremadamente importantes para mantener un dispositivo reforzado. <br>
+                         Todos los días se descubren nuevas vulnerabilidades. Los desarrolladores de sistemas operativos crean y publican correcciones y parches con regularidad. Es menos probable que una computadora actualizada se vea comprometida.
+                         Las siguientes son las mejores prácticas básicas para el refuerzo de dispositivos.
+                         <ul>
+                              <li>Garantizar la seguridad física. </li>
+                              <li>Minimizar los paquetes instalados. </li>
+                              <li>Deshabilitar los servicios no utilizados. </li>
+                              <li>Use SSH y desactive el inicio de sesión de la cuenta raíz a través de SSH. </li>
+                              <li>Mantenga el sistema actualizado. </li>
+                              <li>Deshabilitar la detección automática de USB. </li>
+                              <li>Hacer cumplir contraseñas seguras. </li>
+                              <li>Forzar cambios periódicos de contraseña. </li>
+                              <li>Evite que los usuarios reutilicen contraseñas antiguas. </li>
+                         </ul>
+                         Existen muchos otros pasos y, a menudo, dependen del servicio o de la aplicación.
+                    </p>
+                    <h2>Monitoreo de registros de servicio.</h2>
+                    <p>
+                         Los archivos de registro son los registros que almacena una computadora para realizar un seguimiento de los eventos importantes. Los eventos de kernel, servicios y aplicaciones 
+                         se registran en archivos de registro. Es muy importante que un administrador revise periódicamente los registros de una computadora para mantenerla saludable. 
+                         Al monitorear los archivos de registro de Linux, un administrador obtiene una imagen clara del rendimiento de la computadora, el estado de seguridad y cualquier problema subyacente. 
+                         El análisis de archivos de registro permite al administrador protegerse de los problemas futuros antes de que ocurran. <br>
+                         En Linux, los archivos de registro se pueden clasificar como:
+                         <ul>
+                              <li>Registros de aplicaciones.</li>
+                              <li>Registros de eventos.</li>
+                              <li>Registros de servicio.</li>
+                              <li>Registros del sistema.</li>
+                         </ul>
+                         Algunos registros contienen información sobre los demonios que se ejecutan en el sistema Linux. Un demonio es un proceso en segundo plano que se ejecuta sin la necesidad de interacción del usuario. 
+                         Por ejemplo, System Security Services Daemon (SSSD) administra el acceso remoto y la autenticación para las capacidades de inicio de sesión único.                         
+                         La tabla enumera algunos archivos de registro de Linux populares y sus funciones
+                         <div>
+                              <img src="../images/archivosderegistro.PNG" alt="">
+                         </div>
+                    </p>
                </div>
                <ul class="section-btn">
-                    <a href="combatientes_en_la_guerra_contra_el_delito.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 2.</span></a>
+                    <a href="protocolosDeRed.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 5.</span></a>
                </ul>
           </div>
      </div>
