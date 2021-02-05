@@ -499,7 +499,122 @@ Se usa para mostrar la documentación de un comando específico.
                     <p>
                          <a href="../docs/4/4.4.4-lab---locating-log-files.pdf" target="_blank" rel="noopener noreferrer">Ubicación de archivos de registro.</a>
                     </p>
-                    
+                    <h2>Los tipos de sistema de archivos en Linux</h2>
+                    <p>
+                         Hay muchos tipos diferentes de sistemas de archivos, que varían en propiedades de velocidad, flexibilidad, seguridad, tamaño, estructura, lógica y más. Depende del administrador decidir qué tipo de sistema de archivos se adapta mejor al sistema operativo y los archivos que almacenará.
+                         La tabla enumera algunos tipos de sistemas de archivos que se encuentran comúnmente y son compatibles con Linux.
+                         <table>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             Sistema de archivos Linux.
+                                        </strong>                                             
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             ext2 ( segundo sistema de archivos extendido)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             ext3 ( tercer sistema de archivos extendido)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             ext4 ( cuarto sistema de archivos extendido)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             NTFS ( sistema de archivos de red)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             CDFS ( sistema de archivos de disco compacto)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             Sistema de archivos de intercambio
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             HFS Plus o HFS+ (Sistema de archivos jerárquico Plus)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             APFS ( sistema de archivos de Apple)
+                                        </strong>                                        
+                                   </td>
+                                   <td>
+                                        <strong>
+                                             MBR (Regristro de arranque maestro)
+                                        </strong>                                        
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             Descripción
+                                        </strong>
+                                   </td>
+                                   <td>
+                                        ext2 era el sistema de archivos predeterminado en varias distribuciones importantes de Linux hasta que fue reemplazado por ext3. <br>
+                                        Casi totalmente compatible con ext2, ext3 también admite el registro en diario (ver más abajo). <br>
+                                        ext2 sigue siendo el sistema de archivos de elección para los medios de almacenamiento basados ​​en flash porque la falta de un diario aumenta el rendimiento y minimiza el número de escrituras. <br>
+                                        Debido a que los dispositivos de memoria flash tienen un número limitado de operaciones de escritura, minimizar las operaciones de escritura aumenta la vida útil del dispositivo. <br>
+                                        Sin embargo, los kernels contemporáneos de Linux también son compatibles con ext4, un sistema de archivos aún más moderno, con mejor rendimiento y que también puede funcionar en un modo sin diario.
+                                   </td>
+                                   <td>
+                                        ext3 es un sistema de archivos con diario diseñado para mejorar el sistema de archivos ext2 existente. <br>
+                                        Un diario, la característica principal agregada a ext3, es una técnica utilizada para minimizar el riesgo de corrupción del sistema de archivos en caso de una pérdida repentina de energía. <br>
+                                        Los sistemas de archivos mantienen un registro (o diario) de todos los cambios del sistema de archivos que se van a realizar. <br>
+                                        Si la computadora falla antes de que se complete el cambio, el diario puede usarse para restaurar o corregir cualquier problema eventual creado por la falla. <br>
+                                        El tamaño máximo de archivo en los sistemas de archivos ext3 es de 32 TB.
+                                   </td>
+                                   <td>
+                                        Diseñado como sucesor de ext3, ext4 se creó en base a una serie de extensiones de ext3. <br>
+                                        Si bien las extensiones mejoran el rendimiento de ext3 y aumentan el tamaño de los archivos admitidos, los desarrolladores del kernel de Linux estaban preocupados por los problemas de estabilidad y se oponían a agregar las extensiones al ext3 estable. <br>
+                                        El proyecto ext3 se dividió en dos; uno se mantuvo como ext3 y su desarrollo normal y el otro, llamado ext4, incorporó las extensiones mencionadas.
+                                   </td>
+                                   <td>
+                                        NFS es un sistema de archivos basado en red que permite el acceso a archivos a través de la red.
+                                        Desde el punto de vista del usuario, no hay diferencia entre acceder a un archivo almacenado localmente o en otra computadora en la red.
+                                        NFS es un estándar abierto que permite que cualquiera lo implemente.
+                                   </td>
+                                   <td>
+                                        CDFS se creó  específicamente para discos ópticos.
+                                   </td>
+                                   <td>
+                                        Linux utiliza el sistema de archivos de intercambio cuando se queda sin RAM.
+                                        Técnicamente, es una partición de intercambio que no tiene un sistema de archivos específico, pero es relevante para la discusión del sistema de archivos.
+                                        Cuando esto sucede, el kernel mueve el contenido de RAM inactivo a la partición de intercambio en el disco.
+                                        Si bien las particiones de intercambio (también conocidas como espacio de intercambio) pueden ser útiles para las computadoras Linux con una cantidad limitada de memoria, no deben considerarse como una solución primaria.
+                                        La partición de intercambio se almacena en un disco que tiene velocidades de acceso mucho más bajas que la RAM.
+                                   </td>
+                                   <td>
+                                        Un sistema de archivos utilizado por Apple en sus computadoras Macintosh.
+                                        El kernel de Linux incluye un módulo para montar HFS + para operaciones de lectura y escritura.
+                                   </td>
+                                   <td>
+                                        Un sistema de archivos actualizado que utilizan los dispositivos Apple. Proporciona un cifrado sólido y está optimizado para unidades flash y de estado sólido.
+                                   </td> 
+                                   <td>
+                                        Ubicado en el primer sector de una computadora particionada, el MBR almacena toda la información sobre la forma en que está organizado el sistema de archivos.
+                                        El MBR cede rápidamente el control a una función de carga, que carga el sistema operativo.
+                                   </td>                                      
+                              </tr>
+                         </table>
+                         Montaje es el término utilizado para el proceso de asignar un directorio a una partición. Después de una operación de montaje exitosa, se puede acceder al sistema de archivos contenido en la partición a través del directorio especificado. En este contexto, el directorio se denomina punto de montaje para ese sistema de archivos. Los usuarios de Windows pueden estar familiarizados con un concepto similar; la letra de la unidad.
+                         El resultado del comando muestra el resultado del comando mount emitido en Cisco CyberOPS VM.
+                         <div>
+                              <img src="../images/mount.PNG" alt="">
+                         </div>
+                    </p>
                </div>
                <ul class="section-btn">
                     <a href="protocolosDeRed.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 5.</span></a>
