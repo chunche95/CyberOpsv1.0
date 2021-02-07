@@ -512,55 +512,15 @@ Se usa para mostrar la documentación de un comando específico.
                                    </td>
                                    <td>
                                         <strong>
-                                             ext2 ( segundo sistema de archivos extendido)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             ext3 ( tercer sistema de archivos extendido)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             ext4 ( cuarto sistema de archivos extendido)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             NTFS ( sistema de archivos de red)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             CDFS ( sistema de archivos de disco compacto)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             Sistema de archivos de intercambio
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             HFS Plus o HFS+ (Sistema de archivos jerárquico Plus)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             APFS ( sistema de archivos de Apple)
-                                        </strong>                                        
-                                   </td>
-                                   <td>
-                                        <strong>
-                                             MBR (Regristro de arranque maestro)
-                                        </strong>                                        
+                                             Descripción
+                                        </strong>
                                    </td>
                               </tr>
                               <tr>
                                    <td>
                                         <strong>
-                                             Descripción
-                                        </strong>
+                                             ext2 ( segundo sistema de archivos extendido)
+                                        </strong>                                        
                                    </td>
                                    <td>
                                         ext2 era el sistema de archivos predeterminado en varias distribuciones importantes de Linux hasta que fue reemplazado por ext3. <br>
@@ -569,6 +529,13 @@ Se usa para mostrar la documentación de un comando específico.
                                         Debido a que los dispositivos de memoria flash tienen un número limitado de operaciones de escritura, minimizar las operaciones de escritura aumenta la vida útil del dispositivo. <br>
                                         Sin embargo, los kernels contemporáneos de Linux también son compatibles con ext4, un sistema de archivos aún más moderno, con mejor rendimiento y que también puede funcionar en un modo sin diario.
                                    </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             ext3 ( tercer sistema de archivos extendido)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         ext3 es un sistema de archivos con diario diseñado para mejorar el sistema de archivos ext2 existente. <br>
                                         Un diario, la característica principal agregada a ext3, es una técnica utilizada para minimizar el riesgo de corrupción del sistema de archivos en caso de una pérdida repentina de energía. <br>
@@ -576,18 +543,46 @@ Se usa para mostrar la documentación de un comando específico.
                                         Si la computadora falla antes de que se complete el cambio, el diario puede usarse para restaurar o corregir cualquier problema eventual creado por la falla. <br>
                                         El tamaño máximo de archivo en los sistemas de archivos ext3 es de 32 TB.
                                    </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             ext4 ( cuarto sistema de archivos extendido)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         Diseñado como sucesor de ext3, ext4 se creó en base a una serie de extensiones de ext3. <br>
                                         Si bien las extensiones mejoran el rendimiento de ext3 y aumentan el tamaño de los archivos admitidos, los desarrolladores del kernel de Linux estaban preocupados por los problemas de estabilidad y se oponían a agregar las extensiones al ext3 estable. <br>
                                         El proyecto ext3 se dividió en dos; uno se mantuvo como ext3 y su desarrollo normal y el otro, llamado ext4, incorporó las extensiones mencionadas.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             NTFS ( sistema de archivos de red)
+                                        </strong>                                        
                                    </td>
                                    <td>
                                         NFS es un sistema de archivos basado en red que permite el acceso a archivos a través de la red.
                                         Desde el punto de vista del usuario, no hay diferencia entre acceder a un archivo almacenado localmente o en otra computadora en la red.
                                         NFS es un estándar abierto que permite que cualquiera lo implemente.
                                    </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             CDFS ( sistema de archivos de disco compacto)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         CDFS se creó  específicamente para discos ópticos.
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             Sistema de archivos de intercambio
+                                        </strong>                                        
                                    </td>
                                    <td>
                                         Linux utiliza el sistema de archivos de intercambio cuando se queda sin RAM.
@@ -596,18 +591,39 @@ Se usa para mostrar la documentación de un comando específico.
                                         Si bien las particiones de intercambio (también conocidas como espacio de intercambio) pueden ser útiles para las computadoras Linux con una cantidad limitada de memoria, no deben considerarse como una solución primaria.
                                         La partición de intercambio se almacena en un disco que tiene velocidades de acceso mucho más bajas que la RAM.
                                    </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             HFS Plus o HFS+ (Sistema de archivos jerárquico Plus)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         Un sistema de archivos utilizado por Apple en sus computadoras Macintosh.
                                         El kernel de Linux incluye un módulo para montar HFS + para operaciones de lectura y escritura.
                                    </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             APFS ( sistema de archivos de Apple)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         Un sistema de archivos actualizado que utilizan los dispositivos Apple. Proporciona un cifrado sólido y está optimizado para unidades flash y de estado sólido.
-                                   </td> 
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                        <strong>
+                                             MBR (Regristro de arranque maestro)
+                                        </strong>                                        
+                                   </td>
                                    <td>
                                         Ubicado en el primer sector de una computadora particionada, el MBR almacena toda la información sobre la forma en que está organizado el sistema de archivos.
                                         El MBR cede rápidamente el control a una función de carga, que carga el sistema operativo.
-                                   </td>                                      
-                              </tr>
+                                   </td>  
+                              </tr>                                                          
                          </table>
                          Montaje es el término utilizado para el proceso de asignar un directorio a una partición. Después de una operación de montaje exitosa, se puede acceder al sistema de archivos contenido en la partición a través del directorio especificado. En este contexto, el directorio se denomina punto de montaje para ese sistema de archivos. Los usuarios de Windows pueden estar familiarizados con un concepto similar; la letra de la unidad.
                          El resultado del comando muestra el resultado del comando mount emitido en Cisco CyberOPS VM.
