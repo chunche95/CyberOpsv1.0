@@ -625,11 +625,15 @@ Se usa para mostrar la documentación de un comando específico.
                                    </td>  
                               </tr>                                                          
                          </table>
-                         Montaje es el término utilizado para el proceso de asignar un directorio a una partición. Después de una operación de montaje exitosa, se puede acceder al sistema de archivos contenido en la partición a través del directorio especificado. En este contexto, el directorio se denomina punto de montaje para ese sistema de archivos. Los usuarios de Windows pueden estar familiarizados con un concepto similar; la letra de la unidad.
+                         Montaje es el término utilizado para el proceso de asignar un directorio a una partición. Después de una operación de montaje exitosa, se puede acceder al sistema de archivos contenido en la partición a través del directorio especificado. 
+                         En este contexto, el directorio se denomina punto de montaje para ese sistema de archivos. Los usuarios de Windows pueden estar familiarizados con un concepto similar; la letra de la unidad.
                          El resultado del comando muestra el resultado del comando mount emitido en Cisco CyberOPS VM.
                          <div>
                               <img src="../images/mount.PNG" alt="">
                          </div>
+                         Cuando se emite sin opciones, mount devuelve la lista de sistemas de archivos montados actualmente en una computadora Linux. Si bien muchos de los sistemas de archivos que se muestran están fuera del alcance de este curso, 
+                         observe el sistema de archivos raíz (resaltado). El sistema de archivos raíz está representado por el símbolo "/" y contiene todos los archivos en la computadora de forma predeterminada. También se muestra en la salida que 
+                         el sistema de archivos raíz se formateó como ext4 y ocupa la primera partición de la primera unidad (/dev/sda1).
                     </p>
                </div>
                <ul class="section-btn">
