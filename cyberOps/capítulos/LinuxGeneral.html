@@ -637,7 +637,191 @@ Se usa para mostrar la documentación de un comando específico.
                     </p>
                     <h2>Roles de Linux y permisoss de archivo</h2>
                     <p>
-                         En Linux, la mayoría de las entidades se tratan como archivos. Para organizar el sistema y hacer cumplir los límites dentro de la computadora, Linux 
+                         En Linux, la mayoría de las entidades se tratan como archivos. Para organizar el sistema y hacer cumplir los límites dentro de la computadora, Linux usa permisos de archivo. Los permisos de archivo están integrados en la estrucutra del sistema de archivo 
+                         de archivos y proporcionan un mecanismo para definir permisos en cada archivo. Cada archivo en Linux tiene sus permisos de archivo, que definen las acciones que el propietario, el grupo y otros pueden realizar con el archivo. Los posibles derechos de permiso son lectura, 
+                         escritura y ejecución. Los 'ls' comando con el -l parámetro lista de información adiciónal sobre el archivo. 
+                         La salida propirciona mucha información sobre el archivo indicado como parámetro. 
+                         <div>
+                              <img src="../images/ls -l space.PNG" alt="">
+                         </div>
+                         El primer campo de la salida muestra los permisos asociados con space.txt ( - rwxrw-r-- ). Los permisos de archivo siempre se muestran en el orden Usuario, Grupo y Otro. <br>
+                         El archivo space.txt en tiene los siguientes permisos:
+                         <ul>
+                              <li>El guión (-) significa que se trata de un archivo. Para los directorios, el primer guión sería una "d".</li>
+                              <li>El primer conjunto de caracteres es para permiso de usuario ( rwx ). El usuario, el analista , quien posee el archivo lata R ead, W rito ye X ecute el archivo.</li>
+                              <li>El segundo conjunto de caracteres es para permisos de grupo ( rw- ). El grupo, el personal , que posee el archivo puede R ead y W rito en el fichero.</li>
+                              <li>El tercer conjunto de caracteres es para cualquier otro usuario o grupo de permisos ( r-- ). Cualquier otro usuario o grupo en el equipo sólo pueden R ead el archivo.</li>
+                         </ul>                               
+                         El segundo campo define el número de enlaces físicos al archivo (el número 1 después de los permisos). Un vínculo físico crea otro archivo con un nombre diferente vinculado al mismo lugar en el sistema de archivos (llamado inodo). Esto contrasta con un enlace simbólico, que se analiza en la página siguiente. <br>
+                         El tercer y cuarto campo muestran el usuario ( analista ) y el grupo ( personal ) que poseen el archivo, respectivamente. <br>
+                         El quinto campo muestra el tamaño del archivo en bytes. El archivo space.txt tiene 253 bytes. <br>
+                         El sexto campo muestra la fecha y hora de la última modificación. <br>
+                         El séptimo campo muestra el nombre del archivo. <br>
+                         La figura muestra un desglose de los permisos de archivos en Linux. <br>
+                         <div>
+                              <img src="../images/permisos.PNG" alt="">
+                         </div>
+                         Use valores octales para definir permisos. 
+                         <div>
+                              <img src="../images/permisosOctal.PNG" alt="">
+                         </div>
+                         Los permisos de archivos son una parte fundamental de Linux y no se pueden romper. Un usuario solo tiene los derechos sobre un archivo que permiten los permisos de archivo. El único usuario que puede anular el permiso de archivo en una computadora Linux es el usuario root. 
+                         Dado que el usuario root tiene el poder de anular los permisos de los archivos, el usuario root puede escribir en cualquier archivo. Debido a que todo se trata como un archivo, el usuario root tiene control total sobre una computadora Linux. A menudo, se requiere acceso 
+                         de root antes de realizar tareas administrativas y de mantenimiento. Debido al poder del usuario root, las credenciales de root deben usar contraseñas seguras y no deben compartirse con nadie más que con administradores del sistema y otros usuarios de alto nivel.
+                    </p>
+                    <h2>Enlaces físicos y enlaces simbólicos.</h2>
+                    <p>
+                         Un vínculo físico es otro archivo que apunta a la misma ubicación que el archivo original. Utilice el comando ln para crear un vínculo físico. El primer argumento es el archivo existente y el segundo argumento es el nuevo archivo. Como se muestra en la salida del comando, 
+                         el archivo space.txt está vinculado a space.hard.txt y el campo de vínculo ahora muestra 2.
+                         <div>
+                              <img src="../images/linksHard.PNG" alt="">
+                         </div>
+                         Ambos archivos apuntan a la misma ubicación en el sistema de archivos. Si cambia un archivo, también se cambia el otro. El comando echo se usa para agregar texto a space.txt . Observe que el tamaño del archivo para space.txt y space.hard.txt aumentó a 257 bytes. 
+                         Si elimina space.hard.txt con el comando rm (eliminar), el archivo space.txt aún existe, como se verificó con el comando more space.txt. <br>
+                         Un enlace simbólico, también llamado enlace simbólico o enlace flexible, es similar a un enlace físico en el sentido de que la aplicación de cambios al enlace simbólico también cambiará el archivo original. Como se muestra en la salida del comando a continuación, use la opción del comando ln -s para crear un enlace simbólico.
+                         <div>
+                              <img src="../images/linksSimbol.PNG" alt="">
+                         </div>
+                         Observe que agregar una línea de texto a test.txt también agrega la línea a mytest.txt . Sin embargo, a diferencia de un vínculo físico , eliminar el archivo text.txt original significa que mytext.txt ahora está vinculado a un archivo que ya no existe, como se muestra con los comandos más mytest.txt y ls -l mytest.txt. <br>
+                         Aunque los enlaces simbólicos tienen un único punto de falla (el archivo subyacente), los enlaces simbólicos tienen varios beneficios sobre los enlaces duros:
+                         <ul>
+                              <li>
+                                   Encontrar enlaces físicos es más difícil. Los enlaces simbólicos muestran la ubicación del archivo original en el comando ls -l , como se muestra en la última línea de salida en la salida del comando anterior ( mytest.txt - > test.txt ).                         
+                              </li>
+                              <li>
+                                   Los enlaces físicos se limitan al sistema de archivos en el que se crean. Los enlaces simbólicos pueden enlazar a un archivo en otro sistema de archivos.
+                              </li>
+                              <li>
+                                   Los enlaces físicos no pueden enlazar con un directorio porque el propio sistema utiliza enlaces físicos para definir la jerarquía de la estructura del directorio. Sin embargo, los enlaces simbólicos pueden enlazar a directorios.
+                              </li>
+                         </ul>
+                    </p>
+                    <h2>Práctica de laboratorio: Navegación por el sistema de archivos de Linux y la configuración de permisos.</h2>
+                    <p>
+                         <a href="../docs/4/4.5.4-lab---navigating-the-linux-filesystem-and-permission-settings.pdf" target="_blank" rel="noopener noreferrer">Navegación por el sistema de archivos de Linux y la configuración de permisos</a>
+                    </p>
+                    <h2>Trabajar con la GUI de Linux</h2>
+                    <h3><a href="https://es.wikipedia.org/wiki/Sistema_de_ventanas_X" target="_blank" rel="noopener noreferrer">Sistema de ventanas X</a></h3>
+                    <p>
+                         La interfaz gráfica presente en la mayoría de las computadoras Linux se basa en el sistema X Window. También conocido como X o X11, X Window es un sistema de ventanas diseñado para proporcionar el marco básico para una GUI. X incluye funciones para dibujar y mover ventanas en el dispositivo de visualización e interactuar con un mouse y un teclado.
+                         X funciona como un servidor que permite a un usuario remoto usar la red para conectarse, iniciar una aplicación gráfica y tener la ventana gráfica abierta en el terminal remoto. Mientras que la aplicación en sí se ejecuta en el servidor, X envía su aspecto gráfico a través de la red y se muestra en la computadora remota.
+                         Tenga en cuenta que X no especifica la interfaz de usuario, dejando que otros programas, como los administradores de ventanas, definan todos los componentes gráficos. Esta abstracción permite una gran flexibilidad y personalización, ya que los componentes gráficos como botones, fuentes, iconos, bordes de ventana y esquemas de color están todos definidos por la aplicación del usuario. Debido a esta separación, la GUI de Linux varía mucho de una distribución a otra. 
+                         Ejemplos de administradores de ventanas son Gnome y KDE.
+                         Si bien la apariencia de los administradores de ventanas varía, los componentes principales aún están presentes.
+                         La figura muestra el Administrador de ventanas de Gnome.
+                         <div>
+                              <img src="../images/gnome.PNG" alt="">
+                         </div>
+                         La siguiente figura muestra el Administrador de Windows de KDE. 
+                         <div>
+                              <img src="../images/KDE.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>La GUI de Linux</h2>
+                    <p>
+                         Aunque un sistema operativo no requiere una GUI para funcionar, las GUI se consideran más fáciles de usar que la CLI. La GUI de Linux en su conjunto puede ser reemplazada fácilmente por el usuario. Como resultado de la gran cantidad de distribuciones de Linux, este capítulo se centra en Ubuntu cuando se trata de Linux porque es una distribución muy popular y fácil de usar. <br>
+                         Ubuntu Linux usa Gnome 3 como su GUI predeterminada. El objetivo de Gnome 3 es hacer que Ubuntu sea aún más fácil de usar. La tabla enumera los principales componentes de la interfaz de usuario de Unity. <br>
+                         La figura muestra la ubicación de algunas de las características del escritorio Ubuntu Gnome 3.
+                         <div>
+                              <img src="../images/GUI Linux.png" alt="">
+                         </div>                         
+                    </p>
+                    <h2>Trabajando en un host Linux</h2>
+                    <h3>Instalación y ejecución de aplicaciones en un host Linux</h3>
+                    <p>
+                         Muchas aplicaciones de usuario final son programas complejos escritos en lenguajes compilados. Para ayudar en el proceso de instalación, Linux a menudo incluye programas llamados administradores de paquetes. Un paquete es el término utilizado para referirse a un programa y todos sus archivos de soporte. Al utilizar un administrador de paquetes para instalar un paquete, todos los archivos necesarios se colocan en la ubicación correcta del sistema de archivos. <br>
+                         Los administradores de paquetes varían según las distribuciones de Linux. Por ejemplo, Arch Linux usa pacman , mientras que dpkg (paquete Debian) y apt (Advanced Packaging Tool) se usan en distribuciones Debian y Ubuntu Linux. Para este curso, usaremos el administrador de paquetes pacman. <br>
+                         El resultado del comando muestra el resultado de algunos comandos apt-get utilizados en las distribuciones Debian.  
+                         <div>
+                              <img src="../images/apt-get update.PNG" alt="">
+                              <p>
+                                   El comando apt-get update se usa para obtener la lista de paquetes del repositorio de paquetes y actualizar la base de datos de paquetes local.
+                              </p>
+                              <img src="../images/apt-get upgrade -y.PNG" alt="">
+                              <p>
+                                   El comando apt-get upgrade se usa para actualizar todos los paquetes instalados actualmente a sus últimas versiones.
+                              </p>
+                         </div>                    
+                    </p>
+                    <h2>Malware en un host Linux</h2>
+                    <p>
+                         El malware de Linux incluye virus, troyanos, gusanos y otros tipos de malware que pueden afectar el sistema operativo. Debido a una serie de componentes de diseño, como la estructura del sistema de archivos, los permisos de los archivos y las restricciones de la cuenta de usuario, los sistemas operativos Linux generalmente se consideran mejor protegidos contra el malware. <br>
+                         Aunque podría decirse que está mejor protegido, Linux no es inmune al malware. Se han encontrado y explotado muchas vulnerabilidades en Linux. Estos van desde software de servidor hasta vulnerabilidades del kernel. Los atacantes pueden aprovechar estas vulnerabilidades y poner en peligro al objetivo. Debido a que Linux es de código abierto, las correcciones y parches a menudo están disponibles pocas horas después del descubrimiento de tales problemas. <br>
+                         Si se ejecuta un programa malicioso, causará daños, independientemente de la plataforma. Un vector de ataque común de Linux son sus servicios y procesos. Las vulnerabilidades se encuentran con frecuencia en el servidor y el código de proceso que se ejecuta en las computadoras conectadas a la red. Una versión desactualizada del servidor web Apache podría contener una vulnerabilidad sin parches que un atacante puede aprovechar, por ejemplo. 
+                         Los atacantes a menudo sondean los puertos abiertos para evaluar la versión y la naturaleza del servidor que se ejecuta en ese puerto. Con ese conocimiento, los atacantes pueden investigar si hay algún problema conocido con esa versión particular de ese servidor en particular para respaldar el ataque. Como ocurre con la mayoría de las vulnerabilidades, mantener la computadora actualizada y cerrar los servicios y puertos no utilizados es una buena manera de reducir las 
+                         oportunidades de ataque en una computadora Linux.
+                         El resultado del comando muestra a un atacante que usa el comando Telnet para probar la naturaleza y la versión de un servidor web (puerto 80).
+                         <div>
+                              <img src="../images/telnet-Servers.PNG" alt="">
+                         </div>
+                         En la primera conexión, se realiza una conexión al servidor de la NASA, aceptada, mientras que la siguiente, rechaza la conexión a su puerto 80.
+                    </p>
+                    <h2>Comprobación de rootkit</h2>
+                    <p>
+                         Un rootkit es un tipo de malware diseñado para aumentar los privilegios de un usuario no autorizado u otorgar acceso a partes del software que normalmente no deberían estar permitidas. Los rootkits también se utilizan a menudo para asegurar una puerta trasera a una computadora comprometida. <br>
+                         La instalación de un rootkit se puede automatizar (como parte de una infección) o un atacante puede instalarlo manualmente después de poner en peligro una computadora. Un rootkit es destructivo porque cambia el código del kernel y sus módulos, cambiando las operaciones más fundamentales del propio sistema operativo. Con un nivel de compromiso tan profundo, los rootkits pueden ocultar la intrusión, eliminar cualquier rastro de instalación e incluso alterar las herramientas 
+                         de diagnóstico y resolución de problemas para que su salida ahora oculte la presencia del rootkit. Si bien algunas vulnerabilidades de Linux a lo largo del historial han permitido la instalación de rootkit a través de cuentas de usuario normales, la gran mayoría de los riesgos de rootkit requieren acceso de administrador o root. <br>
+                         Debido a que la naturaleza misma de la computadora está comprometida, la detección de rootkit puede ser muy difícil. Los métodos de detección típicos a menudo incluyen arrancar la computadora desde un medio confiable, como un CD en vivo del sistema operativo de diagnóstico. La unidad comprometida está montada y, desde el conjunto de herramientas del sistema confiable, se pueden iniciar herramientas de diagnóstico confiables para inspeccionar el sistema de archivos comprometido. 
+                         Los métodos de inspección incluyen métodos basados ​​en el comportamiento, escaneo de firmas, escaneo de diferencias y análisis de volcado de memoria. <br>
+                         La eliminación de rootkit puede ser complicada y, a menudo, imposible, especialmente en los casos en que el rootkit reside en el kernel; la reinstalación del sistema operativo suele ser la única solución real al problema. Los rootkits de firmware generalmente requieren reemplazo de hardware. <br>
+                         chkrootkit es un popular programa basado en Linux diseñado para comprobar la computadora en busca de rootkits conocidos. Es un script de shell que utiliza herramientas comunes de Linux, como cadenas y grep, para comparar las firmas de los programas principales. También busca discrepancias mientras atraviesa el sistema de archivos / proc comparando las firmas encontradas allí con la salida de ps. <br>
+                         Si bien es útil, tenga en cuenta que los programas para buscar rootkits no son 100% confiables. <br>
+                         La salida del comando muestra la salida de chkrootkit en Ubuntu Linux.
+                         <div>
+                              <img src="../images/chkrootkit.PNG" alt="">
+                         </div>
+                         <h2>Comandos de tubería</h2>
+                         <p>
+                              Aunque las herramientas de la línea de comandos generalmente están diseñadas para realizar una tarea específica y bien definida, muchos comandos se pueden combinar para realizar tareas más complejas mediante una técnica conocida como tubería. El nombre de su carácter definitorio, la tubería ( | ), consiste en encadenar comandos entre sí, alimentando la salida de un comando a la entrada de otro. <br>
+                              Por ejemplo, el comando ls se usa para mostrar todos los archivos y directorios de un directorio determinado. El comando grep compara las búsquedas a través de un archivo o texto buscando la cadena especificada. Si se encuentra, grep muestra todo el contenido de la carpeta donde se encontró la cadena. <br>
+                              Los dos comandos, ls y grep , se pueden unir para filtrar la salida de ls . Esto se muestra en la salida de <strong>ls -l | grep host</strong> y el comando <b>ls -l | comando de archivo grep</b>.
+                              <div>
+                                   <img src="../images/hostsfiles.PNG" alt="">
+                              </div>
+                         </p>
+                    </p>
+                    <h2>¿Qué aprendendí en este módulo?</h2>
+                    <p>
+                         <h4>Conceptos básicos de Linux</h4>
+                         <p>
+                              Linux es un sistema operativo de código abierto rápido, confiable y pequeño. Requiere pocos recursos de hardware para ejecutarse y es altamente personalizable. Está diseñado para usarse en redes. El kernel de Linux es distribuido por diferentes organizaciones con diferentes herramientas y paquetes de software. Una versión personalizada de Linux que se llama Security Onion contiene software y herramientas que están diseñados para su uso en el monitoreo de seguridad de la red por analistas de ciberseguridad. Kali Linux es otra distribución de Linux personalizada que tiene numerosas herramientas diseñadas para pruebas de penetración de seguridad de red. 
+                         </p>
+                         
+                         <h4>Trabajando en el Shell de Linux</h4>
+                         <p>
+                              En Linux, el usuario se comunica con el sistema operativo a través de una GUI o una interfaz de línea de comandos (CLI) o shell. Si se está ejecutando una GUI, se accede al shell a través de una aplicación de terminal como xterm o gnome terminal. Los comandos de Linux son programas que realizan una tarea específica. El comando man , seguido de un comando específico, proporciona documentación para ese comando. Es importante conocer al menos los comandos básicos de Linux, los comandos de archivos y directorios y los comandos para trabajar con archivos de texto. En Linux todo se trata como si fuera un archivo, incluida la memoria, los discos, el monitor y los directorios. 
+                         </p>
+                         
+                         <h4>Clientes y servidores Linux</h4>
+                         <p>
+                              Los servidores son computadoras que tienen un software instalado que les permite brindar servicios a las computadoras cliente a través de la red. Algunos servicios brindan acceso a recursos externos como archivos, correo electrónico y páginas web, a los clientes que lo soliciten. Otros servicios se ejecutan internamente y realizan tareas como administración de registros, administración de memoria o escaneo de disco. Para permitir que una computadora proporcione múltiples servicios, se utilizan puertos. Un puerto es un recurso de red reservado que "escucha" las solicitudes de los clientes. Si bien el número de puerto que utiliza un servicio se puede configurar, 
+                              la mayoría de los servicios escuchan en los puertos "conocidos" predeterminados. Las aplicaciones de software cliente están diseñadas para comunicarse con tipos específicos de servidores. Los navegadores web están diseñados para comunicarse con servidores web mediante el protocolo HTTP en el puerto 80. Los clientes FTP se comunican con los servidores FTP para transferir archivos.
+                         </p>
+
+                         <h4>Administración básica del servidor</h4>
+                         <p>
+                              En Linux, los servidores se administran mediante archivos de configuración. Se pueden modificar y guardar varios ajustes en archivos de configuración. Cuando se inicia un servicio, mira su (s) archivo (s) de configuración para saber cómo debe ejecutarse. No existe una regla sobre la forma en que se escriben los archivos de configuración. El formato del archivo de configuración depende del creador del software del servidor. Los dispositivos Linux deben protegerse mediante el uso de métodos probados para proteger el dispositivo y el acceso administrativo. Esto se conoce como dispositivos de endurecimiento. Una forma de fortalecer un dispositivo es mantener las contraseñas, 
+                              configurar funciones de inicio de sesión mejoradas e implementar el inicio de sesión remoto seguro con SSH. También es muy importante mantener actualizado el sistema operativo. Otras formas de reforzar un dispositivo son forzar cambios periódicos de contraseña, hacer cumplir contraseñas seguras y evitar la reutilización de contraseñas. Finalmente, Los clientes y servidores de Linux utilizan archivos de registro para registrar el funcionamiento del sistema y los eventos importantes. Se mantienen varios archivos de registro diferentes, incluidos registros de aplicaciones, registros de eventos, registros de servicio y registros del sistema. 
+                              Los registros del servidor registran las actividades que realizan los usuarios remotos que acceden a los servicios del sistema. Es importante conocer la ubicación de los diferentes registros en el sistema de archivos de Linux para poder acceder a ellos y monitorearlos en busca de problemas.
+                         </p>
+
+                         <h4>El sistema de archivos de Linux</h4>
+                         <p>
+                              Linux admite varios sistemas de archivos diferentes que varían según la velocidad, flexibilidad, seguridad, tamaño, estructura, lógica y más. Algunos de los sistemas de archivos compatibles con Linux son ext2, ext3, ext4, NFS y CDFS. Los sistemas de archivos se montan en particiones y se accede a ellos a través de puntos de montaje o directorios. Las letras de unidad de Windows son ejemplos de puntos de montaje. El comando mount se puede usar para mostrar detalles de los sistemas de archivos que están montados actualmente en una computadora Linux. El sistema de archivos raíz está representado por "/” Símbolo. Contiene todos los archivos de la computadora de forma predeterminada. 
+                              Linux usa permisos de archivos para controlar quién puede tener diferentes tipos de acceso a archivos y directorios. Los permisos incluyen lectura (r), escritura (w) y ejecución (x). Los archivos y directorios tienen permisos que se asignan a usuarios, grupos y otros. Los permisos para archivos y carpetas se muestran con ls -lmando. Este comando también muestra los enlaces de un archivo. Los vínculos físicos crean otro archivo con un nombre diferente que está vinculado al mismo lugar en el sistema de archivos. El propietario del archivo y el grupo del archivo también se muestran junto con la fecha y hora de la última modificación al archivo. 
+                              Los permisos de archivo son características poderosas del sistema de archivos de Linux y no se pueden violar. Solo el usuario root puede anular los permisos de archivo. Debido al poder del usuario root, el acceso root debe controlarse cuidadosamente. Los enlaces físicos se crean con el comando ln . También se realizan cambios en uno de los archivos vinculados al archivo original. Los enlaces simbólicos, o enlaces simbólicos, son similares a los enlaces físicos en que un cambio en el archivo vinculado se refleja en el archivo original. Los enlaces simbólicos tienen varias ventajas sobre los enlaces físicos.
+                         </p>
+
+                         <h4>Trabajar con la GUI de Linux</h4>
+                         <p>
+                              El sistema X Windows, o X11, es un marco de software básico que incluye funciones para crear, controlar y configurar una GUI de Windows en una interfaz de apuntar y hacer clic. Diferentes proveedores utilizan el sistema X Windows para crear diferentes GUI de administrador de Windows para Linux. Ejemplos de administradores de ventanas son Gnome y KDE. La distribución de Ubuntu Linux usa Gnome 3 por defecto. El escritorio de Gnome 3 consta del menú de aplicaciones, la base de Ubuntu, la barra superior, el calendario y la bandeja de mensajes del sistema, el área de actividades y el menú de estado.
+                         </p>
+
+                         <h4>Trabajando en un host Linux</h4>
+                         <p>
+                              Para instalar aplicaciones en hosts Linux, se utilizan programas llamados administradores de paquetes. Los paquetes son aplicaciones de software y todos sus archivos de soporte. Los administradores de paquetes son extremadamente útiles para instalar aplicaciones de software complejas desde repositorios de paquetes centralizados a los que se puede acceder a través de Internet. Las diferentes distribuciones de Linux utilizan diferentes administradores de paquetes. Por ejemplo, Arch Linux usa pacman , Debian usa dpkg como administrador de paquetes base y apto para comunicarse con dpkg . Ubuntu también usa apt. Los comandos de la CLI del administrador de paquetes se utilizan para instalar, 
+                              eliminar y actualizar paquetes de software. Los comandos de actualización actualizan todos los paquetes instalados actualmente. La gestión de paquetes también se puede realizar en una GUI. Los procesos de software son instancias de programas informáticos que se están ejecutando. Los sistemas operativos multitarea pueden ejecutar muchos procesos al mismo tiempo. La bifurcación es un método que utiliza el kernel para permitir que un proceso en ejecución se copie a sí mismo. El comando ps enumera los procesos en ejecución, top muestra información sobre los procesos en ejecución dinámicamente y eliminase utiliza para eliminar, reiniciar o pausar procesos en ejecución. Si bien se considera que Linux está mejor protegido contra software malicioso (malware) que otros sistemas operativos, aún es susceptible a los caballos de Troya, gusanos y otros tipos de malware. Linux suele ser atacado a través de sus servicios y procesos. El software desactualizado suele ser vulnerable a los ataques. Los actores de amenazas pueden probar un dispositivo en busca de puertos abiertos que estén vinculados a procesos de servidor desactualizados. Con este conocimiento, se pueden lanzar ataques. Es importante mantener actualizado el sistema operativo y sus componentes y aplicaciones. El chkrootkitEl programa está diseñado para detectar malware de rootkit. Los rootkits son programas de malware de nivel profundo que son muy difíciles de detectar y eliminar. Pueden cambiar el funcionamiento fundamental del propio sistema operativo y se pueden utilizar para crear acceso no autorizado a los sistemas. Los comandos de canalización utilizan el "|" símbolo para encadenar diferentes comandos mediante el uso de la salida de un comando como entrada de otro.
+                         </p>
                     </p>
                </div>
                <ul class="section-btn">
