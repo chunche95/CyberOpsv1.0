@@ -230,6 +230,64 @@
                     <div>
                          <img src="../images/protocol-tcp-ip.PNG" alt="">
                     </div>
+                    <div>
+                         <h5>Capas</h5>
+                         <div>
+                              <img src="../images/capa de aplicacion.PNG" alt="">
+                              <img src="../images/capa de transporte.PNG" alt="">
+                              <img src="../images/capa de internet.PNG" alt="">
+                              <img src="../images/capa de acceso de red.PNG" alt="">
+                         </div>
+                    </div>
+               </p>
+               <h2>Formato y encapsulamiento del mensaje</h2>
+               <p>
+                    Cuando se envia un mensaje desde el origen hacia el destino, se debe utilizar un formato o estructura específicos. Los formatos de los mensajes dependen del tipo de mensaje y el canal que se utilice para entregar el mensaje. 
+                    <div>
+                         <h3>Analogía</h3>
+                         <p>
+                              Un ejemplo común de requerir el formato correcto en las comunicaciones humanas es cuando se envía una carta. Haga clic en Reproducir en la figura para ver una animación de formato y encapsulación de una letra.
+                              El sobre tiene la dirección del emisor y la del receptor, cada una escrita en el lugar adecuado del sobre. Si la dirección de destino y el formato no son correctos, la carta no se entrega.
+                              El proceso que consiste en colocar un formato de mensaje (la carta) dentro de otro formato de mensaje (el sobre) se denomina encapsulamiento. La desencapsulación ocurre cuando el destinatario invierte el proceso y la carta se saca del sobre.
+                         </p>
+                         <h3>Red</h3>
+                         <p>
+                              Semejante a enviar una carta,Un mensaje que se envía a través de una red de computadoras sigue reglas de formato específicas para que pueda ser entregado y procesado.
+                              Protocolo de Internet (IP) es un protocolo con una función similar a la del ejemplo sobre. En la figura, los campos del paquete de Protocolo de Internet versión 6 (IPv6) identifican el origen del paquete y su destino. IP es responsable de enviar un mensaje desde el origen del mensaje al destino a través de una o más redes.
+                              <b>Nota:</b> Los campos del paquete IPv6 se analizan en detalle en otro módulo.
+                              <img src="../images/red.PNG" alt="">
+                         </p>
+                    </div>
+               </p>
+               <h2>Tamaño del mensaje</h2>
+               <p>
+                    Otra regla de comunicación es el tamaño del mensaje. 
+                    <div>
+                         <h3>Analogía</h3>
+                         <p>
+                              Cuando las personas se comunican, los mensajes que envían, normalmente, están divididos en fragmentos más pequeños u oraciones. El tamaño de estas oraciones se limita a lo que la persona que recibe el mensaje puede procesar por vez, como se muestra en la figura. También hace que sea más fácil para el receptor leer y comprender.
+                         </p>
+                         <h3>Red</h3>
+                         <p>
+                              De manera similar, cuando se envía un mensaje largo de un host a otro a través de una red, es necesario separarlo en partes más pequeñas, como se muestra en la figura 2. Las reglas que controlan el tamaño de las partes, o tramas que se comunican a través de la red, son muy estrictas. También pueden ser diferentes, de acuerdo con el canal utilizado. Las tramas que son demasiado largas o demasiado cortas no se entregan. <br>
+                              Las restricciones de tamaño de las tramas requieren que el host de origen divida un mensaje largo en fragmentos individuales que cumplan los requisitos de tamaño mínimo y máximo. El mensaje largo se enviará en tramas independientes, cada trama contendrá una parte del mensaje original. Cada trama también tendrá su propia información de direccionamiento. En el host receptor, las partes individuales del mensaje se vuelven a unir para reconstruir el mensaje original.
+                         </p>
+                    </div>
+               </p>
+               <h2>Sincronización del mensaje</h2>
+               <p>
+                    El tiempo de los mensajes también es muy importante en las comunicaciones de red. El tiempo de los mensajes incluye lo siguiente: 
+                    <ul>
+                         <li>
+                              <b>Control de flujo</b> - Este es el proceso de gestión de la velocidad de transmisión de datos. La sincronización también afecta la cantidad de información que se puede enviar y la velocidad con la que puede entregarse. Por ejemplo, Si una persona habla demasiado rápido, la otra persona tendrá dificultades para escuchar y comprender el mensaje. En la comunicación de red, existen protocolos de red utilizados por los dispositivos de origen y destino para negociar y administrar el flujo de información.
+                         </li>
+                         <li>
+                              <b>Tiempo de espera de respuesta (Response Timeout)</b> - Si una persona hace una pregunta y no escucha una respuesta antes de un tiempo aceptable, la persona supone que no habrá ninguna respuesta y reacciona en consecuencia. La persona puede repetir la pregunta o puede continuar la conversación. Los hosts de las redes tienen reglas que especifican cuánto tiempo deben esperar una respuesta y qué deben hacer si se agota el tiempo de espera para la respuesta.
+                         </li>
+                         <li>
+                              <b>Métodos de acceso</b> -  Determina en qué momento alguien puede enviar un mensaje. Haga clic en Reproducir en la figura para ver una animación de dos personas hablando al mismo tiempo, luego se produce una "colisión de información" y es necesario que las dos retrocedan y comiencen de nuevo. Del mismo modo, cuando un dispositivo desea transmitir en una LAN inalámbrica, es necesario que la tarjeta de interfaz de red (NIC) WLAN determine si el medio inalámbrico está disponible.
+                         </li>
+                    </ul>
                </p>
           </div>
      </div>
