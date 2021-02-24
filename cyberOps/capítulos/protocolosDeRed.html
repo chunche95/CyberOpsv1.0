@@ -289,7 +289,132 @@
                          </li>
                     </ul>
                </p>
-               5.2.7
+               <h2>Unidifusión, multidifusión y difusión</h2>
+               <p>
+                    Un mensaje se puede entregar de diferentes maneras. En algunos casos, una persona desea comunicar información a un solo individuo. Otras veces, esa persona puede necesitar enviar información a un grupo de personas simultaneamente o, incluso, a todas las personas de un área. Los hosts en una red usan opcones de entrega similares para comunicaciones. estos ,ñetodos de comunicación se denominan unicast, multicast y broadcast. <br>
+                    <h3>Unicast</h3>
+                    <p>
+                         Una opción de entrefa de uno a uno se denomina unicast, que significa que el mensaje tiene solo un destinatario.
+                    </p>
+                    <h3>Multicast</h3>
+                    <p>
+                         Si un hpst necesita enviar mensajes usando una opción de uno o varios, se denomina multicast.
+                    </p>
+                    <h3>Broadcast o difusión</h3>
+                    <p>
+                         Si es necesario que todos los hosts de la red reciban el mensaje a la vez, se usa el método de broadcast. La broadcast representa una opción de entrega de mensaje de uno a todos.
+                    </p>
+               </p>
+               <h2>Beneficios del uso de un modelo en capas</h2>
+               <p>
+                    En realidad, no puede ver los paquetes reales viajar a través de una red real de la misma manera que puede ver cómo se ensamblan los componentes de un automóvil en una línea de ensamblaje. por lo tanto, es útil tener una forma de pensar acerca de una red para que puedas imaginar lo que está sucediendo. Un modelo es útil en estas situaciones.
+                    Conceptos complejos, como el funcionamiento de una red, pueden ser difíciles de explicar y comprender. Por esta razón, un modelo en capas se utiliza para modularizar las operaciones de una red en capas manejables.
+                    Los beneficios por el uso de un modelo en capas para describir protocolos de red y operaciones incluyen lo siguiente:
+                    <ul>
+                         <li>
+                              Asistencia de el diseño de protocolos porque los protocolos que operan en una capa específica tienen información defiida sibre la que actúa y una interfaz definida para las capas superiosres e inferiores.
+                         </li>
+                         <li>
+                              Fomenta la competencia, ya que los productos de distintos proveedores pueden trabajar en conjunto.
+                         </li>
+                         <li>
+                              Evita que los cambios en la tecnología o en las funcionalidades de una capa afecten otras capas superiores e inferiores.
+                         </li>
+                         <li>
+                              Proporcionan un lenguaje común para describir las funciones y capacidades de red.
+                         </li>
+                    </ul>
+                    Como se muestra en la figuram hay dos modelos en capas que se usan para describir las opreciones de red: 
+                    <ul>
+                         <li>Modelo de referencia de interconexión de Sistemas Abiertos</li>
+                         <li>Modelo re referencia TCP/IP</li>
+                    </ul>
+                    <div>
+                         <img src="../images/operacionesdered.PNG" alt="">
+                    </div>
+               </p>
+               <h2>El Modelo de Referencia OSI</h2>
+               <p>
+                    El modelo de referencia OSI proporciona una amplia lista de funciones y servicios que se pueden presentar en cada capa. Este tipo de modelo es coherente con todos los tipos de servicios y protocolos de red al describir qué es lo que se debe hacer en una capa determinada, pero sin regir la forma en que se debe lograr. <br>
+                    También describe la interacción de cada capa con las capas directamente por encima y por debajo de él. Los protocolos TCP/IP que se analizan en este curso se estructuran en torno a los modelos OSI y TCP/IP. La tabla muestra detalles sobre cada capa del modelo OSI. La funcionalidad de cada capa y la relación entre ellas será 
+                    más evidente a medida que avance en el curso y que se brinden más detalles acerca de los protocolos.
+                    <table>
+                         <tr>
+                              <td>
+                                   <strong>
+                                        Capa del modelo OSI
+                                   </strong>
+                              </td>
+                              <td>
+                                   <strong>
+                                        Descripción
+                                   </strong>
+                              </td>
+                         </tr> 
+                         <tr>
+                              <td>
+                                   7. Aplicación
+                              </td>
+                              <td>
+                                   La capa de aplicación contiene protocolos utilizados para comunicaciones proceso a proceso.
+                              </td>
+                         </tr> 
+                         <tr>
+                              <td>
+                                   6. Presentación
+                              </td>
+                              <td>
+                                   La capa de presentación proporciona una representación común de losd datos transferidos entre los servicios de la capa de aplicación.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   5. Sesión
+                              </td>
+                              <td>
+                                   La capa de sesión proporciona servicios a la capa de presentación para organizar su diálogo y administrar el intercambio de datos.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   4. Transporte
+                              </td>
+                              <td>
+                                   La capa de transporte define los servicios para segmentar, transferir y reensamblar los datos para las comunicaciones individuales entre terminales.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   3. Red
+                              </td>
+                              <td>
+                                   La capa de red proporciona servicios para intercambiar los datos individuales en la red entre terminales identificados.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   2. Enlace de datos
+                              </td>
+                              <td>
+                                   Los protocolos de la capa de enlace de datos describen métodos para intercambiar tramas de datos entre dispositivos a través de un medio común.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   1. Física
+                              </td> 
+                              <td>
+                                   Los protocolos de la capa física describen los medios mecánicos, eléctricos, funcionales y de procedimiento para activar, mantener y desactivar conexiones físicas para una transmisión de bits hacia y desde un dispositivo de red.
+                              </td>                                   
+                         </tr>
+                    </table>
+                    <strong>Nota:</strong>Tenga en cuenta que, mientras las capas del modelo TCP/IP se mencionan solo por el nombre, las siete capas del modelo OSI se mencionan con frecuencia por número y no por nombre. 
+                    Por ejemplo, la capa física se conoce como Capa 1 del modelo OSI, la capa de enlace de datos es la Capa 2, y así sucesivamente.
+               </p>
+               <h2>Modelo de Protocolo TCP/IP</h2>
+               <p>
+                    
+               </p>
           </div>
      </div>
 </section>
