@@ -198,6 +198,99 @@
                 <p>
                     <a href="../docs/5/5.1.5-lab---tracing-a-route.pdf" target="_blank" rel="noopener noreferrer">Trazando una ruta.</a>
                 </p>
+                <h2>¿Qués es un protocolo?</h2>
+                <p>
+                    Realizar simplemente la conexión física por cable o inalámbrica entre los terminales no es suficiente para habilitar  la comunicación. Para que se produzca la comunicación, los dispositivos deben saber "como" comunicarse. La comunicación. ya sea cara a cara o por una red, está regida por reglas denominadas protocolos. 
+                    Estos protocolos son especificos del tipo de método de comunicación en cuestión. <br>
+                    Por ejemplo, considere a dos personas que se comuncan cara a cara. Antes de comunicarse, deben acordar cómo hacerlo. Si en la comunicación se usa la voz, primero deben acordar el idioma. A continuación, cuando tienen un mensaje que compartir, deben poder dar formato a ese mensaje de una manera que sea comprensible. Por ejemplo, 
+                    si alguien usa el idioma español, pero la estructura de las oraciones es deficiente, el mensaje se puede malinterpretar fácilmente. <br>
+                    Del mismo modo, los protocolos de red específican muchas características de la comunicación de red, como se muestra en la figura. 
+                    <div>
+                         <img src="../images/protocolos de red.PNG" alt="">
+                    </div> 
+                </p>
+                <h2>Protocolos de red.</h2>
+                <p>
+                     Los protocolos de red ofrecen los medios para que las computadoras se comuniquen en las redes. Los protocolos de red determinan la codificación, el fomrato, la encapsulación, el tamaño, la distribución y las opciones de entrega del mensaje. Los protocolos de red definen un formato y un conjunto de reglas comunes para intercambiar mensajes entre dispositivos.
+                     Algunos de los protocolos de red más comunes son Hypertext Transfer Protocol (HTTP), el protocolo de control de transmisión (TCP) y el protocolo de Internet (IP). Como anañista de ciberseguridad, debe estar muy familiarizado con la estructura de los datos del protocolo y cómo funcioan los protocolos en las comunicaciones de red. <br>
+                     <strong>Nota:</strong> IP en este curso se refiere tanto a los protocolos de IPv4 como a los de IPv6 es la versión más reciente de IP y, con el tiempo, sustituirá al protocolo IPv4 más común. 
+                     <div>
+                          <img src="../images/estructura del mensaje.PNG" alt="">
+                          <img src="../images/uso compartido de rutas.PNG" alt="">
+                          <img src="../images/uso compartido de la información.PNG" alt="">
+                          <img src="../images/Administración de sesión.PNG" alt="">
+                     </div>
+                </p>
+                <h2>La suite de protocolos TCP/IP</h2>
+                <p>
+                     Hoy en día, el conjunto de protocolos TCP/IP incluye muchos protocolos y continúa evolucionando para admitir nuevos servicios. Algunos de los más populares se muestran en la figura. 
+                     <div>
+                          <img src="../images/suite de protocolos.PNG" alt="">
+                     </div>
+                     <h3>Capa de aplicación</h3>                     
+                     <pre>
+<strong>Sistema de nombres</strong>
+DNS - Domain Name System. Traduce los nombres de dominio tales como cisco.com a direcciones IP
+Configuración de host
+
+DHCPv4 - Protocolo de configuración dinámica de host para IPv4. Un servidor DHCPv4 asigna dinámicamente información de direccionamiento IPv4 a clientes DHCPv4 al inicio y permite que las direcciones se reutilicen cuando ya no sean necesarias.
+DHCPv6 - Protocolo de configuración dinámica de host para IPv6. DHCPv6 es similar a DHCPv4. Un servidor DHCPv6 asigna dinámicamente información de direccionamiento IPv6 a clientes DHCPv6 al inicio.
+SLAAC - Autoconfiguración sin estado. Método que permite a un dispositivo obtener su información de direccionamiento IPv6 sin utilizar un servidor DHCPv6.
+
+<strong>Correo electrónico</strong>
+SMTP - Protocolo para Transferencia Simple de Correo. Les permite a los clientes enviar correo electrónico a un servidor de correo y les permite a los servidores enviar correo electrónico a otros servidores.
+POP3 -Protocolo de Oficinca de Correo versión 3. Permite a los clientes recuperar el correo electrónico de un servidor de correo y descargarlo en la aplicación de correo local del cliente.
+IMAP - Protocolo de Acceso a Mensajes de Internet Permite que los clientes accedan a correos electrónicos almacenados en un servidor de correo.
+
+<strong>Transferencia de Archivos</strong>
+FTP - Protocolo de Transferencia de Archivos. Establece las reglas que permiten a un usuario en un host acceder y transferir archivos hacia y desde otro host a través de una red. FTP Es un protocolo confiable de entrega de archivos, orientado a la conexión y con acuse de recibo.
+SFTP - SSH Protocolo de Transferencia de Archivos Como una extensión al protocolo Shell seguro (SSH), el SFTP se puede utilizar para establecer una sesión segura de transferencia de archivos, en el que el archivo transferido está cifrado. SSH es un método para el inicio de sesión remoto seguro que se utiliza normalmente para acceder a la línea de comandos de un dispositivo.
+TFTP - Protocolo de Transferencia de Archivos Trivial Un protocolo de transferencia de archivos simple y sin conexión con la entrega de archivos sin reconocimiento y el mejor esfuerzo posible. Utiliza menos sobrecarga que FTP.
+
+<strong>Web y Servicio Web</strong>
+HTTP - Hypertext Transfer Protocol. Un Conjunto de reglas para intercambiar texto, imágenes gráficas, sonido, video y otros archivos multimedia en la World Wide Web.
+HTTPS - HTTP seguro. Una forma segura de HTTP que cifra los datos que se intercambian a través de la World Wide Web.
+REST - Transferencia de Estado Representacional. Servicio web que utiliza interfaces de programación de aplicaciones (API) y solicitudes HTTP para crear aplicaciones web.
+                     </pre>
+                     <h3>Capa de transporte</h3>
+                     <pre>
+<strong>Orientado a la conexión</strong>
+TCP - Protocolo de Control de Transmisión. Permite la comunicación confiable entre procesos que se ejecutan en hosts independientes y tiene transmisiones fiables y con acuse de recibo que confirman la entrega exitosa.
+
+<strong>Sin conexión</strong>
+UDP - Protocolo de Datagramas de Usuario Habilita un proceso que se ejecuta en un host para enviar paquetes a un proceso que se ejecuta en otro host Sin embargo, UDP No confirma la transmisión correcta de datagramas
+                     </pre>
+                     <h3>Capa de Internet</h3>
+                     <pre>
+
+<strong>Protocolo de Internet</strong>
+IPv4 - Protocolo de Internet versión 4. Recibe segmentos de mensajes de la capa de transporte, empaqueta mensajes en paquetes y dirige paquetes para entrega end-to-end a través de una red. IPv4 utiliza una dirección de 32 bits.
+IPv6 - IP versión 6. Similar a IPv4 pero usa una dirección de 128 bits.
+NAT Traducción de Direcciones de Red Traduce las direcciones IPv4 de una red privada en direcciones IPv4 públicas globalmente únicas.
+
+<strong>Mensajería</strong>
+ICMPv4: Protocolo de Control de Mensajes de Internet Proporciona comentarios desde un host de destino a un host de origen con respecto a los errores en la entrega de paquetes
+ICMPv6 - ICMP para IPv6. Funcionalidad similar a ICMPv4 pero se utiliza para paquetes IPv6.
+ICMPv6 ND - Protocolo de Descubrimiento de Vecinos versión 6 Incluye cuatro mensajes de protocolo que se utilizan para la resolución de direcciones y la detección de direcciones duplicadas.
+
+<strong>Protocolos de Routing</strong>
+OSPF - Abrir el Camino más Corto Primero. Protocolo de enrutamiento de estado de vínculo que utiliza un diseño jerárquico basado en áreas. OSPF s un protocolo de routing interior de estándar abierto.
+EIGRP EIGRP - Protocolo de Enrutamiento de Puerta de enlace Interior Mejorado. Es un protocolo de routing abierto desarrollado por Cisco, utiliza una métrica compuesta en función del ancho de banda, la demora, la carga y la confiabilidad.
+BGP - Protocolo de Puerta de Enlace de Frontera Un protocolo de enrutamiento de puerta de enlace exterior estándar abierto utilizado entre los proveedores de servicios de Internet (ISP). BGP también se utiliza entre los ISP y sus clientes privados más grandes para intercambiar información de enrutamiento.                          
+                     </pre>
+                     <h3>Capa de Acceso de Red</h3>
+                     <pre>
+
+<strong>Resolución de dirección</strong>
+ARP - Protocolo de Resolución de Direcciones Proporciona la asignación de direcciones dinámicas entre una dirección IP y una dirección de hardware.
+
+<b>Nota:</b> Puede ver otro estado de documentación que ARP opera en la capa de Internet (OSI Capa 3). Sin embargo, en este curso declaramos que ARP opera en la capa de acceso a la red (OSI Capa 2) porque su objetivo principal es descubrir la dirección MAC del destino. y una dirección de capa 2 es una dirección MAC.
+
+<strong>Protocolos de Enlace de Datos:</strong>
+Ethernet - define las reglas para conectar y señalizar estándares de la capa de acceso a la red.
+WLAN - Wireless Local Area Network. Define las reglas para la señalización inalámbrica a través de las frecuencias de radio de 2,4 GHz y 5 GHz.                          
+                     </pre>
+                </p>
                </div>
                <ul class="section-btn">
                     <a href="protocolodeInternetYEthernet-IP.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 6.</span></a>
