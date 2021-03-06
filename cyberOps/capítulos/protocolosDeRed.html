@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>HC3 - CO. Ch 2.</title>
+<title>HC3 - CO. Ch 5.</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="description" content="módulos de contenido, laboratorios, actividades, videos y cuestionarios de análisis a la ciberseguridad.">
@@ -295,6 +295,263 @@ WLAN - Wireless Local Area Network. Define las reglas para la señalización ina
                <ul class="section-btn">
                     <a href="protocolodeInternetYEthernet-IP.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 6.</span></a>
                </ul>
+               <h2>¿Qué son los protocolos?</h2>
+               <p>
+                    Realizar simplemente la conexión física por cable o inalámbrica entre los terminales no es suficiente para habilitar la comunicación. Para que se produzca la comunicación, los dispositivos deben saber “cómo” comunicarse. La comunicación, ya sea cara a cara o por una red, está regida por reglas denominadas protocolos. Estos protocolos son específicos del tipo de método de comunicación en cuestión.
+                    Por ejemplo, considere a dos personas que se comunican cara a cara. Antes de comunicarse, deben acordar cómo hacerlo. Si en la comunicación se utiliza la voz, primero deben acordar el idioma. A continuación, cuando tienen un mensaje que compartir, deben poder dar formato a ese mensaje de una manera que sea comprensible. Por ejemplo, si alguien utiliza el idioma español, pero la estructura de las oraciones es deficiente, el mensaje se puede malinterpretar fácilmente.
+                    Del mismo modo, los protocolos de red especifican muchas características de la comunicación de red, como se muestra en la figura.
+                    <div>
+                         <img src="../images/protocolos.PNG" alt="">
+                    </div>
+               </p>
+               <h2>Protocolos de red</h2>
+               <p>
+                    Los protocolos de red ofrecen los medios para que las computadoras se comuniquen en las redes. Los protocolos de red determinan la codificación, el formato, la encapsulación, el tamaño, la distribución y las opciones de entrega del mensaje. Los protocolos de red definen un formato y un conjunto de reglas comunes para intercambiar mensajes entre dispositivos. Algunos de los protocolos de red más comunes son Hypertext Transfer Protocol (HTTP), el protocolo de control de transmisión (TCP) y el protocolo de Internet (IP). Como analista de ciberseguridad, debe estar muy familiarizado con la estructura de los datos del protocolo y cómo funcionan los protocolos en las comunicaciones de red.
+                    <b>Nota:</b> IP en este curso se refiere tanto a los protocolos de IPv4 como a los de IPv6. IPv6 es la versión más reciente de IP y, con el tiempo, sustituirá al protocolo IPv4 más común.
+                    <table>
+                         <ul>
+                              <li>Estructura del mensaje</li>
+                              <li>Uso compartido de rutas</li>
+                              <li>Uso compartido de la información</li>
+                              <li>Administración de sesión</li>
+                         </ul>
+                    </table>
+               </p>
+               <h2>La suite de protocolos TCP/IP</h2>
+               <p>
+                    Hoy en día, el conjunto de protocolos TCP/IP incluye muchos protocolos y continúa evolucionando para admitir nuevos servicios. Algunos de los más comunes se muestran en la figura.
+                    <div>
+                         <img src="../images/protocol-tcp-ip.PNG" alt="">
+                    </div>
+                    <div>
+                         <h5>Capas</h5>
+                         <div>
+                              <img src="../images/capa de aplicacion.PNG" alt="">
+                              <img src="../images/capa de transporte.PNG" alt="">
+                              <img src="../images/capa de internet.PNG" alt="">
+                              <img src="../images/capa de acceso de red.PNG" alt="">
+                         </div>
+                    </div>
+               </p>
+               <h2>Formato y encapsulamiento del mensaje</h2>
+               <p>
+                    Cuando se envia un mensaje desde el origen hacia el destino, se debe utilizar un formato o estructura específicos. Los formatos de los mensajes dependen del tipo de mensaje y el canal que se utilice para entregar el mensaje. 
+                    <div>
+                         <h3>Analogía</h3>
+                         <p>
+                              Un ejemplo común de requerir el formato correcto en las comunicaciones humanas es cuando se envía una carta. Haga clic en Reproducir en la figura para ver una animación de formato y encapsulación de una letra.
+                              El sobre tiene la dirección del emisor y la del receptor, cada una escrita en el lugar adecuado del sobre. Si la dirección de destino y el formato no son correctos, la carta no se entrega.
+                              El proceso que consiste en colocar un formato de mensaje (la carta) dentro de otro formato de mensaje (el sobre) se denomina encapsulamiento. La desencapsulación ocurre cuando el destinatario invierte el proceso y la carta se saca del sobre.
+                         </p>
+                         <h3>Red</h3>
+                         <p>
+                              Semejante a enviar una carta,Un mensaje que se envía a través de una red de computadoras sigue reglas de formato específicas para que pueda ser entregado y procesado.
+                              Protocolo de Internet (IP) es un protocolo con una función similar a la del ejemplo sobre. En la figura, los campos del paquete de Protocolo de Internet versión 6 (IPv6) identifican el origen del paquete y su destino. IP es responsable de enviar un mensaje desde el origen del mensaje al destino a través de una o más redes.
+                              <b>Nota:</b> Los campos del paquete IPv6 se analizan en detalle en otro módulo.
+                              <img src="../images/red.PNG" alt="">
+                         </p>
+                    </div>
+               </p>
+               <h2>Tamaño del mensaje</h2>
+               <p>
+                    Otra regla de comunicación es el tamaño del mensaje. 
+                    <div>
+                         <h3>Analogía</h3>
+                         <p>
+                              Cuando las personas se comunican, los mensajes que envían, normalmente, están divididos en fragmentos más pequeños u oraciones. El tamaño de estas oraciones se limita a lo que la persona que recibe el mensaje puede procesar por vez, como se muestra en la figura. También hace que sea más fácil para el receptor leer y comprender.
+                         </p>
+                         <h3>Red</h3>
+                         <p>
+                              De manera similar, cuando se envía un mensaje largo de un host a otro a través de una red, es necesario separarlo en partes más pequeñas, como se muestra en la figura 2. Las reglas que controlan el tamaño de las partes, o tramas que se comunican a través de la red, son muy estrictas. También pueden ser diferentes, de acuerdo con el canal utilizado. Las tramas que son demasiado largas o demasiado cortas no se entregan. <br>
+                              Las restricciones de tamaño de las tramas requieren que el host de origen divida un mensaje largo en fragmentos individuales que cumplan los requisitos de tamaño mínimo y máximo. El mensaje largo se enviará en tramas independientes, cada trama contendrá una parte del mensaje original. Cada trama también tendrá su propia información de direccionamiento. En el host receptor, las partes individuales del mensaje se vuelven a unir para reconstruir el mensaje original.
+                         </p>
+                    </div>
+               </p>
+               <h2>Sincronización del mensaje</h2>
+               <p>
+                    El tiempo de los mensajes también es muy importante en las comunicaciones de red. El tiempo de los mensajes incluye lo siguiente: 
+                    <ul>
+                         <li>
+                              <b>Control de flujo</b> - Este es el proceso de gestión de la velocidad de transmisión de datos. La sincronización también afecta la cantidad de información que se puede enviar y la velocidad con la que puede entregarse. Por ejemplo, Si una persona habla demasiado rápido, la otra persona tendrá dificultades para escuchar y comprender el mensaje. En la comunicación de red, existen protocolos de red utilizados por los dispositivos de origen y destino para negociar y administrar el flujo de información.
+                         </li>
+                         <li>
+                              <b>Tiempo de espera de respuesta (Response Timeout)</b> - Si una persona hace una pregunta y no escucha una respuesta antes de un tiempo aceptable, la persona supone que no habrá ninguna respuesta y reacciona en consecuencia. La persona puede repetir la pregunta o puede continuar la conversación. Los hosts de las redes tienen reglas que especifican cuánto tiempo deben esperar una respuesta y qué deben hacer si se agota el tiempo de espera para la respuesta.
+                         </li>
+                         <li>
+                              <b>Métodos de acceso</b> -  Determina en qué momento alguien puede enviar un mensaje. Haga clic en Reproducir en la figura para ver una animación de dos personas hablando al mismo tiempo, luego se produce una "colisión de información" y es necesario que las dos retrocedan y comiencen de nuevo. Del mismo modo, cuando un dispositivo desea transmitir en una LAN inalámbrica, es necesario que la tarjeta de interfaz de red (NIC) WLAN determine si el medio inalámbrico está disponible.
+                         </li>
+                    </ul>
+               </p>
+               <h2>Unidifusión, multidifusión y difusión</h2>
+               <p>
+                    Un mensaje se puede entregar de diferentes maneras. En algunos casos, una persona desea comunicar información a un solo individuo. Otras veces, esa persona puede necesitar enviar información a un grupo de personas simultaneamente o, incluso, a todas las personas de un área. Los hosts en una red usan opcones de entrega similares para comunicaciones. estos ,ñetodos de comunicación se denominan unicast, multicast y broadcast. <br>
+                    <h3>Unicast</h3>
+                    <p>
+                         Una opción de entrefa de uno a uno se denomina unicast, que significa que el mensaje tiene solo un destinatario.
+                    </p>
+                    <h3>Multicast</h3>
+                    <p>
+                         Si un hpst necesita enviar mensajes usando una opción de uno o varios, se denomina multicast.
+                    </p>
+                    <h3>Broadcast o difusión</h3>
+                    <p>
+                         Si es necesario que todos los hosts de la red reciban el mensaje a la vez, se usa el método de broadcast. La broadcast representa una opción de entrega de mensaje de uno a todos.
+                    </p>
+               </p>
+               <h2>Beneficios del uso de un modelo en capas</h2>
+               <p>
+                    En realidad, no puede ver los paquetes reales viajar a través de una red real de la misma manera que puede ver cómo se ensamblan los componentes de un automóvil en una línea de ensamblaje. por lo tanto, es útil tener una forma de pensar acerca de una red para que puedas imaginar lo que está sucediendo. Un modelo es útil en estas situaciones.
+                    Conceptos complejos, como el funcionamiento de una red, pueden ser difíciles de explicar y comprender. Por esta razón, un modelo en capas se utiliza para modularizar las operaciones de una red en capas manejables.
+                    Los beneficios por el uso de un modelo en capas para describir protocolos de red y operaciones incluyen lo siguiente:
+                    <ul>
+                         <li>
+                              Asistencia de el diseño de protocolos porque los protocolos que operan en una capa específica tienen información defiida sibre la que actúa y una interfaz definida para las capas superiosres e inferiores.
+                         </li>
+                         <li>
+                              Fomenta la competencia, ya que los productos de distintos proveedores pueden trabajar en conjunto.
+                         </li>
+                         <li>
+                              Evita que los cambios en la tecnología o en las funcionalidades de una capa afecten otras capas superiores e inferiores.
+                         </li>
+                         <li>
+                              Proporcionan un lenguaje común para describir las funciones y capacidades de red.
+                         </li>
+                    </ul>
+                    Como se muestra en la figuram hay dos modelos en capas que se usan para describir las opreciones de red: 
+                    <ul>
+                         <li>Modelo de referencia de interconexión de Sistemas Abiertos</li>
+                         <li>Modelo re referencia TCP/IP</li>
+                    </ul>
+                    <div>
+                         <img src="../images/operacionesdered.PNG" alt="">
+                    </div>
+               </p>
+               <h2>El Modelo de Referencia OSI</h2>
+               <p>
+                    El modelo de referencia OSI proporciona una amplia lista de funciones y servicios que se pueden presentar en cada capa. Este tipo de modelo es coherente con todos los tipos de servicios y protocolos de red al describir qué es lo que se debe hacer en una capa determinada, pero sin regir la forma en que se debe lograr. <br>
+                    También describe la interacción de cada capa con las capas directamente por encima y por debajo de él. Los protocolos TCP/IP que se analizan en este curso se estructuran en torno a los modelos OSI y TCP/IP. La tabla muestra detalles sobre cada capa del modelo OSI. La funcionalidad de cada capa y la relación entre ellas será 
+                    más evidente a medida que avance en el curso y que se brinden más detalles acerca de los protocolos.
+                    <table>
+                         <tr>
+                              <td>
+                                   <strong>
+                                        Capa del modelo OSI
+                                   </strong>
+                              </td>
+                              <td>
+                                   <strong>
+                                        Descripción
+                                   </strong>
+                              </td>
+                         </tr> 
+                         <tr>
+                              <td>
+                                   7. Aplicación
+                              </td>
+                              <td>
+                                   La capa de aplicación contiene protocolos utilizados para comunicaciones proceso a proceso.
+                              </td>
+                         </tr> 
+                         <tr>
+                              <td>
+                                   6. Presentación
+                              </td>
+                              <td>
+                                   La capa de presentación proporciona una representación común de losd datos transferidos entre los servicios de la capa de aplicación.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   5. Sesión
+                              </td>
+                              <td>
+                                   La capa de sesión proporciona servicios a la capa de presentación para organizar su diálogo y administrar el intercambio de datos.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   4. Transporte
+                              </td>
+                              <td>
+                                   La capa de transporte define los servicios para segmentar, transferir y reensamblar los datos para las comunicaciones individuales entre terminales.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   3. Red
+                              </td>
+                              <td>
+                                   La capa de red proporciona servicios para intercambiar los datos individuales en la red entre terminales identificados.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   2. Enlace de datos
+                              </td>
+                              <td>
+                                   Los protocolos de la capa de enlace de datos describen métodos para intercambiar tramas de datos entre dispositivos a través de un medio común.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                   1. Física
+                              </td> 
+                              <td>
+                                   Los protocolos de la capa física describen los medios mecánicos, eléctricos, funcionales y de procedimiento para activar, mantener y desactivar conexiones físicas para una transmisión de bits hacia y desde un dispositivo de red.
+                              </td>                                   
+                         </tr>
+                    </table>
+                    <strong>Nota:</strong>Tenga en cuenta que, mientras las capas del modelo TCP/IP se mencionan solo por el nombre, las siete capas del modelo OSI se mencionan con frecuencia por número y no por nombre. 
+                    Por ejemplo, la capa física se conoce como Capa 1 del modelo OSI, la capa de enlace de datos es la Capa 2, y así sucesivamente.
+               </p>
+               <h2>Modelo de Protocolo TCP/IP</h2>
+               <p>
+                    El modelo de protocolo TCP/IP para comunicaciones de internetwork se creó a principios de la década de los setenta y se conoce con el nombre de modelo de Internet. Este tipo de modelo coincide con precisión con la estructura de una suite de protocolos determinada. 
+                    El modelo TCP/IP es un protocolo modelo porque describe las funciones que ocurren en cada capa de protocolos dentro de una suite de TCP/IP. TCP/IP también es un ejemplo de un modelo de referencia. La tabla muestra detalles sobre cada capa del modelo OSI.
+                    <table>
+                         <tr>
+                              <td><strong>
+                                   Capa del modelo TCP/IP
+                              </strong></td>
+                              <td>
+                                   <strong>Descripción</strong>
+                              </td>
+                         </tr>
+                         <tr>
+                              <td><strong>
+                                   4. Aplicación
+                              </strong></td>
+                              <td>
+                                   Representa datos para el usuario más el control de codificación y de diálogo.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td><strong>
+                                   3. Transporte
+                              </strong></td>
+                              <td>
+                                   Admite la comunicación entre distintos dispositivos a través de diversas redes.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td><strong>   
+                                   2. Internet
+                              </strong></td>
+                              <td>
+                                   Determina el mejor camino a través de una red.
+                              </td>
+                         </tr>
+                         <tr>
+                              <td><strong>
+                                   1. Acceso a la red
+                              </strong></td>
+                              <td>
+                                   Contola los dispositivos del hardware y los medios que forman la red.
+                              </td>
+                         </tr>
+                    </table>
+                    Las definiciones del estándar y los protocolos TCP/IP se explican en un foro público y se definen en un conjunto de documentos de petición de comentarios (RFC) disponibles al público. Un RFC es creado por ingenieros de redes y enviado a otros miembros de IETF para comentarios.
+               </p>
           </div>
      </div>
 </section>
