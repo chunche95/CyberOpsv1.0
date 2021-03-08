@@ -572,6 +572,55 @@ WLAN - Wireless Local Area Network. Define las reglas para la señalización ina
                          <video src="../videos/segmentacion_y_multiplexacion.mp4" class="responsive" autoplay="true" muted></video>
                     </div>
                </p>
+               <h2>Secuenciación</h2>
+               <p>
+                    La desventaja de utilizar segmentación y multiplexión para transmitir mensajes a través de la red es el nivel de complejidad que se agrega al proceso. Supongamos que tuviera que enviar una carta de 100 páginas, pero en cada sobre solo cabe una. Por lo tanto, se necesitarían 100 sobres y cada 
+                    sobre tendría que dirigirse individualmente. Es posible que la carta de 100 páginas en 100 sobres diferentes llegue fuera de pedido. En consecuencia, la información contenida en el sobre tendría que incluir un número de secuencia para garantizar que el receptor pudiera volver a ensamblar las páginas en el orden adecuado. <br>
+                    En las comunicaciones de red, cada segmento del mensaje debe seguir un proceso similar para asegurar que llegue al destino correcto y que puede volverse a ensamblar en el contenido del mensaje original, como se muestra en la figura 2. TCP es responsable de secuenciar los segmentos individuales.
+                    <div>
+                         <img src="../images/secuenciacion.PNG" alt="">
+                    </div>
+               </p>
+               <h2>Unidades de datos de protocolo</h2>
+               <p>
+                   Mientras los datos de la aplicación bajan a la pila del protocolo y se transmiten por los medios de la red, se agrega diversa información de protocolos en cada nivel. Esto comúnmente se conoce como proceso de encapsulamiento. <br>
+                   <b>Nota:</b> Aunque la UDP PDU es denominada datagrama, los paquetes IP son a veces también conocidos como datagramas IP. <br>
+                   La manera que adopta una porción de datos en cualquier capa se denomina unidad de datos del protocolo (PDU). Durante el encapsulamiento, cada capa encapsula las PDU que recibe de la capa inferior de acuerdo con el protocolo que se utiliza. En cada etapa del proceso, una PDU tiene un nombre distinto 
+                   para reflejar sus funciones nuevas. Aunque no existe una convención universal de nombres para las PDU, en este curso se denominan de acuerdo con los protocolos de la suite TCP/IP. Las PDU de cada tipo de datos se muestran en la figura. 
+                   <div>
+                         <img src="../images/unidades de datos de protocolo.PNG" alt="">
+                   </div>
+               </p>
+               <h2>Tres direcciones</h2>
+               <p>
+                    Los protocolos de red exigen el uso de direcciones para la comunicación de red. El cliente usa el direccionamiento para enviar solicitudes y otros datos a un servidor. El servidor utiliza la dirección del cliente para regresar los datos solicitados al cliente que los pidió. <br>
+                    Las capas de OSI de transporte, red y enlace de datos utilizan todas algún tipo de direccionamiento. La capa de transporte utiliza direcciones de protocolo en forma de números de puerto para identificar aplicaciones de red que deben procesar datos de cliente y servidor. La capa de red especifica 
+                    direcciones que identifican las redes a las que los clientes y servidores están conectados, y los clientes y servidores propiamente dichos. Por último, la capa de enlace de datos especifica los dispositivos de la red LAN local que deben manejar tramas de datos. Las tres direcciones son necesarias 
+                    para la comunicación entre cliente y servidor, como se ve en la figura.
+                    <div>
+                         <img src="../images/tres direcciones.PNG" alt="">
+                    </div>               
+               </p>
+               <h2>Ejemplo de encapsulamiento</h2>
+               <p>
+                    Cuando se envían mensajes en una red, el proceso de encapsulamiento opera desde las capas superiores hacia las capas inferiores. En cada capa, la información de la capa superior se considera como datos en el protocolo encapsulado. Por ejemplo, el segmento TCP se considera como datos en el paquete IP. <br>
+                    Usted vio esta animación anteriormente en este módulo. Esta vez, haga clic en Reproducir y concéntrese en el proceso de encapsulación ya que un servidor web envía una página web a un cliente web.
+                    <div>
+                         <video src="../videos/Encapsulamiento.mp4" class="responsive" autoplay="true" muted alt=""></video>
+                    </div>
+               </p>
+               <h2>Ejemplo de desencapsulamiento</h2>
+               <p>
+                    Este proceso se invierte en el host receptor, y se conoce como desencapsulamiento. El desencapsulamiento es el proceso que usan los dispositivos receptores para eliminar uno o más  de los encabezados de protocolo. Los datos se desencapsulan mientras suben por la pila hacia la aplicación del usuario final. 
+                    <div>
+                         <video src="../videos/desencapsulamiento.mp4" class="responsive" autoplay muted></video>
+                    </div>
+               </p>
+               <h2>Práctica de laboratorio: Introducción a Wireshark</h2>
+               <p>
+                    <a href="../docs/5/5.3.7-lab---introduction-to-wireshark_es-XL.pdf" target="_blank" rel="noopener noreferrer">Introducción a Wireshark</a>
+               </p>
+               
           </div>
      </div>
 </section>
