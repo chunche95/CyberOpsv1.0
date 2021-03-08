@@ -620,8 +620,46 @@ WLAN - Wireless Local Area Network. Define las reglas para la señalización ina
                <p>
                     <a href="../docs/5/5.3.7-lab---introduction-to-wireshark_es-XL.pdf" target="_blank" rel="noopener noreferrer">Introducción a Wireshark</a>
                </p>
-               
+               <h2>Resumen de Protocolos de Red</h2>
+               <p>
+                    <h3>¿Qué Aprendí en este Módulo?</h3>
+                    <h4>Comunicaciones de red</h4>
+                    Las redes vienen en todos los tamaños y se pueden encontrar en hogares, negocios y otras organizaciones. El Internet es la red más extensa que existe. Todos los equipos que se conectan a una red se conocen como hosts o dispositivos finales. Gran parte de la interacción entre dispositivos terminales es tráfico entre cliente y servidor. <br>
+                    Los hosts pueden funcionar como clientes o servidores o como clientes y servidores en redes de punto a punto. Los servidores son hosts que utilizan software especializado para permitirles responder a las solicitudes de diferentes tipos de datos de los clientes. Los clientes son hosts que utilizan aplicaciones de software como exploradores web, 
+                    clientes de correo electrónico o aplicaciones de transferencia de archivos para solicitar datos de servidores. Cuando usamos Internet, utilizamos una combinación de cables de cobre y fibra óptica o comunicaciones inalámbricas y satelitales para transportar nuestro tráfico de datos. Las conexiones a Internet se realizan a través de proveedores 
+                    de servicios de Internet que se conectan entre sí mediante ISP globales de nivel 1 y nivel 2 que se conectan entre sí a través de puntos de intercambio de Internet (IXP). Las empresas más grandes pueden conectarse a ISP de nivel 2 a través de un punto de presencia (POP). Los ISP de nivel 3 conectan hogares y empresas a Internet. 
+                    El tráfico entre una computadora y un servidor de Internet puede tomar muchas rutas diferentes. Algunos caminos pueden ser muy directos, pero otros pueden parecer salir fuera del camino. Además, los datos que se envían entre un equipo y un servidor se pueden enviar en una ruta diferente de la en la que se reciben.
+                    
+                    <h4>Protocolos de Comunicación</h4>
+                    Las comunicaciones de datos requieren algo más que conexiones. Los dispositivos deben saber cómo comunicarse. Para estos dispositivos utilizan reglas o protocolos de comunicación, al igual que las comunicaciones cara a cara entre personas usan reglas. Los protocolos de red especifican muchas características de la comunicación de red, <br>
+                    como codificación de mensajes, formato y encapsulación de mensajes, tamaño de mensaje, sincronización de mensajes y opciones de entrega. Algunos de los protocolos de red más comunes son Hypertext Transfer Protocol (HTTP), el protocolo de control de transmisión (TCP) y el protocolo de Internet (IP). Es muy importante que un analista de ciberseguridad 
+                    conozca la estructura de los datos del protocolo y cómo funcionan los protocolos en la red. Los protocolos especifican cómo se estructuran los mensajes y la forma en que los dispositivos de red comparten información sobre rutas a otras redes. Especificar cómo y cuándo se transmiten los mensajes de error y del sistema entre dispositivos. 
+                    Además, los protocolos especifican cómo se configuran y terminan las sesiones de transferencia de datos. El conjunto de protocolos TCP/IP es utilizado por Internet y redes de datos en hogares, empresas y otras organizaciones. La suite TCP/IP es una familia de protocolos que se ajustan a los estándares de código abierto disponibles gratuitamente que están 
+                    avalados por la industria de redes y aprobados por organizaciones de estándares. Esto permite que los dispositivos de diferentes fabricantes trabajen juntos. El conjunto de protocolos TCP/IP tiene cuatro capas de protocolos que funcionan juntos cuando se envían y reciben mensajes. Los protocolos comunes en la capa de aplicación de la suite son DNS, DHCP, POP3 y HTTPS, entre otros. 
+                    Los protocolos de la capa de transporte son TCP y UDP. Ejemplos de protocolos de capa de Internet son IPv4, IPv6, ICMP y EIGRP. Los mensajes están formateados para ajustarse a los estándares de protocolos. Los datos de protocolo se encapsulan colocando datos de capa superior dentro de los datos de capa inferior cuando se envían los datos. 
+                    El proceso inverso se produce cuando se reciben los datos. Los estándares de protocolo especifican el tamaño de los mensajes y cómo se codifican los mensajes para enviarlos a través de conexiones de red como ondas de radio, pulsos de luz o señales eléctricas. El host receptor decodifica los mensajes. Las normas de protocolo también especifican la velocidad 
+                    a la que se envían los datos (control de flujo), el tiempo que espera un host para recibir una respuesta desde el destino (tiempo de espera de respuesta) y la forma en que los hosts determinan cuándo pueden enviar datos en una red de medios compartidos (método de acceso). Los mensajes de unidifusión se envían a un host de destino. 
+                    Los mensajes de multidifusión se envían a un grupo de hosts. Las transmisiones se envían a todos los hosts de la misma área de la red. Los modelos de comunicación en capas tienen una serie de beneficios. Los modelos ayudan en el diseño de protocolos y dispositivos. También aumentan la competencia entre fabricantes porque los dispositivos deben trabajar juntos. 
+                    Por último, los modelos evitan que los cambios en una capa afecten a otras capas y proporcionan una forma común de describir el funcionamiento de la red. Dos modelos son los modelos de referencia OSI y TCP/IP. El modelo de OSI tiene siete capas. Las diferentes capas tienen diferentes funciones. El modelo TCP/IP incluye cuatro capas.
+                    
+                    <h4>Encapsulamiento de datos</h4>
+                    Los mensajes que consisten en grandes cantidades de datos no se pueden enviar a través de la red como un flujo masivo de bits. Esto se debe a que otras personas necesitarán esperar a que se complete toda la comunicación antes de poder utilizar la red, y si la comunicación falla, el mensaje completo tendría que ser enviado de nuevo. <br>
+                    En su lugar, los datos se dividen en una serie de piezas más pequeñas y se envían a través de la red. Esto se llama segmentación. La segmentación es requerida por el conjunto de protocolos TCP/IP. Los datos se envían como paquetes. Cada paquete se dirige por separado y puede tomar diferentes rutas a través de una red para llegar al destino. 
+                    La segmentación aumenta la velocidad y la eficiencia de las redes de datos. Se gana una mayor velocidad porque muchas conversaciones de datos pueden tener lugar al mismo tiempo en la red. Este proceso se denomina multiplexación. La eficiencia se obtiene porque sólo se deben volver a enviar los datos que no son recibidos por un destino. 
+                    Los mensajes se segmentan para ser enviados y deben recombinarse cuando se reciben. A medida que los datos se transmiten por la pila de protocolo que se va a enviar, cada capa agrega información diferente. Este proceso se llama encapsulamiento. La manera que adopta una porción de datos en cualquier capa se denomina unidad de datos del protocolo (Protocol Data Unit, PDU). 
+                    Durante la encapsulación, las PDU se encapsulan dentro de las PDU en la siguiente capa de la pila cuando se envían los datos. El proceso inverso se produce cuando se reciben los datos. En la capa de aplicaciones OSI, la PDU generalmente se denomina simplemente datos. Los datos se encapsulan en segmentos o datagramas en la capa de transporte. 
+                    La PDU de capa de red se denomina paquete, encapsula segmentos. La capa de vínculo de datos encapsula los datos en un marco. Finalmente, la capa física transmite bits a través de la red. Las capas de OSI de transporte, red y enlace de datos utilizan todas algún tipo de direccionamiento. La capa de transporte utiliza direcciones de protocolo en forma de números de puerto. 
+                    La capa de red utiliza direcciones IP para identificar hosts y redes. Finalmente, la capa de vínculo de datos utiliza direcciones de hardware para identificar qué hosts de la red local deben manejar tramas. Estas direcciones identifican el origen de los datos y el destino de los datos. Después de recibir los datos, se desencapsulan para que los datos puedan ser 
+                    utilizados por las aplicaciones cliente que los solicitaron. 
+               </p>
+               <h2>Prueba de protocolos de red.</h2>
+               <p>
+                    <video src="../videos/resumen de protocolo de red - test.mp4" class="responsive" muted autoplay></video>
+               </p>
           </div>
+          <ul class="section-btn">
+               <a href="ProtocoloDeInternetYEthernet.html" class="smoothScroll"><span data-hover="Vamos!">Ir a capítulo 6.</span></a>
+          </ul>
      </div>
 </section>
 
