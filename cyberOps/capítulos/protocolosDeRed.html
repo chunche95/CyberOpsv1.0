@@ -546,11 +546,31 @@ WLAN - Wireless Local Area Network. Define las reglas para la señalización ina
                                    1. Acceso a la red
                               </strong></td>
                               <td>
-                                   Contola los dispositivos del hardware y los medios que forman la red.
+                                   Controla los dispositivos del hardware y los medios que forman la red.
                               </td>
                          </tr>
                     </table>
                     Las definiciones del estándar y los protocolos TCP/IP se explican en un foro público y se definen en un conjunto de documentos de petición de comentarios (RFC) disponibles al público. Un RFC es creado por ingenieros de redes y enviado a otros miembros de IETF para comentarios.
+               </p>
+               <h2>Segmentación del mensaje</h2>
+               <p>
+                    Conocer el modelo de referencia OSI y el modelo de protocolo TCP/IP será útil cuando aprenda acerca de cómo se encapsulan los datos a medida que se mueven a través de una red. No es tan simple como una carta física que se envía a través del sistema de correo. <br>
+                    En teoría, una comunicación simple, como un vídeo musical o un correo electrónico puede enviarse a través de la red desde un origen hacia un destino como una transmisión de bits masiva y continua. Sin embargo, esto crearía problemas para otros dispositivos que necesitan utilizar los mismos 
+                    canales de comunicación o enlaces. Estas grandes transmisiones de datos originarán retrasos importantes. Además, si falla un enlace en la infraestructura de la red interconectada durante la transmisión, el mensaje completo se perdería y tendría que retransmitirse completamente. <br>
+                    Un método mejor es dividir los datos en partes más pequeñas y manejables para enviarlas por la red. La segmentación es el proceso de dividir un flujo de datos en unidades más pequeñas para transmisiones a través de la red. La segmentación es necesaria porque las redes de datos utilizan el conjunto 
+                    de protocolos TCP/IP para enviar datos en paquetes IP individuales. Cada paquete se envía por separado, similar al envío de una carta larga como una serie de postales individuales. Los paquetes que contienen segmentos para el mismo destino se pueden enviar a través de diferentes rutas. <br>
+                    La segmentación de mensajes tiene dos beneficios principales.
+                    <ul>
+                         <li>
+                              <strong>Aumenta la velocidad</strong>. Debido a que un flujo de datos grande se segmenta en paquetes, se pueden enviar grandes cantidades de datos a través de la red sin atar un enlace de comunicaciones. Esto permite que muchas conversaciones diferentes se intercalen en la red llamada multiplexación.
+                         </li>
+                         <li>
+                              <strong>Aumenta la eficiencia</strong>. Si un solo segmento no llega a su destino debido a una falla en la red o congestión de la red, solo ese segmento necesita ser retansmitido en lugar de volver a enviar toda la secuencia de datos.
+                         </li>
+                    </ul>
+                    <div>
+                         <video src="../videos/segmentacion_y_multiplexacion.mp4" class="responsive" autoplay="true" muted></video>
+                    </div>
                </p>
           </div>
      </div>
