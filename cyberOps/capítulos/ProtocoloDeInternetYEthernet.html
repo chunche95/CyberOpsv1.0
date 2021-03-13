@@ -105,7 +105,16 @@
                                 y cómo se utilizan para enrutar paquetes desde el origen al destino.
                             </p>
                          </p>
-                    </div>
+                        </div>
+                   </div>
+              </div>
+         </section>
+<!-- PROJECT -->
+<section id="project" >
+    <div class="container">
+         <div class="">
+              <!-- CONTENTS ITEM -->
+              <div class="container">                    
                     <h2>¿Qué aprenderé en este módulo?</h2>
                     <p>
                         <b>Título del módulo.</b> Protocolos Ethernet e IP. <br>
@@ -273,21 +282,43 @@
                             </li>
                         </ul>
                     </p>
-               </div>
-          </div>
-     </div>
-</section>
-
-<!-- PROJECT -->
-<section id="project" >
-     <div class="container">
-          <div class="">
-               <!-- CONTENTS ITEM -->
-               <div class="container">
-                    <h2></h2>
+                    <h2>Sin conexión</h2>
                     <p>
-                        
+                        IP sin conexión, significa que el protocolo IP no crea una conexión de extremo a extremo dedicado antes de enviar los datos. La comunicación sin conexión es conceptualmente similar a enviar una carta a alguien sin notificar al destinatario por adelantado. 
+                        <div>
+                            <img src="../images/sinconexion.PNG" alt="">
+                        </div>
+                        Las comunicaciones de datos sin conexión funcionan con el mismo principio. Como se muestra en la figura siguiente, el protocolo  IP no requiere un intercambio inicial de información de control para establecer una conexión de extremo a extremo antes de que se reenvíen los paquetes. 
+                        <div>
+                            <img src="../images/sinconexion-rojo.PNG" alt="">
+                        </div>
                     </p>
+                    <h2>Mejor esfuerzo</h2>
+                    <p>
+                        El protocolo IP tampoco necesita campos adicionales en el encabezado para mantener una conexión establecida. Este proceso reduce en gran medida la sobrecarga del protocolo IP. Sin embargo, sin una conexión completa preestablecida, los remitentes no saben si los dispositivos de destino están presentes y en funcionamiento cuando envían paquetes, ni tampoco si el destinatario recibe el paquete o si puede 
+                        acceder al paquete y leerlo. <br>
+                        El proctocolo IP no garantiza que todos los paquetes que se envían, dehecho, se reciban. 
+                        <div>
+                            <img src="../Images/mejoresfuerzo.PNG" alt="">
+                        </div>
+                        Dado que es un protocolo de capa de red no confiable, el protocolo IP no garantiza que reciba todos los paquetes enviados. Otros protocolos administran el proceso de seguimiento de paquetes y de aseguramiento de entrega. 
+                    </p>
+                    <h2>Independiente de los medios.</h2>
+                    <p>
+                        Que sea poco confiable significa que el protocolo IP no tiene la capacidad para administrar y recuperar paquetes no recibidos o dañados. Esto se debe a que, si bien los paquetes IP se envían con información sobre la ubicación de la entrega, no contienen información que pueda procesar para informar al remitente si la entrega fue exitosa. Es posible que los paquetes  lleguen dañados o fuera de secuencia al 
+                        destinatario o que no lleguen en absoluto. El protocolo IP no tiene la capacidad de retransmitir aquetes si se producen errores. <br>
+                        Las aplicaciones que usan los datos o los servicios de capas superiores deben solucionar problemas como el envío de paquetes fuera de orden o la pérdida de paquetes. Esta característica permite que el protocolo IP funcione de manera muy eficaz. En el conjunto de protocolos TCP/IP, la confiabilidad es la función del protocolo TCP en la capa de transporte. <br>
+                        IP funciona independientemente de los medios que transportan los datos en las capas más bajas de la pila de protocolos. Como se muestra a continuación, los paquetes IP pueden ser señales electrónicas que se transmiten por cables de cobre, señales ópticas que se transmiten por fibra óptica o inalámbricamente como las señales de radio. 
+                        <div>
+                            <img src="../images/independiente-del-medio.PNG" alt=""> <br>
+                            Los paquetes IP pueden trasladarse a través de diferentes medios.
+                        </div>
+                        La capa de enlace de datos OSI es responsable de tomar un paquete IP y prepararlo para la transmisión a través del medio de comunicaciones. Esto significa que la entrega de paquetes IP no se limita a ningún medio en particular. <br>
+                        Sin embargo, la capa de red tiene en cuenta una de las características más importantes del medio, que es el tamaó máximo de PDU que cada medio puede transportar. Esta característica se conoce como 'unidad de transmisión máxima' (MTU). Parte del control de la comunicación entre la capa de enlace de datos y  la capa de red consiste en establecer el tamaño máximo del paquete. La capa de enlace de datos pasa el valor de MTU 
+                        a la capa de red. La capa de red luego determina qué tamaño pueden tener los paquetes. <br>
+                        En algunos casos, un dispositivo intermedio, generalmente un router, debe dividir un paquete IPv4 cuando lo reenvía de un medio a otro con una MTU más pequeña. Este proceso se llama 'fragmentación de paquetes' o 'fragmentación'. La fragmentaciónprovoca latencia, El router no puede fragmentar los paquetes IPv6. 
+                    </p>
+                    
                </div>
                <ul class="section-btn">
                     <a href="verificacionDeLaConectividad.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 7.</span></a>
