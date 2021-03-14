@@ -345,19 +345,53 @@
                                 <strong>Suma de comprobación de encabezado</strong>. Se usa para detectar daños en el encabezado IPv4.
                             </li>
                             <li>
-                                <strong>Tiempo de duración (Time to Live, TTL)</strong>. TTl contiene un valor
+                                <strong>Tiempo de duración (Time to Live, TTL)</strong>. TTL contiene un valor binario de 8 bists que se usa para limitar la vida útil de un paquete. El dispositivo de origen del paquete IPV4 establece el valor TTL inicial. Se reduce en uno cada vez que el paquete es procesado por un router. Si el campo TTL llega a cero, el router descarta el paquete y envía a la dirección IP de origen un mensaje de tiempop superado del protocolo de mensajes 
+                                de control de Internet (ICMP). Debido a que el router disminuye el TTL de cada paquete, el router también debe volver a calcular la suma de comprobación del encabezado. 
                             </li>
                             <li>
-
+                                <strong>Protocolo</strong>. Este campo se usa para identificar el protocolo del siguiente nivel. Este valor binario de 8 its indica el tipo de carga de datos que lleva el paquete, lo que permite que la capa de red transmita los datos al protocolo de la capa superior apropiado. ICMP(1), TCP(2) y UDP(17) son algunos valores comunes.
                             </li>
                             <li>
-
+                                <strong>Dirección IPv4 de origen</strong>. Contiene un valor binario de 32 bits que representa la dirección IPv4 de origen del paquete. La dirección IPv4 de origen es siempre una dirección unicast.
                             </li>
                             <li>
-
+                                <strong>Dirección IPV4 de destino</strong>. Contiene un valor binario de 32 bits que representa la dirección IPV4 de destino del paquete. La dirección IPv4 de destino es una dirección unicast, multicast o de difusión.
                             </li>
                         </ul>
-                        6.2.10
+                        Los dos campos a los que se hace más referencia son los de dirección IP de origen y de destino En estos campos, se identifica de dónde viene el paquete y a dónde va. Por lo general, estas direcciones no cambian mientras se viaja desde el origen hasta el destino. <br>
+                        Los campos Longitud de encabezado de Internet (IHL), Longitud total y Suma de comprobación del encabezado se utilizan para identificar y validar el paquete. <br>                  
+                        Para reordenar un paquete fragmentado, se usan otros campos. Específicamente, el paquete IPv4 utiliza los campos de identificación, señaladores y desplazamiento de fragmentos para llevar un control de los fragmentos. Un router puede tener que fragmentar un paquete IPv4 cuando lo reenvía de un medio a otro con una MTU más pequeña. <br>
+                        Los campos Opciones y Relleno rara vez se usan y están fuera del alcance de este módulo.
+                    </p>
+                    <h2>Comprensión de conocimientos -  Paquete IPv4</h2>
+                    <p>
+                        <img src="../images/verificacion de comprensión - paquete IPv4.PNG" alt="">
+                    </p>
+                    <h2>Conceptos básicos de direccionamiento IP</h2>
+                    <p>
+                        <h3>Porciones de red y de host</h3>
+                        <p>
+                            La estructura de las direcciones IP consta de una dirección de red jerárquica de 32 bits que identifica a una red y a un host dentro de una red. Al determinar la porción de red frente a la porción del host, debe mirar la secuencia de 32 bits, como se muestra en la figura. <br>
+                            El diagrama muestra el desglose de una dirección IPv4 en las partes de red y host. La dirección IPv4 es 192.168.10.10. Debajo, la dirección se convierte en 11000000 10101000 00001010 00001010. Una línea discontinua muestra la separación entre las partes de red y host. Esto ocurre después del tercer octeto y el bit 24. <br>
+                            <h4>Dirección IPv4</h4>
+                            <div>
+                                <img src="../images/IPV4.PNG" alt="">
+                            </div>
+                            Los bits dentro de la porción de red de la dirección deben ser idénticos para todos los dispositivos que residen en la misma red. Los bits dentro de la porción de host de la dirección deben ser únicos para identificar un host específico dentro de una red. Si dos hosts tienen el mismo patrón de bits en la porción de red especificada de la secuencia de 32 bits, esos dos hosts residen en la misma red. <br>
+                            ¿Pero cómo saben los hosts qué porción de los 32 bits identifica la red y qué porción identifica el host? El rol de la máscara de subred
+                        </p>
+                        <h3>La máscara de subred</h3>
+                        <p>
+                            Como se muestra en la figura, asignar una dirección IPv4 a un hosts requiere lo siguiente:
+                            <ul>
+                                <li>
+                                    <strong>Dirección IPv4</strong>. Esta es la dirección IPv4 única del host.
+                                </li>
+                                <li>
+                                    <strong>Máscara de subred</strong>. Se usa para identificar la parte de red/host de la dirección IPv4.
+                                </li>
+                            </ul>
+                        </p>
                     </p>
                </div>
                <ul class="section-btn">
