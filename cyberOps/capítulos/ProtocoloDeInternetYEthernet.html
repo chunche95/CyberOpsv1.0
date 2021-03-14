@@ -392,6 +392,46 @@
                                 </li>
                             </ul>
                         </p>
+                        <h3>Configuración IPv4 en un equipo con Windows</h3>
+                        <p>
+                            <div>
+                                <img src="../images/configuracionIPV4enunequipoconWindows.PNG" alt="">
+                            </div>
+                            <strong>Nota:</strong> Se requiere una dirección IPv4 de puerta de enlace (gateway) predeterminada para llegar a redes remotas y se requieren direcciones IPv4 del servidor DNS para traducir nombres de dominio a direcciones IPv4.
+                            La máscara de subred IPv4 se usa para diferenciar la porción de red de la porción de host de una dirección IPv4. Cuando se asigna una dirección IPv4 a un dispositivo, la máscara de subred se usa para determinar la dirección de red del dispositivo. La dirección de red representa todos los dispositivos de la misma red.
+                            La siguiente figura muestra la máscara de subred de 32 bits en formato decimal y binario punteado.
+                            <div>
+                                <img src="../images/MASCARADESUBRED.PNG" alt="">
+                            </div>
+                            Observe cómo la máscara de subred es una secuencia consecutiva de bits '1' seguida de una secuencia consecutiva de bits '0'. <br>
+                            Para identificar las porciones de red y host de una dirección IPv4, la máscara de subred se compara con la dirección IPv4 bit por bit, de izquierda a derecha como se muestra en la figura. 
+                            <div>
+                                <img src="../images/ASOCIACION DE UNA DIRECCION IPV4 CON SU MASCARA DE SUBRED.PNG" alt="">
+                            </div>
+                            Tenga en cuenta que la máscara de subred en realidad no contiene la porción de red o host de una dirección IPv4, solo le dice a la computadora dónde buscar la parte de la dirección IPv4 que es la porción de red y qué parte es la porción de host. <br>
+                            El proceso real que se usa para identificar la porción de red y la porción de host se denomina <i>AND.</i>
+                        </p>
+                        <h3>La longitud de prefijo.</h3>
+                        <p>
+                            Puede ser difícil expresar direcciones de red y de host con la dirección de la máscara de subred decimal punteada. Afortunadamente, hay un método alternativo para identificar una máscara de subred, un método llamado longitud del prefijo.
+                            La longitud del prefijo es el número de bits establecidos en 1 en la máscara de subred. Está escrito en "notación de barra", que se observa mediante una barra diagonal (/) seguida del número de bits establecidos en 1. Por lo tanto, cuente el número de bits en la máscara de subred y anteponga una barra diagonal.
+                            Consulte la tabla para ver ejemplos. En la primera columna, se enumeran varias máscaras de subred que se pueden usar con una dirección de host. En la segunda columna, se muestra la dirección binaria de 32 bits convertida. En la última columna, se muestra la longitud de prefijo resultante.
+                            Máscara de subredDirección de 32 bits Longitud255.0.0.0111111.000000000000.00000000/8255.255.0.0111111.111111111111.00000000/16255.255.255.0111111.111111.111111.00000000/24255.255.255.12811111111.1111.10000000/25255.255.255.19211111111.10000000/25255.1921111111111.11000000/26255.2241111111111111111111111.11100000/27255 .255.255.24011111111.11111111.111111.111111.11110000/28255.255.255.2481111111111.11111111.111000/29255.255.255.25211111111.11111111.111111.11100/30
+<pre> 
+Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
+255.0.0.0	        11111111.00000000.00000000.00000000     /8
+255.255.0.0	        11111111.11111111.00000000.00000000     /16
+255.255.255.0	    11111111.11111111.11111111.00000000     /24
+255.255.255.128	    11111111.11111111.11111111.10000000     /25
+255.255.255.192	    11111111.11111111.11111111.11000000     /26
+255.255.255.224	    11111111.11111111.11111111.11100000     /27
+255.255.255.240	    11111111.11111111.11111111.11110000     /28
+255.255.255.248	    11111111.11111111.11111111.11111000     /29
+255.255.255.252	    11111111.11111111.11111111.11111100     /30
+</pre>
+                            <b>Nota:</b> Una dirección de red también se conoce como prefijo o prefijo de red. Por lo tanto, la longitud del prefijo es el número de bits "1" en la máscara de subred.
+                            Al representar una dirección IPv4 utilizando una longitud de prefijo, la dirección IPv4 se escribe seguida de la longitud del prefijo sin espacios. Por ejemplo, 192.168.10.10 255.255.255.0 se escribiría como 192.168.10.10/24. Más adelante se analiza el uso de varios tipos de longitudes de prefijo. Por ahora, el foco estará en el prefijo / 24 (es decir, 255.255.255.0)
+                        </p>
                     </p>
                </div>
                <ul class="section-btn">
