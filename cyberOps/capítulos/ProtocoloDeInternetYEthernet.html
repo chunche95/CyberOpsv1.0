@@ -496,6 +496,25 @@ Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
                     <p>
                         <img src="../images/compruebe su compresión - estructuras de direcciones IPv4.PNG" alt="">
                     </p>
+                    <h2>Clases de direcciones IPv4 y máscaras de subred predeterminadas</h2>
+                    <p>
+                        Clases de direcciones IPv4 y máscaras de subred predeterminadas
+                        Hay varios tipos y clases de direcciones IPv4. Mientras que las clases de direcciones son cada vez menos importantes en las redes, todavía se utilizan y mencionan con frecuencia en la documentación sobre redes. <br>
+                        <h5>Clases de direcciones</h5>
+                        En 1981, las direcciones IPv4 se asignaban mediante el direccionamiento con base a esquemas de clases, según se define en RFC 790. A los clientes se les asignaba una dirección de red basada en una de tres clases: A, B o C. El RFC dividía los rangos unicast en las siguientes clases específicas:
+                        <ul>
+                            <li><b>Clase A</b> (0.0.0.0/8 a 127.0.0.0/8): Diseñada para admitir redes extremadamente grandes, con más de 16 millones de direcciones de host. Usaba un prefijo /8 fijo donde el primer octeto indicaba la dirección de red y los tres octetos restantes eran para las direcciones de host.</li>
+                            <li><b>Clase B</b> (128.0.0.0/16 a 191.255.0.0/16): Diseñada para satisfacer las necesidades de redes de tamaño moderado a grande, con hasta 65 000 direcciones de host. Usaba un prefijo /16 fijo donde los dos octetos de valor superior indicaban la dirección de red y los dos octetos restantes eran para las direcciones de host.</li>
+                            <li><b>Clase C</b> (192.0.0.0/24 a 223.255.255.0/24): Diseñada para admitir redes pequeñas con un máximo de 254 hosts. Usaba un prefijo /24 fijo donde los tres primeros octetos indicaban la red y el octeto restante era para las direcciones de host.</li>
+                        </ul>
+                        <strong>Nota:</strong> También existe un bloque de multidifusión de clase D que va de 224.0.0.0 a 239.0.0.0, y un bloque de direcciones experimentales de clase E que va de 240.0.0.0 a 255.0.0.0. <br>
+                        Tal como se indica en la figura, el sistema de clases asignaba el 50% de las direcciones IPv4 disponibles a 128 redes Clase A, el 25% de las direcciones a la Clase B y, luego, la Clase C compartía el 25% restante con las Clases D y E. 
+                        Aunque era adecuado en su momento, con la expansión de Internet resultó obvio que este método estaba desperdiciando direcciones y reducía la cantidad de direcciones de red IPv4 disponibles.
+                        <div>
+                            <img src="../images/clases de direcciones IPV4.PNG" alt="">
+                        </div>
+                        El direccionamiento bajo el esquema de clases se abandonó a fines de la década de 1990 para favorecer el sistema de direccionamiento sin clase actual. Sin embargo, como veremos más adelante en esta sección, el direccionamiento sin clases fue solamente una solución temporal para el agotamiento de direcciones IPv4.
+                    </p>
                </div>
                <ul class="section-btn">
                     <a href="verificacionDeLaConectividad.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 7.</span></a>
