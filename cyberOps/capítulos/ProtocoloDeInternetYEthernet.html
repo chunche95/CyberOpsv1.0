@@ -434,7 +434,26 @@ Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
                         </p>
                         <h3>Determinación de la red: lógica AND</h3>
                         <p>
-                            
+                            Un AND lógico es una de las tres operaciones booleanas utilizadas en la lógica booleana o digital. Las otras dos son OR y NOT. La operación AND se usa para determinar la dirección de red.
+                            el AND lógico es la comparación de dos bits que producen los resultados que se muestran a continuación. Observe que solo mediante 1 AND 1 se obtiene 1. Cualquier otra combinación da como resultado un 0.
+                            <ul>
+                                <li>1 Y 1 = 1</li>
+                                <li>0 Y 1 = 0</li>
+                                <li>1 Y 0 = 0</li>
+                                <li>0 Y 0 = 0</li>
+                            </ul>
+                            Nota: En la lógica digital, 1 representa True y 0 representa False Cuando se utiliza una operación AND, ambos valores de entrada deben ser True (1) para que el resultado sea True (1). <br>
+                            Para identificar la dirección de red de un host IPv4, se recurre a la operación lógica AND para la dirección IPv4, bit por bit, con la máscara de subred. El uso de la operación AND entre la dirección y la máscara de subred produce la dirección de red. <br>
+                            Para ilustrar cómo se usa AND para descubrir una dirección de red, considere un host con dirección IPv4 192.168.10.10 y una máscara de subred de 255.255.255.0, como se muestra en la figura: <br>
+                            Dirección de hostIPv4 (192.168.10.10)-La dirección IPv4 del host en formato decimal y binario punteados. <br>
+                            Máscara de subred (255.255.255.0)--La máscara de subred del host en formatos decimales y binarios punteados. <br>
+                            <div>
+                                <img src="../images/determinaciondelared-lógicaAND.PNG" alt="">
+                            </div>
+                            Dirección de red (192.168.10.0): la operación AND lógica entre la dirección IPv4 y la máscara de subred da como resultado una dirección de red IPv4 que se muestra en formato decimal y binario punetados. <br>
+                            Utilizando la primera secuencia de bits como ejemplo, observe que la operación AND se realiza en el bit 1 de la dirección del host con el bit 1 de la máscara de subred. Esto resulta en un bit "1" para la dirección de red. 1 AND 1 = 1. <br>
+                            La operación AND entre una dirección de host IPv4 y una máscara de subred da como resultado la dirección de red IPv4 para este host. En este ejemplo, la operación AND entre la dirección host 192.168.10.10 y la máscara de subred 255.255.255.0 (/24) da como resultado la dirección de red IPv4 192.168.10.0/24. 
+                            Esta es una operación IPv4 importante, ya que le dice al host a qué red pertenece.
                         </p>
                     </p>
                </div>
