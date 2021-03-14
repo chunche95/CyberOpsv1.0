@@ -415,22 +415,22 @@
                         <p>
                             Puede ser difícil expresar direcciones de red y de host con la dirección de la máscara de subred decimal punteada. Afortunadamente, hay un método alternativo para identificar una máscara de subred, un método llamado longitud del prefijo.
                             La longitud del prefijo es el número de bits establecidos en 1 en la máscara de subred. Está escrito en "notación de barra", que se observa mediante una barra diagonal (/) seguida del número de bits establecidos en 1. Por lo tanto, cuente el número de bits en la máscara de subred y anteponga una barra diagonal.
-                            Consulte la tabla para ver ejemplos. En la primera columna, se enumeran varias máscaras de subred que se pueden usar con una dirección de host. En la segunda columna, se muestra la dirección binaria de 32 bits convertida. En la última columna, se muestra la longitud de prefijo resultante.
-                            Máscara de subredDirección de 32 bits Longitud255.0.0.0111111.000000000000.00000000/8255.255.0.0111111.111111111111.00000000/16255.255.255.0111111.111111.111111.00000000/24255.255.255.12811111111.1111.10000000/25255.255.255.19211111111.10000000/25255.1921111111111.11000000/26255.2241111111111111111111111.11100000/27255 .255.255.24011111111.11111111.111111.111111.11110000/28255.255.255.2481111111111.11111111.111000/29255.255.255.25211111111.11111111.111111.11100/30
+                            Consulte la tabla para ver ejemplos. En la primera columna, se enumeran varias máscaras de subred que se pueden usar con una dirección de host. En la segunda columna, se muestra la dirección binaria de 32 bits convertida. En la última columna, se muestra la longitud de prefijo resultante.                        
 <pre> 
 Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
 255.0.0.0	        11111111.00000000.00000000.00000000     /8
 255.255.0.0	        11111111.11111111.00000000.00000000     /16
-255.255.255.0	    11111111.11111111.11111111.00000000     /24
-255.255.255.128	    11111111.11111111.11111111.10000000     /25
-255.255.255.192	    11111111.11111111.11111111.11000000     /26
-255.255.255.224	    11111111.11111111.11111111.11100000     /27
-255.255.255.240	    11111111.11111111.11111111.11110000     /28
-255.255.255.248	    11111111.11111111.11111111.11111000     /29
-255.255.255.252	    11111111.11111111.11111111.11111100     /30
+255.255.255.0	        11111111.11111111.11111111.00000000     /24
+255.255.255.128	        11111111.11111111.11111111.10000000     /25
+255.255.255.192	        11111111.11111111.11111111.11000000     /26
+255.255.255.224	        11111111.11111111.11111111.11100000     /27
+255.255.255.240	        11111111.11111111.11111111.11110000     /28
+255.255.255.248	        11111111.11111111.11111111.11111000     /29
+255.255.255.252	        11111111.11111111.11111111.11111100     /30
 </pre>
                             <b>Nota:</b> Una dirección de red también se conoce como prefijo o prefijo de red. Por lo tanto, la longitud del prefijo es el número de bits "1" en la máscara de subred.
-                            Al representar una dirección IPv4 utilizando una longitud de prefijo, la dirección IPv4 se escribe seguida de la longitud del prefijo sin espacios. Por ejemplo, 192.168.10.10 255.255.255.0 se escribiría como 192.168.10.10/24. Más adelante se analiza el uso de varios tipos de longitudes de prefijo. Por ahora, el foco estará en el prefijo / 24 (es decir, 255.255.255.0)
+                            Al representar una dirección IPv4 utilizando una longitud de prefijo, la dirección IPv4 se escribe seguida de la longitud del prefijo sin espacios. Por ejemplo, 192.168.10.10 255.255.255.0 se escribiría como 192.168.10.10/24. Más adelante se analiza el uso de varios tipos de longitudes de prefijo. 
+                            Por ahora, el foco estará en el prefijo / 24 (es decir, 255.255.255.0)
                         </p>
                     </p>
                </div>
