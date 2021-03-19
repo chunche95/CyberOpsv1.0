@@ -566,6 +566,71 @@ Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
                         </ul>
                         Se requiere una puerta de enlace predeterminada para enviar tráfico fuera de la red local. El tráfico no se puede reenviar fuera de la red local si no hay una puerta de enlace predeterminada, la dirección de la puerta de enlace predeterminada no está configurada o la puerta de enlace predeterminada está desactivada.
                     </p>
+                    <h2>Verifique su comprensión -  Cómo enruta un hots</h2>
+                    <p>
+                        <img src="../images/cómo enruta un host.PNG" alt="">
+                    </p>
+                    <h2>IPv6</h2>
+                    <p>
+                        Ya sabe que IPv4 se está quedando sin direcciones. Es por eso que necesita aprender acerca de IPv6.
+                        IPv6 está diseñado para ser el sucesor de IPv4. IPv6 tiene un espacio de direcciones más grande de 128 bits, que proporciona 340 undecillones (es decir, 340 seguidos de 36 ceros) posibles direcciones. Sin embargo, IPv6 es más que solo direcciones más extensas. <br>
+                        Cuando el IETF comenzó a desarrollar un sucesor de IPv4, aprovechó esta oportunidad para corregir las limitaciones de IPv4 e incluir mejoras. Un ejemplo es el Protocolo de mensajes de control de Internet versión 6 (ICMPv6), que incluye la resolución de direcciones y la configuración automática de direcciones que no se encuentran en ICMP para IPv4 (ICMPv4). <br>
+                        El agotamiento del espacio de direcciones IPv4 fue el factor que motivó la migración a IPv6. A medida que África, Asia y otras áreas del mundo están más conectadas a Internet, no hay suficientes direcciones IPv4 para acomodar este crecimiento. Como se muestra en la ilustración, a cuatro de cinco Registros Regionales de Internet (RIR) se les agotaron las direcciones IPv4. <br>
+                        El gráfico muestra un mapa global de los cinco registros regionales de Internet y las fechas de agotamiento IPv4. La fecha de agotamiento de ARINs IPv4 es julio de 2015, los datos de agotamiento de los NCCs RIPE son septiembre de 2012, la fecha de agotamiento de APNIC es junio de 2014, la fecha de agotamiento de LACNIC es abril de 2011 y la fecha de agotamiento proyectada de AfrINICS es 2020. <br>
+                        <div>
+                            <img src="../images/RIR IPV4 Exhaustion dates.PNG" alt="">
+                        </div>
+                        IPv4 tiene un máximo teórico de 4300 millones de direcciones. Las direcciones privadas en combinación con la traducción de direcciones de red (NAT) fueron esenciales para demorar la reducción del espacio de direcciones IPv4. Sin embargo, NAT es problemático para muchas aplicaciones, crea latencia y tiene limitaciones que impiden severamente las comunicaciones entre pares. <br>
+                        Con el número cada vez mayor de dispositivos móviles, los proveedores de telefonía móvil han estado liderando el camino con la transición a IPv6. Los dos principales proveedores de telefonía móvil en los Estados Unidos informan que más del 90% de su tráfico es sobre IPv6. <br>
+                        La mayoría de los principales proveedores de Internet y proveedores de contenido, como YouTube, Facebook y Netflix, también han hecho la transición. Muchas empresas como Microsoft, Facebook y LinkedIn están haciendo la transición a IPv6 solo internamente. En 2018, el ISP de banda ancha Comcast reportó un despliegue de más del 65% y British Sky Broadcasting más del 86%. <br>
+                        <h5>Internet de las cosas </h5>
+                        En la actualidad, Internet es significativamente distinta de como era en las últimas décadas. Actualmente, Internet es mucho más que el correo electrónico, las páginas web y la transferencia de archivos entre equipos. Internet evoluciona y se está convirtiendo en una Internet de las cosas (IoT). Ya no serán solo los equipos, las tabletas y los teléfonos inteligentes los únicos dispositivos que accedan a Internet. 
+                        Los dispositivos del futuro preparados para acceder a Internet y equipados con sensores incluirán desde automóviles y dispositivos biomédicos hasta electrodomésticos y ecosistemas naturales. <br>
+                        Con una población de Internet cada vez mayor, un espacio limitado de direcciones IPv4, problemas con NAT y el IoT, ha llegado el momento de comenzar la transición a IPv6.
+                    </p>
+                    <h2>Verifique su comprensión - Tipos de dirección IPv6.</h2>
+                    <p>
+                        <img src="../images/tipos de direcciones IPV6.PNG" alt="">
+                    </p>
+                    <h2>Resumen de Ethernet y protocolo IP</h2>
+                    <p>
+                        <h4>¿Qué aprendí en este módulo?</h4>
+                        <p>
+                            <h5>Ethernet</h5>
+                            <p>
+                                Ethernet y LAN inalámbricas (WLAN) son las dos tecnologías LAN más populares. Ethernet opera en las capas físicas y de enlace de datos del modelo OSI y se definen en los estándares IEEE 802.2 y 802.3. Ethernet admite anchos de banda de 10 Mbps a 100.000 Mbps. Es importante conocer los campos de trama Ethernet. Una dirección MAC de Ethernet es un valor binario de 48 bits expresado como 12 dígitos hexadecimales 
+                                (4 bits por dígito hexadecimal). La dirección MAC se puede representar mediante guiones, dos puntos o puntos entre los grupos de dígitos.
+                            </p>
+                            <h5>IPv4</h5>
+                            <p>
+                                Los protocolos de capa de red permiten a los dispositivos finales intercambiar datos entre redes e Internet. IP versión 4 (IPv4) e IP versión 6 (IPv6) son los principales protocolos de comunicación de la capa de red. Para lograr comunicaciones punto a punto a través de los límites de la red, los protocolos de capa de red realizan cuatro operaciones básicas: El protocolo IP encapsula el segmento de la capa de 
+                                transporte agregando un encabezado IP, que se utiliza para entregar el paquete al host de destino, el cuál es examinado por los dispositivos de la capa 3 (es decir, los Routers y Switches capa 3), para alcanzar el host de destino. El protocolo IP es connectionless (no reuqiere una ruta preestablecida), mejor esfuerzo e independiente de los medios. Es importante estar familiarizado con la estructura del paquete IP.
+                            </p>
+                            <h5>Conceptos básicos del direccionamiento IP</h5>
+                            <p>
+                                La estructura de las direcciones IP consta de una dirección de red jerárquica de 32 bits que identifica la porción de red y la parte del host dentro de una red. Los bits dentro de la porción de red de la dirección deben ser idénticos para todos los dispositivos que residen en la misma red. Los bits dentro de la porción de host de la dirección deben ser únicos para identificar un host específico dentro de una red.
+                                A un host se le asigna una dirección IPv4 y una máscara de subred. La máscara de subred IPv4 se usa para diferenciar la porción de red de la porción de host de una dirección IPv4. La dirección de red representa todos los dispositivos de la misma red. La longitud del prefijo es el número de bits establecidos en 1 en la máscara de subred. Está escrito en "notación de barra", que se observa mediante una barra diagonal (/) seguida del número de bits establecidos en 1. El proceso real utilizado para identificar las
+                                porciones de red y host se llama ANDing. Las subredes crean dominios de difusión más pequeños para reducir el tráfico general de la red, mejorar el rendimiento de la red e implementar políticas de seguridad. Las subredes se pueden utilizar para agrupar dispositivos por ubicación, departamento o tipo de dispositivo.
+                            </p>
+                            <h5>Tipos de direcciones IPv4</h5>
+                            <p>
+                                Las primeras implementaciones de IPv4 proporcionaron direcciones de red enrutables globalmente basadas en un sistema bajo un esquema de calase, que utiliza las Clases A, B y C, cada una de las cuales tiene diferentes rangos de direcciones IP. Sin embargo, el sistema de direccionamiento bajo este esquema era defectuoso y rápidamente agotó las direcciones de red disponibles y, por lo tanto, 
+                                fue reemplazado por el actual sistema de direccionamiento sin esquemas de clases. Hay direcciones IPv4 públicas y direcciones IPv4 privadas. Las direcciones privadas deben ser utilizadas por las organizaciones y no se propagan en Internet. Hay tres bloques de direcciones privadas disponibles.
+                            </p>
+                            <h5>La puerta de enlace (gateway) predeterminada</h5>
+                            <p>
+                                El dispositivo final de origen determina si un paquete está destinado a un host local o a un host remoto. En IPv4 -: El dispositivo de origen utiliza su propia máscara de subred junto con su propia dirección IPv4 y la dirección IPv4 de destino para realizar esta determinación. En IPv6: El router local anuncia la dirección de red local (prefijo) a todos los dispositivos de la red. 
+                                El router conectado al segmento de red local se denomina gateway predeterminado. Tiene una dirección IP local en el mismo rango de direcciones que otros hosts en la red local. Puede aceptar datos en la red local y reenviar datos fuera de la red local. Este también enruta el tráfico a otras redes. Una ruta predeterminada es la ruta o camino que la PC utiliza cuando intenta conectarse a la red remota. En un host de Windows, el comando route print o netstat -r se puede usar para mostrar la tabla de enrutamiento del host.
+                            </p>
+                            <h5>IPv6</h5>
+                            <p>
+                                Una dirección IPv6 es una dirección jerárquica de 128 bits. El espacio de direcciones de 128 bits proporciona un grupo mucho mayor de direcciones IP disponibles públicamente (340 undecilliones) que IPv4 (4,3 mil millones). El Protocolo de mensajes de control de Internet versión 6 (ICMPv6), también incluye la resolución y configuración automática de direcciones , Estas características no se encuentran presentes en ICMPv4.
+                                Las direcciones IPv6 se escriben como una cadena de valores hexadecimales. Cada cuatro bits está representado por un solo dígito hexadecimal; para un total de 32 valores hexadecimales. Hay dos reglas que ayudan a reducir el número de dígitos necesarios para representar una dirección IPv6. La primera regla es omitir los ceros iniciales en cualquier hexteto. Regla 2 : Los dos puntos dobles (::) pueden reemplazar cualquier cadena única y contigua de uno o más segmentos de 16 bits (hextetos) que estén compuestas sólo por ceros. 
+                                La longitud del prefijo se representa en notación de barra diagonal y se usa para indicar la porción de red de una dirección IPv6. La longitud de prefijo puede ir de 0 a 128. La longitud de prefijo IPv6 recomendada para LAN y la 
+                                mayoría de los otros tipos de redes es / 64. Esto se debe a que la autoconfiguración de direcciones sin estado (SLAAC) utiliza 64 bits para el ID de la interfaz. También facilita la creación y gestión de subredes.
+                            </p>
+                        </p>
+                    </p>
                </div>
                <ul class="section-btn">
                     <a href="verificacionDeLaConectividad.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 7.</span></a>
