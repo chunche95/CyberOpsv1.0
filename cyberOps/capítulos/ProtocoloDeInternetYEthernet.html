@@ -515,6 +515,57 @@ Máscara de subred	Dirección de 32 bits	                Longitud de prefijo
                         </div>
                         El direccionamiento bajo el esquema de clases se abandonó a fines de la década de 1990 para favorecer el sistema de direccionamiento sin clase actual. Sin embargo, como veremos más adelante en esta sección, el direccionamiento sin clases fue solamente una solución temporal para el agotamiento de direcciones IPv4.
                     </p>
+                    <h2>Direcciones privadas reservadas</h2>
+                    <p>
+                        Las direcciones IPv4 públicas son direcciones en las que se realiza routing globalmente entre los routers ISP. Sin embargo, no todas las direcciones IPv4 disponibles pueden usarse en Internet. Existen bloques de direcciones denominadas direcciones privadas que la mayoría de las organizaciones usan para asignar direcciones IPv4 a los hosts internos.
+                        A mediados de la década de 1990, se presentaron las direcciones IPv4 privadas debido al agotamiento del espacio de direcciones IPv4. Las direcciones IPv4 privadas no son exclusivas y cualquier red interna puede usarlas.
+                        Estos son los bloques de direcciones privadas: 
+                        <ul>
+                            <li>10.0.0.0 a 10.255.255.255 </li>
+                            <li>172.16.0.0 a 172.31.255.255 </li>
+                            <li>192.168.0.0 a 192.168.255.255</li>
+                        </ul>
+                        Es importante saber que las direcciones dentro de estos bloques de direcciones no están permitidas en Internet y deben ser filtradas (descartadas) por los routers de Internet. Por ejemplo, como se ve en la figura, los usuarios de las redes 1, 2 o 3 envían paquetes a destinos remotos. Los routers ISP detectan que las direcciones IPv4 de origen de los paquetes provienen de direcciones privadas y, por lo tanto, descartan los paquetes. 
+                    </p>
+                    <h4>Direcciones privadas no se pueden enrutar a través de Internet</h4>
+                    <p>
+                        La mayoría de las organizaciones usan direcciones IPv4 privadas para los hosts internos. Sin embargo, estas direcciones RFC 1918 no se pueden enrutar en Internet y deben traducirse a direcciones IPv4 públicas. Se usa la traducción de direcciones de red (NAT) para traducir entre direcciones IPv4 privadas y públicas. En general, esto se hace en el router que conecta la red interna a la red del ISP. <br>
+                        Los routers domésticos brindan la misma funcionalidad. Por ejemplo, la mayoría de los routers domésticos asignan direcciones IPv4 a sus hosts cableados e inalámbricos desde la dirección privada 192.168.1.0 /24. A la interfaz del router doméstico que se conecta a la red del proveedor de servicios de Internet (ISP) se le suele asignar una dirección IPv4 pública para usar en Internet.
+                    </p>
+                    <h2>La desición de reenvío de host</h2>
+                    <p>
+                        Con IPv4 e IPv6, los paquetes siempre se crean en el host de origen. El host de origen debe poder dirigir el paquete al host de destino. Para ello, los dispositivos finales de host crean su propia tabla de enrutamiento. En este tema se explica cómo los dispositivos finales utilizan las tablas de enrutamiento.
+                        Otra función de la capa de red es dirigir los paquetes entre hosts. Un host puede enviar un paquete según lo siguiente:
+                        <ul>
+                            <li>A sí mismo- Un host puede hacerse ping a sí mismo al enviar un paquete a una dirección IPv4 127.0.0.1, denominada "interfaz de bucle invertido". El hacer ping a la interfaz de bucle invertido, pone a prueba la pila del protocolo TCP/IP en el host.</li>
+                            <li>Host local - Este es un host de destino que se encuentra en la misma red local que el host emisor. Los hosts de origen y destino comparten la misma dirección de red.</li>
+                            <li>Host remoto - Este es un host de destino en una red remota. Los hosts de origen y destino no comparten la misma dirección de red.</li>
+                        </ul>
+                        La figura ilustra la PC1 conectándose a un host local en la misma red y a un host remoto ubicado en otra red. 
+                        <div>
+                            <img src="../images/decision de renvio de host.PNG" alt="">
+                        </div>
+                        El dispositivo final de origen determina si un paquete está destinado a un host local o a un host remoto. El dispositivo final de origen determina si la dirección IP de destino está en la misma red en la que está el propio dispositivo de origen. El método de determinación varía según la versión IP:
+                        <ul>
+                            <li>En IPv4 - El dispositivo de origen utiliza su propia máscara de subred junto con su propia dirección IPv4 y la dirección IPv4 de destino para realizar esta determinación.</li>
+                            <li>En IPv6- El router local anuncia la dirección de red local (prefijo) a todos los dispositivos de la red.</li>
+                        </ul>
+                        En una red doméstica o comercial, puede tener varios dispositivos cableados e inalámbricos interconectados mediante un dispositivo intermediario, como un switch LAN o un punto de acceso inalámbrico (WAP). Este dispositivo intermediario proporciona interconexiones entre hosts locales en la red local. Los hosts locales pueden conectarse y compartir información sin la necesidad de dispositivos adicionales. Si un host está enviando 
+                        un paquete a un dispositivo que está configurado con la misma red IP que el dispositivo host, el paquete simplemente se reenvía desde la interfaz del host, a través del dispositivo intermediario, y directamente al dispositivo de destino. <br>
+                        Por supuesto, en la mayoría de las situaciones queremos que nuestros dispositivos puedan conectarse más allá del segmento de red local, como a otros hogares, negocios e Internet. Los dispositivos que no están en el segmento de red local se denominan "módulo remoto de E/S". Cuando un dispositivo de origen envía un paquete a un dispositivo de destino remoto, se necesita la ayuda de los routers y del enrutamiento. El enrutamiento 
+                        es el proceso de identificación de la mejor ruta para llegar a un destino. El router conectado al segmento de red local se denomina gateway predeterminado. 
+                    </p>
+                    <h2>Puesta de enlace predeterminada</h2>
+                    <p>
+                        La puerta de enlace predeterminada es el dispositivo de red (es decir, el router o el switch de capa 3) que puede enrutar el tráfico a otras redes. Si se piensa en una red como si fuera una habitación, el gateway predeterminado es como la puerta. Si desea ingresar a otra habitación o red, debe encontrar la puerta.
+                        En una red, una puerta de enlace predeterminada suele ser un router con estas características:
+                        <ul>
+                            <li>Tiene una IP local en el mismo rango de direcciones que otros hosts en la red local.</li>
+                            <li>Puede aceptar datos  en la red local y reenviar datos fuera de la red local.</li>
+                            <li>Enruta el tráfico a otras redes</li>
+                        </ul>
+                        Se requiere una puerta de enlace predeterminada para enviar tráfico fuera de la red local. El tráfico no se puede reenviar fuera de la red local si no hay una puerta de enlace predeterminada, la dirección de la puerta de enlace predeterminada no está configurada o la puerta de enlace predeterminada está desactivada.
+                    </p>
                </div>
                <ul class="section-btn">
                     <a href="verificacionDeLaConectividad.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 7.</span></a>
