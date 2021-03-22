@@ -116,11 +116,108 @@
                     <h2>¿Qué aprenderé en este módulo?</h2>
                     <p>
                         <b>Título del módulo.</b> Protocolos Ethernet e IP. <br>
-                        <b>Objetivos del módulo.</b> Explicar cómo los protocolos Ethernet e IP permiten la comunicación en redes.                         
+                        <b>Objetivos del módulo.</b> Explicar cómo los protocolos Ethernet e IP permiten la comunicación en redes.                 
+                         <table>
+                              <tr>
+                                   <td><strong>Objetivo</strong></td>
+                                   <td>Topologías de red</td>
+                                   <td>Dispositivos de seguridad</td>
+                                   <td>Servicios de seguridad</td>                                        
+                              </tr>
+                              <tr>
+                                   <td><strong>Objetivo del tema</strong></td>
+                                   <td>Explique cómo los diseños de red influyen en el flujo de tráfico a través de la red.</td>
+                                   <td>Explique cómo se emplean los dispositivos para reforzar la seguridad de las redes.</td>
+                                   <td>Explique cómo los servicios de red mejran la seguridad de las redes.</td>                                             
+                              </tr>
+                         </table>
+                    </p>
+                    <h2>Topologías de red</h2>
+                    <p>
+                         <h3>Representaciones de red.</h3>
+                         <p>
+                              Los arquitectos y administradores de redes deben poder mostrar el aspecto que tendrán sus redes. Necesitan poder ver fácilmente qué componentes se conectan a otros componentes, dónde se ubicarán y cómo se conectarán. Los diagramas de redes a menudo usan símbolos, como los que se muestran en la figura, para representar los diferentes dispositivos y conexiones que forman una red.
+                              <div>
+                                   <img src="../images/topologiasdered.PNG" alt="">
+                              </div>
+                              Un diagrama proporciona una manera fácil de comprender cómo se conectan los dispositivos en una red grande. Este tipo de representación de una red se denomina diagrama de topología. La capacidad de reconocer las representaciones lógicas de los componentes físicos de red es fundamental para poder visualizar la organización y el funcionamiento de una red. <br>
+                              Además de estas representaciones, se utiliza una terminología especializada para describir cómo cada uno de estos dispositivos y medios se conectan entre sí:
+                              <ul>
+                                   <li><strong>Tarjeta de interfaz de red (Network Interface Card) (NIC)</strong> - Una NIC conecta físicamente el dispositivo final a la red.</li>
+                                   <li><strong>Puerto físico</strong> - Un conector o conexión en un dispositivo de red donde se conectan los medios a un terminal u otro dispositivo de red.</li>
+                                   <li><strong>Interfaz</strong> - Puertos especializados en un dispositivo de red que se conecta a redes individuales. Debido a que los routers conectan redes, los puertos en un router se denominan interfaces de red.</li>
+                              </ul>
+                              <strong>Nota:</strong> Los términos puerto e interfaz con frecuencia se utilizan en forma indistinta.
+                         </p>
+                    </p>
+                    <h2>Diagramas de topología</h2>
+                    <p>
+                         Los diagramas de topología son documentación obligatoria para cualquier persona que trabaje con una red. Estos diagramas proporcionan un mapa visual que muestra cómo está conectada la red. Hay dos tipos de diagramas de topología, físicos y lógicos.
+                         <h3>Diagramas de topologías físicas</h3>
+                         Los diagramas de topología física ilustran la ubicación física de los dispositivos intermedios y la instalación del cable, como se muestra en la figura. Puede ver que las habitaciones en las que se encuentran estos dispositivos están etiquetadas en esta topología física.
+                         <div>
+                              <img src="../images/topo_fisica.PNG" alt="">
+                         </div>
+                         <h3>Diagramas de topologías lógicas.</h3>
+                         Los diagramas de topología lógica ilustran los dispositivos, los puertos y el esquema de direccionamiento de la red, como se muestra en la figura. Puede ver qué dispositivos finales están conectados a qué dispositivos intermediarios y qué medios se están utilizando.
+                         <div>
+                              <img src="../images/TOPO_LOGICAS.PNG" alt="">
+                         </div>
+                         Las topologías que se muestran en los diagramas físicos y lógicos son adecuadas para su nivel de comprensión en este punto del curso. Utilice Internet para buscar “diagramas de topología de red” y ver algunos ejemplos más complejos. Si agrega la palabra "Cisco" a su frase de búsqueda, encontrará muchas topologías que usan íconos similares a los que ha visto en estas figuras.                         
+                    </p>
+                    <h2>Redes de muchos tamaños</h2>
+                    <p>
+                         Ahora que está familiarizado con los componentes que componen las redes y sus representaciones en topologías físicas y lógicas, está listo para aprender acerca de los diferentes tipos de redes. <br>
+                         Hay redes de todo tamaño. Pueden ir desde redes simples, compuestas por dos PC, hasta redes que conectan millones de dispositivos. <br>
+                         Las redes domésticas sencillas le permiten compartir recursos, como impresoras, documentos, imágenes y música, entre unos pocos dispositivos finales locales. <br>
+                         Las redes de oficinas pequeñas y oficinas domésticas (SOHO) permiten a las personas trabajar desde casa o desde una oficina remota. Muchos trabajadores independientes utilizan este tipo de redes para anunciar y vender productos, pedir suministros y comunicarse con los clientes. <br>
+                         Las empresas y las grandes organizaciones usan redes para proporcionar consolidación, almacenamiento y acceso a la información en los servidores de red. Las redes proporcionan correo electrónico, mensajería instantánea y colaboración entre empleados. Muchas organizaciones usan la conexión de su red a Internet para proporcionar productos y servicios a los clientes. <br>
+                         Internet es la red más extensa que existe. De hecho, el término Internet significa “red de redes”. Es una colección de redes privadas y públicas interconectadas. <br>
+                         En pequeñas empresas y hogares, muchas PC funcionan como servidores y clientes en la red. Este tipo de red se denomina red entre pares.
+                    </p>
+                    <h2>LAN y WAN</h2>
+                    <p>
+                         Las infraestructuras de red pueden variar en gram medida en términos de:
+                         <ul>
+                              <li>El tamaño del área que abarcan.</li>
+                              <li>La cantidad de usuarios conectados.</li>
+                              <li>La cantidad y los tipos de servicios disponibles.</li>
+                              <li>El área de responsabilidad.</li>
+                         </ul>
+                         Los dos tipos más comunes de infraestructuras de red son las redes de área local (LAN) y las redes de área amplia (WAN). Una LAN es una infraestructura de red que proporciona acceso a usuarios y dispositivos finales en un área geográfica pequeña. Normalmente, una LAN se utiliza en un departamento dentro de una empresa, un hogar o una red de pequeñas empresas. 
+                         Una WAN es una infraestructura de red que proporciona acceso a otras redes en un área geográfica amplia, que generalmente es propiedad y está administrada por una corporación más grande o un proveedor de servicios de telecomunicaciones. La figura muestra las LAN conectadas a una WAN. <br>
+                         La topología de red muestra tres LAN conectadas a través de un vínculo WAN en el centro. Una leyenda muestra que las LAN se resaltan en amarillo y las WAN en morado claro. La WAN se encuentra en el centro del diagrama. Contiene un símbolo de nube etiquetado nube con conexiones WAN rojas a tres routers. Cada router se encuentra en parte en la WAN y en parte en una LAN. 
+                         En la parte inferior izquierda se encuentra la LAN central. Contiene un servidor, dos switches multicapa, dos switches LAN y cuatro PC. En la parte inferior derecha está la sucursal LAN. Contiene un switch, un servidor, una impresora, dos teléfonos IP conectados cada uno a un PC y un punto de acceso inalámbrico con conexiones inalámbricas a un ordenador portátil y un teléfono inteligente. 
+                         En la parte superior derecha se encuentra la LAN de la oficina en casa. Contiene un router inalámbrico con una conexión por cable a una impresora y conexiones inalámbricas a una computadora portátil y un monitor.
+                         <div>
+                              <img src="../images/LAN.PNG" alt="">
+                         </div>
+                         <h3>LAN</h3>
+                         <p>
+                              Una LAN es una infraestructura de la red que abarca un área geográfica pequeña. Las LANs tienen características específicas:
+                              <ul>
+                                   <li>Las LANs interconectan terminales en un área limitada, como una casa, un lugar de estudios, un edificio de oficinas o un campus.</li>
+                                   <li>Por lo general, la administración de las LAN está a cargo de una única organización o persona. El control administrativo se aplica a nivel de red y rige las políticas de seguridad y control de acceso.</li>
+                                   <li>Las LANs proporcionan ancho de banda de alta velocidad a dispositivos finales internos y dispositivos intermedios, como se muestra en la figura.</li>
+                              </ul>
+                              <div>
+                                   <img src="../images/LAN_CABLE.PNG" alt="">
+                              </div>
+                         </p>
+                         <h3>WAN</h3>
+                         <p>
+                              La figura muestra una WAN que interconecta dos LAN. Una WAN es una infraestructura de la red que abarca un área geográfica extensa. Las WAN generalmente son administradas por proveedores de servicios (SP) o proveedores de servicios de Internet (ISP). <br>
+                              Las WANs tienen características específicas:
+                              <ul>
+                                   <li>Las WAN interconectan LAN a través de áreas geográficas extensas, por ejemplo, entre ciudades, estados, provincias, países o continentes.</li>
+                                   <li>Por lo general, la administración de las WAN está a cargo de varios proveedores de servicios</li>
+                                   <li>Normalmente, las wan proporcionan enlaces de velocidad más lenta entre las redes LAN.</li>
+                              </ul>
+                         </p>
                     </p>
                </div>
                <ul class="section-btn">
-                    <a href="Infraestructuradeseguridaddelared.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 12.</span></a>
+                    <a href="??????.html" class="smoothScroll"><span data-hover="Vamos!">Ir al capítulo 13.</span></a>
                </ul>
           </div>
      </div>
