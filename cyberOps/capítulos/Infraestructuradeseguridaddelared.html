@@ -174,6 +174,9 @@
                          Las empresas y las grandes organizaciones usan redes para proporcionar consolidación, almacenamiento y acceso a la información en los servidores de red. Las redes proporcionan correo electrónico, mensajería instantánea y colaboración entre empleados. Muchas organizaciones usan la conexión de su red a Internet para proporcionar productos y servicios a los clientes. <br>
                          Internet es la red más extensa que existe. De hecho, el término Internet significa “red de redes”. Es una colección de redes privadas y públicas interconectadas. <br>
                          En pequeñas empresas y hogares, muchas PC funcionan como servidores y clientes en la red. Este tipo de red se denomina red entre pares.
+                         <div>
+                              <video src="../videos/redes de muchos tamaños.mp4" class="responsive" muted autoplay="true"></video>
+                         </div>
                     </p>
                     <h2>LAN y WAN</h2>
                     <p>
@@ -220,7 +223,130 @@
                     </p>
                     <h2>El modelo de diseño de red de tres capas.</h2>
                     <p>
-                         
+                         La LAN cableada del campus usa un modelo de diseño jerárquico para separar la topología de red en grupos modulares o capas. Separando el diseño en capas permite que cada capa implemente funciones específicas, lo que simplifica el diseño de la red para una implementación y administración más sencillas. Esto también simplifica la implementación y administración de la red. <br>
+                         La LAN cableada del campus habilita la comunicación entre dispositivos en un edificio o grupo de edificios, así como también la interconexión a la red WAN y el perímetro de Internet en la capa principal de la red. <br>
+                         Un diseño de la red LAN jerárquica incluye acceso, distribución y capas principales como se muestra en la figura.
+                         <div>
+                              <img src="../images/modelo de diseño jerárquico.PNG" alt="">
+                         </div>
+                         Cada capa está diseñada para cumplir funciones específicas.
+                         La capa de acceso otorga a los puntos de acceso y a los usuarios acceso directo a la red. La capa de distribución agrega capas de acceso y brinda conectividad a los servicios. Por último, la capa de núcleo ofrece conectividad entre las capas de distribución para entornos de LAN grandes. El tráfico de los usuarios se inicia en la capa de acceso y pasa por las demás capas si se necesita utilizar la funcionalidad de esas capas. <br>
+                         Aunque el modelo jerárquico consta de tres capas, es posible que en algunas redes empresariales pequeñas se implemente un diseño jerárquico de dos niveles. Como se muestra en la figura, en un diseño jerárquico de dos niveles, las capas de núcleo y de distribución se combinan en una, lo que reduce el costo y la complejidad. 
+                         <div>
+                              <img src="../images/nucleo_contraido.PNG" alt="">
+                         </div>
+                         En arquitecturas de red mallada o plana, los cambios tienden a afectar a una gran cantidad de sistemas. El diseño jerárquico permite restringir los cambios operativos a un subgrupo de la red, lo que facilita la administración y mejora la recuperabilidad. La estructuración modular de la red en elementos pequeños y fáciles de comprender también facilita la recuperabilidad a través de aislamiento de fallas mejorado.
+                    </p>
+                    <h2>Vídeo - Diseño de red de tres capas.</h2>
+                    <p>
+                         <video src="../videos/diseñodereddetrescapas.mp4" class="responsive" muted controls></video>
+                    </p>
+                    <h2>Arquitecturas de seguridad comunes.</h2>
+                    <p>
+                         Principalmente, el diseño de firewall tiene por objetivo permitir o denegar el tráfico según el origen, el destino y el tipo de tráfico. Algunos diseños son tan simples y solo consisten en diseñar una red externa y una interna, que son determinadas por dos interfaces en un firewall. <br>
+                         Aquí hay tres diseños comunes de firewall.
+                         <div>
+                              <img src="../images/PRIVADO-PUBLICO.PNG" alt="">
+                              <img src="../images/DMZ.PNG" alt="">
+                              <img src="../images/FIREWALLDEPOLITICASBASADOSENZONAS.PNG" alt="">
+                         </div>
+                    </p>
+                    <h2>Verifique su conocimiento. -  Identifique la topología de red.</h2>
+                    <p>
+                         <img src="../images/verifique su conocimiento - Identifique la topología de red.PNG" alt="">
+                    </p>
+                    <h2>Packet Tracer. Identificar el flujo de paquetes.</h2>
+                    <p>
+                         En esta actividad de Packet Tracer, se observará el flujo de paquetes en una topología LAN y una topología WAN. También observará de qué manera puede cambiar la ruta del flujo de paquetes cuando hay un cambio en la topología de la red.
+                         <div>
+                              <a href="../docs/12/12.1.9-packet-tracer---identify-packet-flow_es-XL.pdf" target="_blank" rel="noopener noreferrer">Identificación de flujos de paquetes. (PDF)</a> <br>
+                              <a href="../docs/12/12.1.9-packet-tracer---identify-packet-flow_es-XL.pka" target="_blank" rel="noopener noreferrer">Identificación de flujos de paquetes. (PKA)</a>
+                         </div>
+                    </p>
+                    <h2>Video - Dispositivos de seguridad.</h2>
+                    <p>
+                       <video src="../videos/Dispositivos_de_seguridad.mp4" class="responsive" muted controls></video>  
+                    </p>
+                    <h2>Firewalls</h2>
+                    <p>
+                         Un firewall es un sistema o grupo de sistemas que impone una política de control de acceso entre redes.
+                         <div>
+                              <video src="../videos/firewall.mp4" class="responsive" muted controls></video>
+                         </div>
+                         <h3>Propiedades comunes de firewall</h3>
+                         <p>
+                              Todos los firewalls comparten algunas propiedades comunes:
+                              <ul>
+                                   <li>Los firewalls resisten ataques de red.</li>
+                                   <li>Los firewalls son el único punto de tránsito entre las redes corporativas internas y las redes externas porque todo el tráfico circula por ellos.</li>
+                                   <li>Los firewalls aplican la política de control de acceso. </li>
+                              </ul>
+                         </p>
+                         <h3>Ventajas de firewall</h3>
+                         <p>
+                              Los firewall en una red brindan numerosos beneficios:
+                              <ul>
+                                   <li>Evitan la exposición de hosts, recursos y aplicaciones confidenciales a usuarios no confiables.</li>
+                                   <li>Sanean el flujo de protocolos, lo que evita el aprovechamiento de las fallas de protocolos.</li>
+                                   <li>Bloquean los datos maliciosos de servidores y clientes.</li>
+                                   <li>Simplifican la administración de la seguridadm ya que la mayor parte del control del acceso a redes se deriva a unos pocos firewalls de la red.</li>
+                              </ul>
+                         </p>
+                         <h3>Limitaciones del firewall</h3>
+                         <p>
+                              Los firewalls también tienen algunas limitaciones.
+                              <ul>
+                                   <li>Un firewall mal configurado puede tener graves consecuencias para la red, por ejemplo, convertirse en un punto único de falla.</li>
+                                   <li>Los datos de muchas aplicaciones no se pueden transmitir con seguridad mediante firewalls.</li>
+                                   <li>Los usuarios pueden buscar maneras de esquivar el firewall para recibir material bloqueado, lo que expone a la red a posibles ataques.</li>
+                                   <li>Puede reducirse la velocidad de la red.</li>
+                                   <li>El tráfico no autorizado se puede tunelizar u ocultar como tráfico legítimo a través del firewall.</li>
+                              </ul>
+                         </p>
+                    </p>
+                    <h2>Descripciones de tipos de firewall.</h2>
+                    <p>
+                         Es importante entender los diferentes tipos de firewalls y sus capacidades específicas, de modo que se utilice el firewall adecuado para cada situación.
+                         <h3>Firewall para filtrado de paquetes (sin estado)</h3>
+                         <p>
+                              Los firewalls de filtrado de paquetes suelen formar parte de un firewall de router, que autoriza o rechaza el tráfico a partir de la información de las capas 3 y 4. Son firewalls sin estado que utilizan una simple búsqueda en la tabla de políticas que filtra el tráfico según criterios específicos. <br>
+                              Por ejemplo, los servidores SMTP escuchan el puerto 25 de manera predeterminada. Un administrador puede configurar el firewall de filtrado de paquetes para bloquear el puerto 25 desde una estación de trabajo específica a fin de evitar que difunda un virus por correo electrónico.
+                              <div>
+                                   <img src="../images/fwd-filtrado-de-paquetes-sin-estado.PNG" alt="">
+                              </div>
+                         </p>
+                         <h3>Firewall con detección de estado</h3>
+                         <p>
+                              Los firewalls con estado son los más versátiles y las tecnologías de firewall más comúnmente usadas. Los firewalls activos proporcionan un filtrado de paquetes utilizando la información de conexión que se mantiene en una tabla de estados. El filtrado con estado es una 
+                              arquitectura de firewall que se clasifica en la capa de red. También analiza el tráfico en las capas 4 y 5 de OSI.
+                              <div>
+                                   <img src="../images/firewall-con-deteccion-de-estado.PNG" alt="">
+                              </div>
+                         </p>
+                         <h3>Firewall de gateway de aplicaciones</h3>
+                         <p>
+                              <strong>Firewall de gateway de aplicación (proxy de firewall)</strong> - Como se muestra en la figura, filtra la información en las capas 3, 4, 5 y 7 del modelo de referencia OSI. La mayor parte del control y filtrado del firewall se realiza en el software. 
+                              Cuando un cliente necesita tener acceso a un servidor remoto, se conecta a un servidor proxy. El servidor proxy se conecta al servidor remoto en nombre del cliente. Por lo tanto, el servidor solamente ve una conexión desde el servidor proxy.
+                              <div>
+                                   <img src="../images/firewall-del-gateway-de-aplicaciones.PNG" alt="">
+                              </div>
+                         </p>
+                         <h3>Firewall de próxima generación.</h3>
+                         <p>
+                              Los firewall de prócima generación (NGFW) van más allá de los firewall con estado y ofrecen lo siguiente: 
+                              <ul>
+                                   <li>Prevención de intrusiones integrada.</li>
+                                   <li>Control y reconocimiento de aplicaciones para ver y bloquear aplicaciones riesgosas.</li>
+                                   <li>Rutas de actualización para incluir futuros datos de información.</li>
+                                   <li>Técnicas para afrontar amenazas de seguridad en constante evolución.</li>
+                              </ul>
+                         </p>
+                         Otros métodos de implementación de firewall incluyen los siguientes:
+                         <ul>
+                              <li>Firewall basado en host (servidor y personal) ─ Una computadora o servidor que ejecuta software de firewall.</li>
+                              <li>Firewall transparente ─ Filtra el tráfico de IP entre un par de interfaces conectadas con puente.</li>
+                              <li>Firewall híbrido ─ Una combinación de los distintos tipos de firewall. Por ejemplo, un firewall de inspección de aplicación combina un firewall con estado y un firewall de gateway de aplicación.</li>
+                         </ul>
                     </p>
                </div>
                <ul class="section-btn">
