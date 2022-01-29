@@ -249,7 +249,33 @@
 											Debe limitarse el acceso de los usuarios únicamente a los recursos que necesitan de un sistema informático o una red. Por ejemplo, no deberían poder acceder a todos los archivos en un servidor si solo necesitan acceso a una carpeta. Si bien puede resultar más sencillo permitir el acceso de los usuarios a toda la unidad, es más seguro limitar el acceso solo a la carpeta que necesitan para realizar su trabajo. 
 											Esto se conoce como principio de privilegios mínimos. Limitar el acceso a los recursos también permite evitar el acceso de programas malintencionados a dichos recursos en caso de que se infecte la computadora del usuario.
 										</p>
+										<h3>Restricción de los permisos de usuario.</h3>
+										<p>
+											Si un administrador deniega los permisos a un intercambio de red para una persona o un grupo, esta denegación anula cualquier otra configuración de permisos. Por ejemplo, si un administrador le niega el permiso de acceso a un intercambio de red a una persona, el usuario no podrá acceder a este intercambio aunque sea el administrador o forme parte del grupo de administradores. 
+											La política de seguridad local debe describir los recursos a los que puede acceder cada usuario y cada grupo y el tipo de acceso para cada uno. <br>
+											Cuando un usuario cambia los permisos de una carpeta, tiene la opción de aplicar los mismos permisos a todas las subcarpetas. Esto se conoce como propagación de permisos. La propagación de permisos es una forma sencilla de aplicar permisos a muchos archivos y carpetas rápidamente. Una vez que se establecen los permisos de la carpeta principal, las carpetas y los archivos que se crean dentro de ésta heredan sus permisos. <br>
+											Además, la unicación de los datos y la acción realizada en los datos determinan la propagación de los permisos:
+											<ul>
+												<li>Los datos que se transmiten al mismo volumen mantienen los permisos originales.</li>
+												<li>Los datos que se copian en el mismo volumen heredan los nuevos permisos.</li>
+												<li>Los datos que se transfieren a otro volumen heredan los nuevos permisos.</li>
+												<li>Los datos que se copian en otro volumen heredan los nuevos permisos.</li>
+											</ul>
+										</p>
 									</p>
+									<h2>Encriptación de archivos.</h2>
+									<p>
+										La encripación es una herramienta que se usa para proteger datos. La encriptación transforma los datos con un algoritmo  complicado para que no puedan leerse. Una clave especial transforma la información ilegible en información legible. Los programas de software, carpetas e incluso unidades enteras. <br>
+										El sistema de cifrado de archivos (EFS) es una característica de Windows que permite cifrar datos. La implementación de Windows del EFS se conecta directamente con la cuenta de un usuario específico. Sólo el usuario que cifró los datos podrá acceder a las carpetas o los archivos cifrados. <br>
+										Un usuario también puede elegir cifrar una unidad de disco duro completa en Windows con una función denominada BitLocker, para usarlo, se debe contar con dos volúmenes como mínimo en un disco duro. <br>
+										Antes de usar BitLocker, el usuario debe habilitar el módulo de plataforma confiable (TPM) en la BIOS. El TPM es un chip especializado que se instala en la placa base. El TPM almacena información específica del sistema host, como clave de cifrado, certificados digitales y contraseñas. <br>
+										Las aplicaciones, como BitLocker, que usan cifrado pueden aprovechar el chip del TPM. <br>
+										<div>
+											<img src="images/TPM_Management_on_Local_Computer.PNG" class="responsive" alt="">
+										</div>
+										BitLocker To Go cifra unidades extraíbles. BitLocker To Go no utiliza un chip del TPM, pero aún proporciona cifrado para datos y requiere una contraseña.
+									</p>
+									
 								</div>
 							</section>
 
