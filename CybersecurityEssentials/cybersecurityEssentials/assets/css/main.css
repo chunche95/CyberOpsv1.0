@@ -2036,6 +2036,7 @@ input, select, textarea {
 		max-width: 55%;
 		height: 25%;
 		border-radius: 5px;	
+		box-align: center;
 	}
 
 	.responsive {

@@ -271,7 +271,7 @@
 										Antes de usar BitLocker, el usuario debe habilitar el módulo de plataforma confiable (TPM) en la BIOS. El TPM es un chip especializado que se instala en la placa base. El TPM almacena información específica del sistema host, como clave de cifrado, certificados digitales y contraseñas. <br>
 										Las aplicaciones, como BitLocker, que usan cifrado pueden aprovechar el chip del TPM. <br>
 										<div>
-											<img src="images/TPM_Management_on_Local_Computer.PNG" class="miniResponsive" alt="">
+											<img src="images/TPM_Management_on_Local_Computer.PNG" class="responsive" alt="">
 										</div>
 										BitLocker To Go cifra unidades extraíbles. BitLocker To Go no utiliza un chip del TPM, pero aún proporciona cifrado para datos y requiere una contraseña.
 									</p>
@@ -282,7 +282,7 @@
 										Si el hardware de la computadora falla, el usuario puede restaurar los datos de la copia de respaldo una vez que el sistema sea funcional. <br>
 										La política de seguridad de la organización debe incluir copias de respaldo de datos. Los usuarios deben realizar copias de respaldo de datos con regularidad. Las copias de respaldo de datos suelen almacenarse externamente para proteger los medios de copia de respaldo en caso de que ocurra algo en la instalación principal. <br>
 										<div>
-											<img src="images/backup.png" class="responsive" alt="Backup">
+											<img src="images/backup.jpg" class="responsive2" alt="Backup">
 										</div>
 										Las siguientes son algunas consideraciones para las copias de respaldo de datos: 
 										<ul>
@@ -301,14 +301,131 @@
 											</li>
 										</ul>
 									</p>
+									<h2>Bloqueo y filtración de contenido.</h2>
+									<p>
+										El software de control de contenido restringe el contenido al que un usuario puede acceder mediante un navegador web a través de Internet. El software de control de contenido puede bloquear los sitios que contienen ciertos 
+										tipos de materiales, como pornografía o contenido político o religioso controversial. Un padre puede implementar el software de control de contenido en la computadora utilizada por un niño. Las bibliotecas y las escuelas también implementan 
+										el software para evitar el acceso a contenido considerado censurable. <br>
+										<div>
+											<img src="images/filtros_de_busqueda.jpg" class="responsive2" alt="">
+										</div>
+										Un administrador puede implementar los siguientes tipos de filtros: 
+										<ul>
+											<li>Filtros basados en el navegador mediante una extensión de navegador de terceros.</li>
+											<li>Filtros de correo electrónico mediante un filtro basado en el servidor o cliente.</li>
+											<li>Filtros del lado del cliente instalados en una computadora específica.</li>
+											<li>Filtros de contenido basados en el router que bloquean el ingreso de tráfico en la red.</li>
+											<li>Filtros de contenido basados en dispositivos similares a los basados en el router.</li>
+											<li>Filtros de contenido basados en la nube.</li>
+										</ul>
+										Los motores de búsqueda, como Google, ofrecen la opción de activar un filtro de seguridad para excluir los enlaces inadecuados de los resultados de búsqueda.
+									</p>
+									<h2>Congelación y clonación de discos.</h2>
+									<p>
+										Hay muchas aplicaciones de terceros disponibles para restaurar un sistema al estado predeterminado. Esto permite que el administrador proteja el sistema operativo y los archivos de configuración de un sistema.
+										La clonación de discos copia el contenido del disco duro de la computadora en un archivo de imagen. Por ejemplo, un administrador crea las particiones requeridas en un sistema, formatea la partición y luego instala el sistema operativo. 
+										Instala todo el software de aplicación requerido y configura todo el hardware. El administrador utiliza el software de clonación de discos para crear el archivo de imagen. El administrador puede utilizar la imagen clonada de la siguiente manera:
+										<ul>
+											<li>Para limitar automáticamente  un sistema y restaurar la imagen principal de la organización.</li>
+											<li>Para implementar las nuevas computadoras dentro de la organización.</li>
+											<li>Para proporcionar una copia de respaldo del sistema completa.</li>
+										</ul>
+										<i><a href="https://en.wikipedia.org/wiki/Comparison_of_disk_cloning_software" target="_blank" rel="noopener noreferrer">Comparativa del software  de clonación de discos.</a></i> <br>
+										La congelación bloquea la partición de la unidad de disco duro. Cuando un usuario reinicia un sistema, el sistema se revierte a la configuración congelada. El sistema no guarda ningún cambio del usuario, por lo que cualquier aplicación instalada o archivo guardado se pierden cuando el sistema se reinicia. <br>
+										Si el administrador necesita cambiar la configuración del sistema, primero debe reanudar la partición protegida desactivando la congelación. Después de realizar los cambios, debe volver a activar el programa. El administrador puede configurar la congelación 
+										para que se reinicie después de que un usuario cierra sesión, después del apagado tras un período de inactividad o en un horario programado. <br>
+										Estos productos no ofrecen protección en tiempo real. Un sistema sigue siendo vulnerable hasta que el usuario o un evento programado reinicien el sistema. Sin embargo, un sistema infectado con código malicioso obtiene un nuevo comienzo si bien se reinicia el sistema.
+									</p>
+									<h2>Cerraduras y cables de seguridad.</h2>
+									<p>
+										Existen varios métodos para proteger físicamente los equipos informáticos:
+										<ul>
+											<li>
+												Utilizar seguros de cables en los equipos, como en la figura.
+												<div>
+													<img src="images/candado.PNG" class="responsive2" alt=""> 
+													<img src="images/candadodeseguridad.PNG" class="responsive2" alt="">
+												</div>
+											</li>
+											<li>
+												Mantener cerradas las salas de telecomunicaciones.
+											</li>
+											<li>
+												Utilizar jaulas de seguridad alrededor de los equipos.
+											</li>
+										</ul>
+										Muchos dispositivos portátiles y monitores de computadoras costosos tienen incorporada una ranura de seguridad de acero especial para utilizar junto con los seguros de cables. <br>
+										El tipo más común de cerradura de puerta es la entrada con cerradura con llave estándar. No se cierra automáticamente al cerrar la puerta. Además, una persona puede calzar una tarjeta de plástico delgada, como una tarjeta de crédito, entre la cerradura y el marco de la puerta para forzar su apertura. 
+										Las cerraduras de las puertas en edificios comerciales son diferentes de las cerraduras de las puertas residenciales. Para mayor seguridad, una cerradura con pestillo proporciona seguridad adicional. Aunque cualquier cerradura con llave presenta una vulnerabilidad si se pierden, roban o duplican las llaves. <br>
+										Una cerradura cifrada, como se muestra en la siguiente figura, utiliza botones que un usuario presiona conforme a una secuencia determinada para abrir la puerta. Es posible programar una cerradura cifrada. Esto significa que el código de un usuario solo funcionará durante determinados días o cierto tiempo. 
+										<div>
+											<img src="images/cerraduras de seguridad.PNG" class="responsive2" alt="">
+										</div>
+										Por ejemplo, una cerradura cifrada puede permitir que Bob acceda únicamente a la sala de servidores entre las 7 a. m. y las 6 p. m. de lunes a viernes. La cerradura cifrada también puede mantener un registro de cuándo se abre la puerta y el código utilizado para abrirla.
+									</p>
+									<h2>Temporizadores de cierre de sesión.</h2>
+									<p>
+										Un empleado se levanta y deja su computadora para tomar un descanso. Si el empleado no adopta ninguna medida para proteger su estación de trabajo, cualquier información en el sistema es vulnerable ante un usuario no autorizado. Una organización puede adoptar las siguientes medidas para impedir el acceso no autorizado:
+										<h3>Tiempo de espera de inactividad y bloqueo de pantalla.</h3>
+										<p>
+											Los empleados pueden o no cerrar sesión de sus computadoras cuando dejan el lugar de trabajo. Por lo tanto, es una de las mejores prácticas de seguridad configurar un temporizador de inactividad que desactive automáticamente al usuario y bloquee la pantalla después de un período determinado. 
+											El usuario debe volver a iniciar sesión para desbloquear la pantalla.
+										</p>
+										<h3>Horario de inicio de sesión</h3>
+										<p>
+											En algunas situaciones, una organización puede desear que los empleados inicien sesión durante horas específicas, como desde las 7:00  hasta las 18:00. El sistema bloquea los inicios de sesión en el horario fuera de las horas de inicio de sesión permitidas.
+										</p>
+									</p>
+									<h2>Seguimiento por GPS.</h2>
+									<p>
+										El sistema de posicionamiento global (GPS) utiliza satélites y computadoras para determinar la ubicación de un dispositivo. La tecnología del GPS es una característica estándar en los smartphones que proporciona seguimiento de la posición en tiempo real. El seguimiento por GPS puede identificar una ubicación en el rango de 100 metros. 
+										Esta tecnología está disponible para seguir a los hijos, los adultos mayores, las mascotas y los vehículos. Utilizar el GPS para localizar un teléfono celular sin el permiso del usuario es una invasión a la privacidad y es ilegal. <br>
+										Muchas aplicaciones de telefonía celular utilizan el seguimiento del GPS para rastrear la ubicación de un teléfono. Por ejemplo, Facebook permite a los usuarios registrar una ubicación, que es visible para las personas en sus redes.
+									</p>
+									<h2>Inventario y etiqutas de RFID.</h2>
+									<p>
+										La identificación por radiofrecuencia (RFID) utiliza ondas de radio para identificar y rastrear objetos. Los sistemas de inventario de RFID usan etiquetas adjuntas a todos los elementos que una organización desea rastrear. Las etiquetas contienen un circuito integrado que se conecta a una antena. 
+										Las etiquetas de RFID son pequeñas y requieren muy poca energía, por lo que no necesitan batería para almacenar información para intercambiar con un lector. La RFID puede ayudar a automatizar el seguimiento de los activos o bloquear, desbloquear o configurar inalámbricamente los dispositivos electrónicos. <br>
+										Los sistemas de RFID operan dentro de distintas frecuencias. Los sistemas de baja frecuencia tienen un rango de lectura más corto y tasas de lectura de datos más bajas, pero no son tan sensibles a las interferencias de las ondas de radio ocasionadas por los líquidos y metales presentes. Las frecuencias más altas tienen una velocidad de 
+										transferencia de datos más rápida y mayores rangos de lectura, pero son más sensibles a las interferencias de las ondas de radio.
+									</p>
+									<h2>Actividad: defensa de sistemas y dispositivos.</h2>
+									<p>
+										<img src="images/Actividades/Actividad -  defensa de sistemas y dispositivos.PNG" class="responsive" alt="">
+									</p>
+									<h2>Administración del acceso remoto.</h2>
+									<p>
+										El acceso remoto se refiere a cualquier combinación de hardware y software que permite a los usuarios acceder a una red interna local de manera remota. <br>
+										Con el sistema operativo Windows, los técnicos pueden usar el asistente remoto y el escritorio remoto para reparar y actualizar las computadoras. El escritorio remoto, como se muestra en la figura, permite a los técnicos ver y controlar una computadora desde una ubicación remota. El asistente remoto permite a los técnicos 
+										ayudar a los clientes en la solución de problemas desde una ubicación remota. El asistente remoto también permite al cliente ver la reparación o actualización en tiempo real en la pantalla. <br>
+										El proceso de instalación de Windows no activa el escritorio remoto de manera predeterminada. Al habilitar esta función, se abre el puerto 3389, lo que puede ocasionar una vulnerabilidad si un usuario no necesita este servicio.
+										<div>
+											<img src="images/escritorio remoto.PNG" class="responsive" alt="">
+										</div>
+									</p>
+									<h2>Telnet, SSH y SCP</h2>
+									<p>
+										El shell seguro (SSH) es un protocolo que proporciona una conexión de administración segura (cifrada) a un dispositivo remoto. El SSH debe reemplazar a Telnet para las conexiones de administración. Telnet es un protocolo más antiguo que usa la transmisión no segura de texto no cifrado de la autenticación de inicio de sesión 
+										(nombre de usuario y contraseña) y de los datos transmitidos entre los dispositivos que se comunican. El SSH proporciona seguridad para las conexiones remotas mediante el cifrado seguro cuando se autentica un dispositivo (nombre de usuario y contraseña) y para los datos transmitidos entre los dispositivos de comunicación. 
+										El SSH utiliza el puerto TCP 22. Telnet utiliza el puerto TCP 23. <br>
+										En la Figura 1, los ciberdelincuentes monitorean paquetes con Wireshark. En la Figura 2, los ciberdelincuentes capturan el nombre de usuario y la contraseña del administrador desde la sesión de Telnet de texto no cifrado. <br>
+										En la Figura 3, se muestra la vista de Wireshark de una sesión de SSH. Los ciberdelincuentes rastrean la sesión mediante la dirección IP del dispositivo del administrador, pero en la Figura 4 la sesión cifra el nombre de usuario y la contraseña. <br>
+										El protocolo de copia segura (SCP) transfiere de forma segura los archivos informáticos entre dos sistemas remotos. El SCP usa el SSH para la transferencia de datos (incluido el elemento de autenticación), por lo que el SCP garantiza la autenticidad y la confidencialidad de los datos en tránsito.
+										<div>
+											<img src="images/" class="responsive2" alt=""><p>Figura 1</p>
+											<img src="images/" class="responsive2" alt=""><p>Figura 2</p>
+											<img src="images/" class="responsive2" alt=""><p>Figura 3</p>
+											<img src="images/" class="responsive2" alt=""><p>Figura 4</p>
+										</div>
+									</p>
 								</div>
 							</section>
 
 						<!-- Three -->
 							<section id="three">
 								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<h3>Capitulemos</h3>
+									<p></p>
 									<div class="features">
 										<article>
 											<a href="cap6.html" class="image"><img src="../images/altaDisponibilidad.png" alt="" /></a>
@@ -358,7 +475,7 @@
 							</ul>
 						</div>
 					</section>
-
+				<!-- <a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por stories - www.freepik.es</a>-->
 			</div>
 
 		<!-- Scripts -->
