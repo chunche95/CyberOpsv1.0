@@ -400,7 +400,7 @@
 										ayudar a los clientes en la solución de problemas desde una ubicación remota. El asistente remoto también permite al cliente ver la reparación o actualización en tiempo real en la pantalla. <br>
 										El proceso de instalación de Windows no activa el escritorio remoto de manera predeterminada. Al habilitar esta función, se abre el puerto 3389, lo que puede ocasionar una vulnerabilidad si un usuario no necesita este servicio.
 										<div>
-											<img src="images/escritorio remoto.PNG" class="responsive" alt="">
+											<img src="images/escritorio remoto.PNG" class="responsive2" alt="">
 										</div>
 									</p>
 									<h2>Telnet, SSH y SCP</h2>
@@ -411,11 +411,154 @@
 										En la Figura 1, los ciberdelincuentes monitorean paquetes con Wireshark. En la Figura 2, los ciberdelincuentes capturan el nombre de usuario y la contraseña del administrador desde la sesión de Telnet de texto no cifrado. <br>
 										En la Figura 3, se muestra la vista de Wireshark de una sesión de SSH. Los ciberdelincuentes rastrean la sesión mediante la dirección IP del dispositivo del administrador, pero en la Figura 4 la sesión cifra el nombre de usuario y la contraseña. <br>
 										El protocolo de copia segura (SCP) transfiere de forma segura los archivos informáticos entre dos sistemas remotos. El SCP usa el SSH para la transferencia de datos (incluido el elemento de autenticación), por lo que el SCP garantiza la autenticidad y la confidencialidad de los datos en tránsito.
+										<p>
+											<img src="images/wireshark-captura de datos.PNG" class="responsive2" alt=""><p>Figura 1</p>
+											<img src="images/TELNET.PNG" class="responsive2" alt=""><p>Figura 2</p>
+											<img src="images/SSH-Nosepuedeleerlosdatos.PNG" class="responsive2" alt=""><p>Figura 3</p>
+											<img src="images/SCP-Protocolodecopiasegura.PNG" class="responsive2" alt=""><p>Figura 4</p>
+										</p>
+									</p>
+									<h2>Protección de puertos y servicios.</h2>
+									<p>
+										Los ciberdelincuentes atacan los servicios que se ejecutan en un sistema porque saben que la mayoría de los dispositivos ejecuta más servicios o programas que los necesarios. Un administrador debe observar cada servicio para comprobar su necesidad y evaluar el riesgo. Elimine cualquier servicio innecesario. <br>
+										Un método simple que muchos administradores usan para contribuir a la seguridad de la red ante accesos no autorizados es la inhabilitación de todos los puertos del switch que no se utilizan. Por ejemplo, si un switch tiene 24 puertos y hay tres conexiones Fast Ethernet en uso, 
+										es aconsejable inhabilitar los 21 puertos que no se utilizan. <br>
 										<div>
-											<img src="images/" class="responsive2" alt=""><p>Figura 1</p>
-											<img src="images/" class="responsive2" alt=""><p>Figura 2</p>
-											<img src="images/" class="responsive2" alt=""><p>Figura 3</p>
-											<img src="images/" class="responsive2" alt=""><p>Figura 4</p>
+											<img src="images/servicios.png" class="responsive" alt="">
+										</div>
+										El proceso de habilitación e inhabilitación de puertos puede llevar mucho tiempo, pero mejora la seguridad de la red y vale la pena el esfuerzo.
+									</p>
+									<h2>Cuentas privilegiadas.</h2>
+									<p>
+										Los ciberdelincuentes atacan las cuentas privilegiadas porque son las más poderosas dentro de la organización. Las cuentas privilegiadas tienen credenciales para acceder a los sistemas y brindan acceso elevado sin restricción. Los administradores usan estas cuentas para implementar y administrar los sistemas operativos, 
+										las aplicaciones y los dispositivo de red. La figura resume los tipos de cuentas privilegiadas. <br>
+										<div>
+											<video src="videos/cuentasPrivilegiadas.mp4" class="responsive" muted loop autoplay></video>
+										</div>
+										La organización debe adoptar las siguientes mejores prácticas para proteger las cuentas privilegiadas:
+										<ul>
+											<li>
+												Identificar y reducir la cantidad de cuentas privilegiadas.
+											</li>
+											<li>
+												Aplicar el principio de privilegios mínimos.
+											</li>
+											<li>
+												Establecer un proceso para la revocación de derechos cuando los empleados dejan o cambian de trabajo.
+											</li>
+											<li>
+												Eliminar las cuentas compartidas con contraseñas que no caducan.
+											</li>
+											<li>
+												Proteger el almacenamiento de contraseñas.
+											</li>
+											<li>
+												Eliminar las credenciales compartidas entre varios administradores.
+											</li>
+											<li>
+												Cambiar automáticamente las contraseñas de la cuenta privilegiada cada 30 o 60 días.
+											</li>
+											<li>
+												Registrar las sesiones privilegiadas.
+											</li>
+											<li>
+												Implementar un proceso para cambiar las contraseñas integradas para los scripts y las cuentas de servicio.
+											</li>
+											<li>
+												Registrar toda la actividad del usuario. 
+											</li>
+											<li>
+												Generar las alertas para comportamientos inusuales.
+											</li>
+											<li>
+												Deshabilitar las cuentas privilegiadas inactivas.
+											</li>
+											<li>
+												Usar la autenticación de varios factores para todo el acceso administrativo.
+											</li>
+											<li>
+												Implementar un gateway entre el usuario final y los activos confidenciales para limitar la exposición de la red al malware.
+											</li>
+										</ul>
+										Bloquear las cuentas privilegiadas es fundamental para la seguridad de la organización. Proteger estas cuentas debe ser un proceso continuo. Una organización debe evaluar el proceso de realización de 
+										todos los ajustes necesarios para mejorar la seguridad
+									</p>
+									<h2>Políticas de grupo.</h2>
+									<p>
+										En la mayoría de las redes que usan computadoras Windows, un administrador configura Active Directory con dominios en Windows Server. Las computadoras con Windows son miembros de un dominio.
+										El administrador configura una directiva de seguridad de dominio que se aplica a todas las computadoras que se unan. Las directivas de cuenta se configuran automáticamente cuando un usuario inicia sesión en Windows. <br>
+										Cuando una computadora no es parte de un dominio de Active Directory, el usuario configura las políticas a través de la política de seguridad local de Windows. En todas las versiones de Windows,
+										excepto la edición doméstica, ingrese secpol.msc en Ejecutar comando para abrir la herramienta de política de seguridad local. <br>
+										Un administrador configura las políticas de cuenta de usuario, como políticas de contraseña y políticas de bloqueo, expandiendo Políticas de cuentas > Políticas de contraseñas. 
+										Con las configuraciones que se muestran en la Figura 1, los usuarios deben cambiar sus contraseñas cada 90 días y utilizar la nueva contraseña al menos un (1) día. Las contraseñas deben contener ocho (8) caracteres 
+										y tres de las siguientes cuatro categorías: letras mayúsculas, letras minúsculas, números y símbolos. Por último, el usuario puede reutilizar la contraseña después de 24 contraseñas únicas. <br>
+										Una política de bloqueo de cuentas bloquea una computadora durante un tiempo determinado cuando ocurren demasiados intentos de acceso incorrecto al sistema. Por ejemplo, la política que se 
+										muestra en la Figura 2 permite que el usuario introduzca un nombre de usuario o una contraseña incorrectos cinco veces. Después de cinco intentos, la cuenta queda bloqueada por 30 minutos. Después de 30 minutos, la cantidad 
+										de intentos se restablece a cero y el usuario puede intentar iniciar sesión nuevamente. <br>
+										Hay más configuraciones de seguridad disponibles ampliando la carpeta Políticas locales. Una política de auditoría crea un archivo de registro de seguridad que se utiliza para rastrear los eventos enumerados en la Figura 3.
+										<div>
+											<img src="images/configuracion de los requisitos de contraseñas.PNG" class="responsive2" alt=""><p>Configuración de los requisitos de contraseñas.</p>
+											<img src="images/configuracion de la politica de bloqueo de cuenta.PNG" class="responsive2" alt=""><p>Configuración de la política de bloqueo de cuenta.</p>
+											<img src="images/habilitacion de politicas de auditoria.PNG" class="responsive2" alt=""><p>Habilitación de políticas de auditoría.</p>
+										</div>
+									</p>
+									<h2>Fuente de alimentación</h2>
+									<p>
+										Un aspecto crítico de la protección de los sistemas de información son los sistemas y las consideraciones de energía eléctrica. El suministro constante de electricidad es fundamental en las actuales instalaciones 
+										de almacenamiento de datos y servidores masivos. Estas son algunas reglas generales en el desarrollo de sistemas de suministro eléctrico eficaces:
+										<ul>
+											<li>Los centros de datos deben estar en una fuente de alimentación distinta al resto del edificio.</li>
+											<li>Fuentes de alimentación redundantes: dos o más fuentes que provienen de dos o más subestaciones eléctricas.</li>
+											<li>Acondicionamiento de la energía.</li>
+											<li>Con frecuencia se requieren sistemas energéticos de respaldo.</li>
+											<li>Debe contarse con un UPS para apagar satisfactoriamente los sistemas.</li>
+										</ul>
+										Una organización debe protegerse contra varios problemas al diseñar sus sistemas de fuente de alimentación eléctrica.
+										<h3>Exceso de energía.</h3>
+										<p>
+											<img src="images/dead-battery.png"  class="responsive2" alt="">
+											<ul>
+												<li>Sobre voltaje: Alto voltaje momentáneo.</li>
+												<li>Explosión: Alto voltaje prolongado.</li>
+											</ul>
+										</p>
+										<h3>Pérdida de energía.</h3>
+										<p>
+											<ul>
+												<li>Falla: Pérdida de energía momentánea.</li>
+												<li>Apagón: Pérdida de energía completa.</li>
+											</ul>
+											<img src="images/plano-electrico.jpg" class="responsive" alt="">
+										</p>
+										<h3>Degradación de energía.</h3>
+										<p>
+											<ul>
+												<li>Holgura/caída: Bajo voltaje momentáneo.</li>
+												<li>Apagón: Bajo voltaje prolongado.</li>
+												<li>Corriente de irrupción: Sobre voltaje inicial de energía.</li>
+											</ul>
+										</p>
+									</p>
+									<h2>Calefacción, ventilación y aire acondicionado (HVAC)</h2>
+									<p>
+										Los sistemas de HVAC son fundamentales para la seguridad de las personas y los sistemas de información en las instalaciones de la organización. Al diseñar instalaciones de TI modernas, estos sistemas juegan un papel importante en la seguridad general. 
+										Los sistemas de HVAC controlan el entorno ambiental (temperatura, humedad, flujo de aire y filtración de aire) y deben planificarse y operarse junto a otros componentes de centros de datos, como hardware informático, cableado, almacenamiento de datos, 
+										protección contra incendios, sistemas de seguridad física y energía. Casi todos los dispositivos de hardware informático físicos tienen requisitos ambientales que incluyen temperatura y rangos de humedad aceptables. Los requisitos ambientales aparecen 
+										en un documento de especificaciones del producto o en una guía de planificación física. Es fundamental mantener estos requisitos ambientales para evitar fallas del sistema y extender la vida útil de los sistemas de TI. Los sistemas de HVAC comerciales 
+										y otros sistemas de administración de edificios ahora se conectan a Internet para su supervisión y control. Eventos recientes han demostrado que dichos sistemas (a menudo denominados “sistemas inteligentes”) también aumentan las repercusiones de seguridad. <br>
+										Uno de los riesgos asociados a los sistemas inteligentes es que las personas que acceden y administran el sistema trabajan para un contratista o un proveedor externo. Debido a que los técnicos de HVAC necesitan encontrar la información rápidamente, 
+										los datos cruciales tienden a almacenarse en muchos lugares diferentes, lo que los hace accesibles a muchas más personas. Tal situación permite que una amplia red de individuos, entre ellos, asociados de los contratistas, accedan a las credenciales del sistema de HVAC. 
+										La interrupción de estos sistemas puede representar un riesgo considerable para la seguridad informática de la organización.
+									</p>
+									<h2>Supervisión de hardware.</h2>
+									<p>
+										El monitoreo de hardware a menudo se encuentra en torres de servidores grandes. Una torre de servidores es una instalación que aloja cientos o miles de servidores de empresas. Google tiene muchas torres de servidores en todo el mundo para proporcionar servicios óptimos. 
+										Incluso las empresas más pequeñas construyen torres de servidores locales para alojar el creciente número de servidores necesarios para realizar los negocios. Los sistemas de control de hardware se utilizan para monitorear el estado de dichos sistemas y minimizar el tiempo de inactividad 
+										de la aplicación y el servidor. Los sistemas de control de hardware modernos utilizan los puertos de red y USB para transmitir la condición de temperatura de la CPU, el estado de la fuente de alimentación, la velocidad y la temperatura del ventilador, 
+										el estado de la memoria, el espacio en disco y el estado de la tarjeta de red. Los sistemas de control de hardware permiten a un técnico supervisar cientos o miles de sistemas desde un solo terminal. A medida que la cantidad de torres de servidores aumenta, los sistemas de control 
+										de hardware se han convertido en contramedidas esenciales para la seguridad.
+										<div>
+											<img src="images/supervision de hardware.png" class="responsive" alt="">
 										</div>
 									</p>
 								</div>
