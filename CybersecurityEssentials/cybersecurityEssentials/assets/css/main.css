@@ -2030,6 +2030,15 @@ input, select, textarea {
 		display: inline-block;
 		position: relative;
 	}
+
+	.miniResponsive {
+		width: 20%;
+		max-width: 55%;
+		height: 25%;
+		border-radius: 5px;	
+		box-align: center;
+	}
+
 	.responsive {
 		width: 90%;
 		max-width: 85%;
