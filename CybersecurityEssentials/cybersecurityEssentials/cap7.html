@@ -573,6 +573,46 @@
 										Para medir la eficacia general de un centro de operaciones, una organización impulsará ejercicios y prácticas realistas. Un ejercicio de simulación de tablero es un recorrido estructurado de un equipo para simular un evento y evaluar la eficacia del centro. Una medida más eficaz es simular una intrusión hecha sin advertencia. Esto supone el uso de un equipo rojo, un grupo independiente de personas 
 										que desafía los procesos en una organización para evaluar su eficacia. Por ejemplo, el equipo rojo debe atacar un sistema crítico, incluidos el reconocimiento y el ataque, el escalamiento de privilegios y el acceso remoto.
 									</p>
+									<h2>Switches, routers y dispositivos de red.</h2>
+									<p>
+										Los dispositivos de red se envían sin contraseñas o con contraseñas predeterminadas, cabie las contraseñas predeterminadas antes de conectar un dispositivo a la red. Documente y registre los cambios en los dispositivos de red. <br>
+										Por último, examine todos los registros de configuración. <br>
+										En las siguientes secciones se analizan varias medidas que un administrador puede adoptar para proteger diferentes dispositivos de red. <br>
+										<h3>Switches</h3>
+										<p>
+											Los witches de red son el coraxón de la red de comunicaciones de datos moderna. Las principales amenazas para los switches de red son el robo, el hacking y el acceso remoto, los ataques contra los protocolos de red, como ARP/STP, o los ataques contra el rendimiento y la disponibilidad. Varias contramedidas y controles pueden proteger los switches de red, incluidas la 
+											seguridad física mejorada, la configuración avanzada y la implementación de actualizaciones y parches adecuados del sistema según sea necesario. Otro control eficaz es la implementación de la seguridad de los puertos. Un administrador debe proteger todos los puertos del switch (interfaces) antes de implementar el switch para fines de producción. Una forma de proteger los puertos es mediante 
+											la implementación de una característica denominada "seguridad de puertos". La seguridad de puertos limita la cantidad de direcciones MAC válidas permitidas en el puerto. El swicth permite el acceso a dispositivos con direcciones MAC legitimas y rechaza otras direcciones MAC.
+										</p>
+										<h3>VLAN</h3>
+										<p>
+											Las VLAN ofrecen una forma de agrupar dispositivos dentro de una LAN y en switches individuales. Las VLAN usan conexiones lógicas en lugar de conexiones físicas. Los puertos individuales de switch pueden asignarse a una VLAN específica. Se pueden usar otros puertos para interconectar físicamente los switches y permitir el tráfico de varias VLAN entre los switches. Estos puertos se denominan enlaces troncales. <br>
+											Por ejemplo, el Departamento de Recursos Humanos debe proteger sus datos confidenciales. Las VLAN permiten que el administrador segmente las redes según factores tales como la función, el equipo del proyecto o la aplicación, independientemente de la ubicación física del usuario o el dispositivo, como se muestra en la figura. 
+											<div>
+												<img src="images/definicion de grupos de VLAN.PNG" class="reponsive" alt="definicion de grupos de VLAN">
+											</div>
+											Los dispositivos dentro de una VLAN funcionan como si estuvieran en su propia red independiente, aunque compartan una misma infraestructura con otras VLAN. Una VLAN puede separar los grupos que tienen datos confidenciales del resto de la red, lo que disminuye las posibilidades de violaciones de la información confidencial. Los enlaces troncales permiten que las personas en la VLAN de RR. HH. se conecten físicamente a varios switches. <br>
+											Existen varios tipos de vulnerabilidades y ataques de VLAN diferentes. Estos pueden incluir ataques a los protocolos de los enlaces troncales y la VLAN. Los detalles de estos ataques están más allá del alcance de este curso. Los hackers también pueden atacar el rendimiento y la disponibilidad de la VLAN. Las contramedidas comunes incluyen el monitoreo de los cambios y el rendimiento de la VLAN, las configuraciones avanzadas, 
+											y los parches y las actualizaciones regulares del sistema para el IOS.
+										</p>
+										<h3>Firewall</h3>
+										<p>
+											Los firewalls son soluciones de hardware o de software que aplican las políticas de seguridad de la red. Un firewall filtra el ingreso de tráfico potencialmente peligroso o no autorizado en la red, ver figura. 
+											<div>
+												<img src="images/firewall.png" class="responsive" alt="Firewall">
+											</div>
+											Un firewall simple proporciona funcionalidades básicas de filtrado de tráfico mediante listas de control de acceso (ACL). Los administradores utilizan las ACL para detener el tráfico o para permitir solamente tráfico específico en sus redes. Una ACL es una lista secuencial de instrucciones de permiso o denegación que se aplican a los protocolos o las direcciones. Las ACL son una herramienta potente para controlar el tráfico hacia y desde la red. 
+											Los firewalls mantienen los ataques alejados de la red privada; un objetivo común de los hackers es vencer las protecciones del firewall. Las principales amenazas para los firewalls son el robo, el hacking y el acceso remoto, los ataques contra las ACL o los ataques contra el rendimiento y la disponibilidad. Varias contramedidas y controles pueden proteger los firewalls, entre ellos, seguridad física mejorada, configuración avanzada, 
+											acceso remoto y autenticación seguros, y actualizaciones y parches adecuados del sistema según sea necesario.
+										</p>
+										<h3>Routers</h3>
+										<p>
+											Los routers forman la red troncal de Internet y las comunicaciones entre las diferentes redes. Los routers se comunican unos con otros para identificar la mejor ruta posible a fin de distribuir el tráfico a las diferentes redes. Los routers usan protocolos de routing para tomar decisiones de routing. Los routers también pueden integrar otros servicios, como las funcionalidades de switching y firewall. Estas operaciones hacen que los routers sean los principales objetivos. 
+											Las principales amenazas para los routers de red son el robo, el hacking y el acceso remoto, los ataques contra los protocolo de routing, como RIP/OSPF, o los ataques contra el rendimiento y la disponibilidad. Varias contramedidas y controles pueden proteger los routers de red, entre ellos, la seguridad física mejorada, la configuración avanzada, el uso de protocolos de routing seguros con autenticación, y la implementación de actualizaciones 
+											y parches adecuados del sistema según sea necesario.
+											<img src="images/ACL.PNG" class="responsive" alt="">
+										</p>
+									</p>
 								</div>
 							</section>
 
