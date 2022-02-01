@@ -613,6 +613,76 @@
 											<img src="images/ACL.PNG" class="responsive" alt="">
 										</p>
 									</p>
+									<h2>Dispositivos móviles e inalámbricos.</h2>
+									<p>
+										Los dispositivos móviles e inalámbricos se han convertido en el tipo de dispositivo predominante en la mayoría de las redes modernas. Ofrecen movilidad y conveniencia, pero representan un conjunto de vulnerabilidades. Estas vulnerabilidades incluyen el robo, el hacking y el acceso remoto no autorizado, el espionaje, los ataques de intermediarios, y los ataques contra el rendimiento y la disponibilidad. 
+										La mejor manera de proteger una red inalámbrica es utilizar la autenticación y el cifrado. El estándar inalámbrico original (801.11) introdujo dos tipos de autenticación, como se muestra en la figura:
+										<div>
+											<img src="images/metodos de autenticación.PNG" class="responsive" alt="">>
+										</div>
+										<ul>
+											<li>
+												Autenticación del sistema abierto: Cualquier dispositivo inalámbrico puede conectarse a la red inalámbrica. Use este método en situaciones donde la seguridad no sea un problema.										
+											</li>
+											<li>
+												Autenticación de clave compartida: Proporciona mecanismos para autenticar y cifrar datos entre el cliente inalámbrico y un AP o router inalámbrico.										
+											</li>
+										</ul>
+										Las tres técnicas de autenticación de clave compartida para las WLAN son las siguientes:
+										<ul>
+											<li>
+												Privacidad equivalente por cable (WEP): era la especificación 802.11 original que protegía las WLAN. Sin embargo, la clave de cifrado nunca cambiaba al intercambiar paquetes, por lo que era fácil de descifrar.										
+											</li>
+											<li>
+												Acceso protegido a Wi-Fi (WPA): este estándar utiliza la WEP, pero protege los datos con un algoritmo de cifrado del protocolo de integridad de clave temporal (TKIP), que es mucho más seguro. El TKIP cambia la clave para cada paquete, lo que hace que sea mucho más difícil de descifrar.										
+											</li>
+											<li>
+												IEEE 802.11i/WPA2:: IEEE 802.11i es un estándar de la industria para proteger las WLAN. Tanto 802.11i como WPA2 usan la ⁪norma de cifrado avanzado (AES) para el cifrado, actualmente el protocolo de encriptación más sólido.
+											</li>
+										</ul>
+										Desde 2006, cualquier dispositivo que tenga el logotipo de Certificado para Wi-Fi tiene la certificación WPA2. Por lo tanto, las WLAN modernas deben utilizar el estándar 802.11i/WPA2. Otras contramedidas incluyen la seguridad física mejorada y las actualizaciones y los parches regulares del sistema de los dispositivos.
+									</p>
+									<h2>Servicios de routing y red.</h2>
+									<p>
+										Los ciberdelincuentes usan servicios de red vulnerables para atacar un dispositivo o usarlo como parte del ataque. Para verificar si existen servicios de red inseguros, revise el dispositivo y busque puertos abiertos mediante un escáner de puertos. Un escáner de puertos es una aplicación que sondea un dispositivo 
+										en busca de puertos abiertos, envía un mensaje a cada puerto y espera su respuesta. <br>
+										La respuesta indica cómo se utiliza el puerto. Los ciberdelincuentes también usan escáneres de puertos por el mismo motivo. Proteger los servicios de red garantiza que solo los puertos necesarios estén expuestos y disponibles.
+										<h3>Protocolo de configuración dinámica de host (DHCP)</h3>
+										<p>
+											El DHCP usa un servidor para asignar una dirección IP y otra información de configuración automáticamente a los dispositivos de red. En efecto, el dispositivo obtiene un formulario de permiso del servidor del DHCP para utilizar la red. Los atacantes pueden apuntar a los servidores del DHCP para denegar el acceso a los dispositivos en la red.
+											La figura siguiente proporciona una lista de comprobación de seguridad para el DHCP. <br>
+											<div>
+												<img src="images/listadeverificaciondeseguridaddeDHCP.PNG" class="responsive" alt="">
+											</div>
+										</p>
+										<h3>Protocolo de mensajes de control de Internet (ICMP)</h3>
+										<p>
+											Los dispositivos de red usan ICMP para enviar mensajes de error, como un servicio solicitado que no está disponible o un host que no puede llegar a un router. El comando ping es una utilidad de red que emplea ICMP para probar la posibilidad de conexión de un host en una red. 
+											El ping envía mensajes de ICMP al host y espera una respuesta. Los ciberdelincuentes pueden alterar el uso de ICMP para los fines maliciosos que se enumeran a continuación.
+											<div>
+												<video src="videos/uso indebido de ICMP.mkv" class="responsive" muted loop autoplay alt=""></video>
+											</div>
+											Los ataques de denegación de servicio usan ICMP. Muchas redes filtran ciertas solicitudes de ICMP para evitar estos ataques.
+										</p>
+										<h3>Protocolo de información de enrutamiento (RIP)</h3>
+										<p>
+											El RIP limita la cantidad de saltos permitida en una ruta en una red desde el dispositivo de origen hasta el destino. La cantidad máxima de saltos permitida para el RIP es quince. El RIP es un protocolo de routing que se usa para intercambiar información de routing sobre qué redes alcanza cada router y el alcance de dichas redes. El RIP calcula la mejor ruta según el recuento de saltos.
+											<div>
+												<img src="images/vulnerabilidadesydefensasdeRIP:PNG" class="responsive" alt="">
+											</div>
+											La figura enumera las vulnerabilidades y defensas del RIP frente a los ataques al RIP. Los hackers pueden atacar los routers y el RIP. Los ataques a los servicios de routing pueden afectar el rendimiento y la disponibilidad. Algunos ataques incluso pueden dar como resultado el redireccionamiento del tráfico. Utilice los servicios seguros con autenticación 
+											e implemente parches y actualizaciones del sistema para proteger los servicios de routing, como el RIP.
+										</p>
+										<h3>Protocolo de tiempo de red (NTP)</h3>
+										<p>
+											Es importante tener la hora correcta dentro de las redes. Las marcas de tiempo correctas hacen un seguimiento preciso de los eventos de red, por ejemplo, las violaciones de seguridad. Además, la sincronización de relojes es fundamental para la interpretación correcta de los eventos dentro de los archivos de datos syslog, así como para los certificados digitales. <br>
+											El protocolo de tiempo de red (NTP) es un protocolo que sincroniza los relojes de los sistemas informáticos sobre las redes de datos. El NTP permite que los dispositivos de red sincronicen la configuración de la hora con un servidor del NTP. 
+											<div>
+												<img src="images/metodos seguros para proporcionar sincronización.PNG" class="responsive" alt="">
+											</div>
+											En la figura se enumeran los diferentes ,étodos utilizados para proporcionar una sincronización segura para la red. Los ciberdelincuentes atacan los servidores de tiempo para interrumpir la comunicación segura que depende de certificados digitales y ocultar la información del ataque, como marcas de tiempo precisas.
+										</p>
+									</p>
 								</div>
 							</section>
 
