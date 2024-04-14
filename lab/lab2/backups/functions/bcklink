@@ -27,6 +27,7 @@ data
 id=$id
 path=$path
 bck_dir=$bck_dir
+bck_files=$bck_files
 mypaths_file=$mypaths_file
 
 # Función para mostrar los datos de entrada
@@ -36,9 +37,9 @@ dataEntry() {
     echo "- ID: $id"
     echo "- Path: $path"
     echo "- Dir. destino: $bck_dir"
+    echo "- Fich. destino: $bck_files"
     echo "- Fichero registro: $mypaths_file"
     echo "..........................................."
-    read -p "ENTER para continuar" read
 }
 
 # Función para verificar si el identificador ya existe en bck
@@ -92,7 +93,8 @@ copyFile() {
             fi            
         else 
             echo "Sin resultados"
-        fi         
+        fi 
+        rm find.tmp        
     else
         
         echo -e "\033[3;31m ¡Advertencia! \033[0m"
@@ -133,4 +135,3 @@ copyFile() {
 # Ejecutar las funciones
 dataEntry 2>&1 | tee -a "$archivo_log"
 checkId 2>&1 | tee -a "$archivo_log"
-rm find.tmp

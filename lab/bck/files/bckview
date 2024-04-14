@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Mostrar contenido de mypaths.txt
+cat bck/mypaths.txt

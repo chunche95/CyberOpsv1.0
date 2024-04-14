@@ -10,43 +10,34 @@
 
 # Solicitar los datos al usuario
 data() {
-    
     # Variables definidas para ejecutar la tarea    
     bck_dir=$(realpath bck_dir)  # Ruta absoluta al directorio bckdir
     bck_files="$bck_dir/files"  # Ruta donde almacena las copias de los ficheros
     mypaths_file="$bck_dir/mypaths.txt" # fichero mypaths que guarda las rutas de los ficheros copiados
-
     # Solicitar los datos al usuarios
     read -p "Introduzca el ID: " id
     read -p "Introduzca el path: " path
-
     # Verificar si las variables de entorno están definidas y no son nulas
     if [[ -z "${id}" || -z "${path}" ]]; then
         echo -e "\033[1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. \033[0m"
         exit 1
     fi
-
     checkDir "bck_dir" "bck_files" "mypaths_file"
-
     export bck_dir
     export bck_files
     export mypaths_file
     export id
     export path
-
 }
 
 # Función para verificar si el fichero y carpeta de bakcups existen, sino los crea
 checkDir() {    
-    local bck_dir=$1 
-    local bck_files=$2
-    local mypaths_file=$3
     
+    read -p "ENTER para continuar" continue
     if [ ! -d "$bck_dir" ]; then
         echo "Carpeta de backups no existe. Creándola..."        
         mkdir "$bck_dir"        
         mkdir "$bck_files"
-
         echo "---------------------------"
         echo "Carpeta de backups creada. "
         echo "---------------------------"
@@ -58,7 +49,6 @@ checkDir() {
         echo "Fichero de paths creado."
         echo "---------------------------"
     fi
-    sleep 1
     clear
 }
 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Verificar argumento
+if [ "$#" -ne 1 ]; then
+    echo "Uso: $0 id"
+    exit 1
+fi
+
+# Verificar si el id existe
+if ! grep -q "^$1," bck/mypaths.txt; then
+    echo "El identificador $1 no existe en la copia."
+    exit 1
+fi
+
+# Crear enlace simbólico
+ln -sf "$(readlink -f "bck/files/$1")" "$(cut -d ',' -f 2 <<< "$(grep "^$1," bck/mypaths.txt)")"
+
+echo "El archivo asociado al identificador $1 ha sido restaurado."

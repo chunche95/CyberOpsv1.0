@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Verificar argumentos
+if [ "$#" -ne 2 ]; then
+    echo "Uso: $0 old_id new_id"
+    exit 1
+fi
+
+# Verificar si old_id existe
+if ! grep -q "^$1," bck/mypaths.txt; then
+    echo "El identificador $1 no existe en la copia."
+    exit 1
+fi
+
+# Verificar si new_id ya existe
+if grep -q "^$2," bck/mypaths.txt; then
+    echo "El identificador $2 ya existe en la copia."
+    exit 1
+fi
+
+# Actualizar mypaths.txt
+sed -i "s/^$1,/^$2,/" bck/mypaths.txt
+
+# Renombrar archivo en bck/files
+mv "bck/files/$1" "bck/files/$2"
+
+# Actualizar enlaces simbólicos
+find -L . -type l -lname "$(readlink -f "bck/files/$1")" -exec sh -c 'ln -snf "$1" "${0%/*}/$(basename "$1")"' {} "bck/files/$2" \;
+
+echo "El identificador $1 ha sido cambiado a $2."

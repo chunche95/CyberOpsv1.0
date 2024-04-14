@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Verificar argumentos
+if [ "$#" -ne 2 ]; then
+    echo "Uso: $0 id path"
+    exit 1
+fi
+
+# Verificar si el identificador ya existe
+if grep -q "^$1," bck/mypaths.txt; then
+    echo "El identificador $1 ya existe en la copia."
+    exit 1
+fi
+
+# Copiar archivo a bck/files
+cp "$2" "bck/files/$1"
+
+# Crear enlace simbólico
+ln -s "$(readlink -f "bck/files/$1")" "$2"
+
+# Actualizar mypaths.txt
+echo "$1,$2" >> bck/mypaths.txt
+
+echo "Archivo añadido a la copia con el identificador $1."
+
