@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# ██████╗░░█████╗░██╗░░██╗██╗░░░░░██╗███╗░░██╗██╗░░██╗
+# ██╔══██╗██╔══██╗██║░██╔╝██║░░░░░██║████╗░██║██║░██╔╝
+# ██████╦╝██║░░╚═╝█████═╝░██║░░░░░██║██╔██╗██║█████═╝░
+# ██╔══██╗██║░░██╗██╔═██╗░██║░░░░░██║██║╚████║██╔═██╗░
+# ██████╦╝╚█████╔╝██║░╚██╗███████╗██║██║░╚███║██║░╚██╗
+# ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝
+
+# bcklink
+#       • Sintaxis
+# $ bcklink id path
+#       • Funcionalidad
+# – Copia el fichero con ruta path con el identificador id en bck
+# – Crea un enlace simbólico que apunta desde path al archivo correspondiente id en bck
+# – Actualiza el fichero mypaths.txt añadiendo la entrada siguiente id,path
+#       • Consideraciones
+# – Si el identificador ya existe en bck muestra un mensaje indicándolo y no realiza ninguna acción
+
+# Nombre del archivo de registro
+archivo_log="logs/$(date +"%Y-%m-%d").log"
+
+# Solicitamos datos de entrada
+source functions/requestData
+data
+# variables globales
+id=$id
+path=$path
+bck_dir=$bck_dir
+mypaths_file=$mypaths_file
+
+# Función para mostrar los datos de entrada
+dataEntry() {        
+    echo "..........................................."
+    echo -e "\033[1;36m Variables de entrada: \033[0m"
+    echo "- ID: $id"
+    echo "- Path: $path"
+    echo "- Dir. destino: $bck_dir"
+    echo "- Fichero destino: $mypaths_file"
+    echo "..........................................."
+    read -p "ENTER para continuar" read
+}
+
+# Función para verificar si el identificador ya existe en bck
+checkId() {    
+    # Verificar si el identificador ya existe en bck
+    echo -e "\033[2;35m Variables de entrada en checkId: \033[0m: \n Ruta File: $path/$bck_dir \n $id"
+    read -p "ENTER para verificar" read
+    rutaFile="$bck_dir/$id"
+    echo $rutaFile
+    if [ -f $rutaFile ]; then
+        echo -e "\033[1;33m El identificador $id ya existe en '$PATH/bckdir/files'. \033[0m"
+        echo ""
+        echo -e "\033[1;33m Si desea modificar el identificador del fichero $id. Use la opción 'bckmv' del sistema \033[0m"
+        sleep 2
+        exit 1
+    fi
+}
+
+# Función para copiar el archivo a bck y crear el enlace simbólico
+copyFile() {    
+    # Copiar el archivo a bck con el identificador correspondiente
+    echo -e "\033[3;33m Copiando el archivo a bck con el identificador correspondiente.\033[0m"
+    rutaFile="$bck_dir/$id"
+
+    echo "Datos a copiar:  $path + $rutaFile"
+
+    cp $path/* $rutaFile
+    if [ "$?" -ne 0 ]; then
+        echo -e "\033[1;31m Error al copiar el fichero a bckdir. \033[0m"
+        exit 1
+    fi
+    # Crear el enlace simbólico
+    ln -s "$bck_dir/$id" "$path" 
+    if [ "$?" -ne 0 ]; then
+        echo -e "\033[1;31m Error al crear el enlace simbólico. \033[0m"
+        exit 1
+    fi
+    # Actualizar el archivo mypaths.txt
+    echo "$id,$path" >> "$mypaths_file" || { echo -e "\033[1;33m Error al actualizar fichero mypaths.txt \033[0m"; exit 1; }
+
+    echo -e "\033[1;32m Fichero copiado a bck y enlace simbólico creado con éxito. \033[0m"
+    tail -n 10 "$mypaths_file"
+}
+
+# Ejecutar las funciones
+dataEntry 2>&1 | tee -a "$archivo_log"
+checkId 2>&1 | tee -a "$archivo_log"
+copyFile 2>&1 | tee -a "$archivo_log"

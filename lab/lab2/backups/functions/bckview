@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+# ██████╗░░█████╗░██╗░░██╗██╗░░░██╗██╗███████╗░██╗░░░░░░░██╗
+# ██╔══██╗██╔══██╗██║░██╔╝██║░░░██║██║██╔════╝░██║░░██╗░░██║
+# ██████╦╝██║░░╚═╝█████═╝░╚██╗░██╔╝██║█████╗░░░╚██╗████╗██╔╝
+# ██╔══██╗██║░░██╗██╔═██╗░░╚████╔╝░██║██╔══╝░░░░████╔═████║░
+# ██████╦╝╚█████╔╝██║░╚██╗░░╚██╔╝░░██║███████╗░░╚██╔╝░╚██╔╝░
+# ╚═════╝░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░
+
+# bckview
+#     • Sintaxis
+# $ bckview
+#     • Funcionalidad
+# – Muestra el contenido del fichero mypaths.txt
+
+bckview() {
+    # Verificar si existe el archivo mypaths.txt
+    if [ ! -f "mypaths.txt" ]; then
+        echo "El archivo mypaths.txt no existe." 
+        exit 1
+    fi
+
+    # Mostrar el contenido del archivo
+    cat "mypaths.txt"
+}
+archivo.log = $(date +"%Y-%m-%d").log 2>&1 | tee -a archivo.log
+
+bckview 2>&1 | tee -a archivo.log

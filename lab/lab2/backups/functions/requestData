@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# ██████╗░░█████╗░████████╗░█████╗░
+# ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
+# ██║░░██║███████║░░░██║░░░███████║
+# ██║░░██║██╔══██║░░░██║░░░██╔══██║
+# ██████╔╝██║░░██║░░░██║░░░██║░░██║
+# ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
+
+
+# Solicitar los datos al usuario
+data() {
+    
+    # Variables definidas para ejecutar la tarea    
+    local bck_dir=$(realpath ../bckdir)  # Ruta absoluta al directorio bckdir
+    local mypaths_file="$bck_dir/bckdir/mypaths.txt"
+
+    # Solicitar los datos al usuarios
+    read -p "Introduzca el ID: " id
+    read -p "Introduzca el path: " path
+
+    # Verificar si las variables de entorno están definidas y no son nulas
+    if [[ -z "${id}" || -z "${path}" ]]; then
+        echo -e "\033[1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. \033[0m"
+        exit 1
+    fi
+
+    checkDir "bck_dir" "mypaths_file"
+
+    export bck_dir
+    export mypaths_file
+    export id
+    export path
+
+}
+
+# Función para verificar si el fichero y carpeta de bakcups existen, sino los crea
+checkDir() {    
+    local bck_dir=$1  # Ruta absoluta al directorio bckdir
+    local mypaths_file=$2
+    
+    if [ ! -d "$bck_dir" ]; then
+        echo "Carpeta de backups no existe. Creándola..."        
+        mkdir "$bck_dir"        
+        mkdir "$bck_dir/files"
+
+        echo "---------------------------"
+        echo "Carpeta de backups creada. "
+        echo "---------------------------"
+    fi
+    if [ ! -f "$bck_dir/$mypaths_file" ]; then
+        echo "Fichero de paths no existe. Creándolo..."        
+        touch "$bck_dir/$mypaths_file"
+        echo "---------------------------"
+        echo "Fichero de paths creado."
+        echo "---------------------------"
+    fi
+    sleep 1
+    clear
+}
+
+# Comprobaciones iniciales
+#data

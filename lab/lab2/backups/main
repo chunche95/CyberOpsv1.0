@@ -1,0 +1,134 @@
+#!/bin/bash
+
+#--------------------------------------------------------------------------------------
+#██████╗░░█████╗░██╗░░██╗  ██████╗░██████╗░░█████╗░░██████╗░██████╗░░█████╗░███╗░░░███╗
+#██╔══██╗██╔══██╗██║░██╔╝  ██╔══██╗██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗████╗░████║
+#██████╦╝██║░░╚═╝█████═╝░  ██████╔╝██████╔╝██║░░██║██║░░██╗░██████╔╝███████║██╔████╔██║
+#██╔══██╗██║░░██╗██╔═██╗░  ██╔═══╝░██╔══██╗██║░░██║██║░░╚██╗██╔══██╗██╔══██║██║╚██╔╝██║
+#██████╦╝╚█████╔╝██║░╚██╗  ██║░░░░░██║░░██║╚█████╔╝╚██████╔╝██║░░██║██║░░██║██║░╚═╝░██║
+#╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝
+#--------------------------------------------------------------------------------------
+
+# Programa principal de copias de seguridad de archivos de configuración, archivos o directorio.
+# Gestionados en la carpeta central /bck.
+# Sustituyendo los archivos principales por enlaces simbólicos
+
+# Sistema BCK consta de 2 partes:
+# - Una estructura de archivos donde se organizan las copias de los archivos
+# - Un conjunto de programas de utilidad que gestionan la estructura de archivos
+
+# Cuando se añade un ficherom refiriéndose a ficheros o directorios en general, a este se le asocia un identificador. (ID) 
+# Este id indica al fichero de forma unívoca en el sistema y permite su  gestión. El sistema bck permite:
+#
+# 1) Añadir fichero a la copia (bcklink)
+# 2) Ver los ids y ficheros asociados (bckview)
+# 3) Modificar su id (bckmv)
+# 4) Restaurar el fichero (bckrestore)
+# 5) Eliminar el fichero de la copia (bckrm)
+
+## Estructura de archivos
+# . ~
+# |
+# |-+ bckdir/
+#   |-- files/ ( contiene los archivos que se han incluido en bck, pero se sustituye el nombre del fichero por el del id asignado.)
+#   |-- mypaths.txt ( contiene en cada línea una pareja id,ruta (separada por una coma) 
+
+# La forma en que funciona bck es sustituyendo el archivo original por un enlace
+# simbólico que apunta a la copia realizada (el archivo dentro de la carpeta files
+# nombrado por su id).
+#
+# Ejemplo:
+#----------------------------------------------------------------
+#                               Fichero original
+#----------------------------------------------------------------
+# ~/dir/test/$ ls -l
+# -rw-rw-r-- 1 user 10 feb 10 18:52 file1.txt
+# 
+#
+#----------------------------------------------------------------
+#                         Fichero tras realizar copia
+#----------------------------------------------------------------
+# lrwxrwxrwx 1 user 52 feb 10 20:10 file1.txt -> /home/user/bckdir/files/f1
+#
+#----------------------------------------------------------------
+#                               En mypaths.txt 
+#----------------------------------------------------------------
+# f1,/home//dir/test/file1.txt
+#
+#----------------------------------------------------------------
+#                                   En 'files'
+#----------------------------------------------------------------
+# ~/bckdir/files/$ ls -l
+# -rw-rw-r-- 1 user 13 mar 10 18:52 f1
+
+
+# Función para imprimir el menú
+print_menu() {
+    echo -e "·······································"
+    echo -e "\n>>>>>>>>>>>>> ß𝓬ƙ ρɾσցɾα𝓶 <<<<<<<<<<<<\n"
+    echo -e "·······································"
+    echo -e "\n\033[1;36m-- Menu de Copia de Seguridad --\n\033[0m"
+    echo -e "\033[1;32m  1) Añadir fichero a la copia (bcklink) \033[0m"
+    echo -e "\033[1;32m  2) Ver los ids y ficheros asociados (bckview) \033[0m"
+    echo -e "\033[1;32m  3) Modificar su id (bckmv) \033[0m"
+    echo -e "\033[1;32m  4) Restaurar el fichero (bckrestore) \033[0m"
+    echo -e "\033[1;32m  5) Eliminar el fichero de la copia (bckrm) \033[0m"
+    echo -e "\033[1;35m  0) Salir \033[0m"
+}
+
+# Función para registrar los resultados en el archivo de log con fecha
+log_result() {
+    logs_dir="logs"
+    # Verificar si el directorio logs/ existe, si no, crearlo
+    if [ ! -d $logs_dir ]; then
+        mkdir $logs_dir
+    fi
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> logs/"$(date +"%Y-%m-%d").log" 2>&1
+}
+
+# Función para salir del programa
+exit_program() {
+    echo ""
+    echo -e "\033[1; 36m-- Gracias por usar el sistema BCK --\033[0m"
+    echo "Finalizando el sistema BCK"
+    sleep 2
+    clear
+}
+
+# Función inválida en el sistema BCK
+bad_option() {
+    echo ""
+    echo -e "\033[1;31m -- \t Illegal options --\033[0m"
+    echo -e "\033[1;31m Vuelva a intentarlo de nuevo \033[0m"
+    echo ""
+}
+
+# Función para ejecutar la opcion seleccionada
+execute_option() {
+    archivo_log="logs/$(date +"%Y-%m-%d").log"    
+    case $option in
+        1) ./functions/bcklink 2>&1 | tee -a $archivo_log;;
+        2) ./functions/bckview 2>&1 | tee -a $archivo_log;;
+        3) ./functions/bckmv 2>&1 | tee -a $archivo_log;;
+        4) ./functions/bckrestore 2>&1 | tee -a $archivo_log;;
+        5) ./functions/bckrm 2>&1 | tee -a $archivo_log;;
+        0) exit_program 2>&1 | tee -a $archivo_log; exit;;
+        *) bad_option 2>&1 | tee -a $archivo_log;;
+    esac
+}
+
+# Función principal del script
+main() {
+    archivo_log="logs/$(date +"%Y-%m-%d").log"    
+    while true; do
+        clear
+        print_menu
+        read -p "   Ingrese una opcion: " option
+        log_result "Opción seleccionada: $option"        
+        execute_option $option        
+        read -p "Presione ENTER para continuar ..." backmenu
+    done
+}
+
+# Ejecutar la función principal
+main 

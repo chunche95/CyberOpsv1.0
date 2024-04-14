@@ -1,0 +1,383 @@
+2024-04-14 01:05:13 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: 
+Carpeta y fichero Path creados - No existian
+
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+2024-04-14 01:06:54 - Opción seleccionada: 0
+
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+2024-04-14 01:06:59 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+2024-04-14 01:08:31 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+2024-04-14 01:09:39 - Opción seleccionada: [A
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 01:09:42 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+2024-04-14 01:10:22 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero creado - No existia
+2024-04-14 01:10:45 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Introduzca el ID: Introduzca el path: 1 && f1
+1 && f1
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 1
+Path: f1
+Dir. destino: 
+...........................................
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 1
+Path: f1
+Dir. destino: 
+...........................................
+
+Carpeta y fichero Path creados - No existian
+
+Carpeta y fichero Path creados - No existian
+mkdir: cannot create directory ‘/files’mkdir: cannot create directory ‘/files’: Permission denied
+: Permission denied
+touch: cannot touch '/mypaths.txt'touch: cannot touch '/mypaths.txt': Permission denied
+: Permission denied
+
+
+touch: touch: cannot touch '/mypaths.txt'cannot touch '/mypaths.txt': Permission denied
+: Permission denied
+Fichero creado - No existia
+Fichero creado - No existia
+cp: cp: cannot create regular file '/1'cannot create regular file '/1': Permission denied: Permission denied
+
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 01:20:05 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: 
+Carpeta y fichero Path creados - No existian
+
+Introduzca el ID: 2024-04-14 01:21:56 - Opción seleccionada: 1
+
+Carpeta y fichero Path creados - No existian
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+mkdir: cannot create directory ‘/files’: Permission denied
+touch: cannot touch '/mypaths.txt': Permission denied
+
+touch: cannot touch '/mypaths.txt': Permission denied
+Fichero creado - No existia
+Introduzca el ID: 2024-04-14 01:23:06 - Opción seleccionada: 1
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 01:23:11 - Opción seleccionada: 1
+
+Carpeta y fichero destino creados - No existian
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+mkdir: cannot create directory ‘/files’: Permission denied
+touch: cannot touch '/mypaths.txt': Permission denied
+
+touch: cannot touch '/mypaths.txt': Permission denied
+Fichero creado - No existia
+Introduzca el ID: Introduzca el path: Error: Las variables de entorno id y/o path no están definidas o son nulas.
+2024-04-14 01:26:06 - Opción seleccionada: 1
+Carpeta de backups no existe. Creándola...
+mkdir: cannot create directory ‘/files’: Permission denied
+Carpeta de backups creada.
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '': No such file or directory
+Fichero de paths creado.
+Introduzca el ID: 2024-04-14 01:26:13 - Opción seleccionada: 1
+Carpeta de backups no existe. Creándola...
+mkdir: cannot create directory ‘/files’: Permission denied
+Carpeta de backups creada.
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '': No such file or directory
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: Introduzca el ID: Introduzca el path: ./functions/bcklink: line 79: arguments: command not found
+./functions/bcklink: line 79: arguments: command not found
+...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: 1
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: 1
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt
+...........................................
+ENTER para continuarCarpeta de backups no existe. Creándola...
+Carpeta de backups no existe. Creándola...
+Carpeta de backups creada.
+Carpeta de backups creada.
+Fichero de paths no existe. Creándolo...
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt'touch: cannot touch '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt': No such file or directory
+: No such file or directory
+Fichero de paths creado.
+Fichero de paths creado.
+cp: cannot stat '1'cp: cannot stat '1': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 09:41:03 - Opción seleccionada: 1
+Carpeta de backups no existe. Creándola...
+mkdir: cannot create directory ‘/files’: Permission denied
+Carpeta de backups creada.
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '': No such file or directory
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: Introduzca el ID: Introduzca el path: ./functions/bcklink: line 81: arguments: command not found
+./functions/bcklink: line 81: arguments: command not found
+...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt
+...........................................
+ENTER para continuar
+
+2024-04-14 09:50:02 - Opción seleccionada: 1
+Carpeta de backups no existe. Creándola...
+mkdir: cannot create directory ‘’: No such file or directory
+Creando...
+mkdir: cannot create directory ‘/files’: Permission denied
+Carpetas creadas
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '': No such file or directory
+Fichero de paths creado.
+Introduzca el ID: 2024-04-14 09:50:48 - Opción seleccionada: 1
+Carpeta de backups no existe. Creándola...
+mkdir: cannot create directory ‘’: No such file or directory
+Creando...
+mkdir: cannot create directory ‘/files’: Permission denied
+Carpetas creadas
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+touch: cannot touch '': No such file or directory
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 09:54:39 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Carpeta de backups no existe. Creándola...
+Creando...
+Carpetas creadas
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 09:55:23 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 09:56:46 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/mypaths.txt
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 09:57:59 - Opción seleccionada: 0
+
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+2024-04-14 09:58:11 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 09:59:41 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+Vars [Part2]: bck_dir - mypaths_file
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 10:00:37 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+Vars [Part2]: bck_dir - mypaths_file
+Carpeta de backups no existe. Creándola...
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: [1;33m Error: Las variables de entorno id y/o path no están definidas o son nulas. [0m
+2024-04-14 10:01:22 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+Vars [Part2]: bck_dir - mypaths_file
+Carpeta de backups no existe. Creándola...
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+Introduzca el ID: Introduzca el path: Vars: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir - /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+Vars [Part2]: bck_dir - mypaths_file
+Fichero de paths no existe. Creándolo...
+Fichero de paths creado.
+...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar...........................................
+[1;35m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificarcp: cannot create regular file '/files/1'cp: cannot create regular file '/files/1': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 10:12:57 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: f1
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificar/files/1
+/files/1
+Datos a copiar:  f1 + /files/1
+Datos a copiar:  f1 + /files/1
+cp: cannot create regular file '/files/1'cp: cannot create regular file '/files/1': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 10:14:50 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /files
+- Fichero destino: /files/
+...........................................
+ENTER para continuar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificar[2;35m Variables de entrada: [0m: 
+ /files 
+ 1
+ENTER para verificar/files/1
+/files/1
+
+
+2024-04-14 10:20:35 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: +/files
+- Fichero destino: 
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: +/files
+- Fichero destino: 
+...........................................
+ENTER para continuar2024-04-14 10:21:08 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: 
+- Fichero destino: 
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: 
+- Fichero destino: 
+...........................................
+ENTER para continuar2024-04-14 10:23:12 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: 2024-04-14 10:23:24 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Carpeta de backups no existe. Creándola...
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: 
+- Fichero destino: 
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: 
+- Fichero destino: 
+...........................................
+ENTER para continuar
