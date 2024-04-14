@@ -26,6 +26,15 @@ echo "------------------"
 echo "Terminado (x1)"
 echo "------------------"
 
+###########################################
+#  Laboratorios Base Seguridadinformatica #
+###########################################
+cd lab 
+sh up.sh
+echo "------------------"
+echo "Terminado (x1)"
+echo "------------------"
+
 ####################
 # OTROS CONTENIDOS #
 ####################
@@ -38,6 +47,5 @@ echo "======> 50%"
 echo "=========> 75%"
 echo "===========> 100%"
 echo "Fin de subida de archivos"
-
 sleep 5
 git status
