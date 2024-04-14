@@ -12,8 +12,8 @@
 data() {
     
     # Variables definidas para ejecutar la tarea    
-    local bck_dir=$(realpath ../bckdir)  # Ruta absoluta al directorio bckdir
-    local mypaths_file="$bck_dir/bckdir/mypaths.txt"
+    bck_dir=$(realpath ../bckdir)  # Ruta absoluta al directorio bckdir
+    mypaths_file="$bck_dir/bckdir/mypaths.txt"
 
     # Solicitar los datos al usuarios
     read -p "Introduzca el ID: " id

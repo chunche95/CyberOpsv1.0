@@ -61,6 +61,23 @@
 # ~/bckdir/files/$ ls -l
 # -rw-rw-r-- 1 user 13 mar 10 18:52 f1
 
+# Función para imprimir un mensaje de advertencia centrado y con color llamativo
+print_warning() {
+    local message="$1"
+    local terminal_width="$(tput cols)"
+    local message_length="${#message}"
+    local padding_length=$(( ($terminal_width - $message_length) / 2 ))
+    local padding=""
+    for ((i = 0; i < $padding_length; i++)); do
+        padding+=" "
+    done
+    
+    echo -e "\n\n\033[1;31m$padding$message$padding\033[0m"
+}
+
+# Mensaje de advertencia
+warning_message="Recordatorio: Por favor, use rutas absolutas en el programa para mejorar su experiencia con las tareas de backup."
+
 
 # Función para imprimir el menú
 print_menu() {
@@ -119,7 +136,14 @@ execute_option() {
 
 # Función principal del script
 main() {
+    # Archivo de logs
     archivo_log="logs/$(date +"%Y-%m-%d").log"    
+    # Imprimir el mensaje de advertencia    
+    clear
+    print_warning "$warning_message"
+    sleep 2
+    clear
+    # Bucle infinito del menu principal
     while true; do
         clear
         print_menu

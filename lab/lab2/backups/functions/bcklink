@@ -36,18 +36,15 @@ dataEntry() {
     echo "- ID: $id"
     echo "- Path: $path"
     echo "- Dir. destino: $bck_dir"
-    echo "- Fichero destino: $mypaths_file"
+    echo "- Fichero registro: $mypaths_file"
     echo "..........................................."
     read -p "ENTER para continuar" read
 }
 
 # Función para verificar si el identificador ya existe en bck
 checkId() {    
-    # Verificar si el identificador ya existe en bck
-    echo -e "\033[2;35m Variables de entrada en checkId: \033[0m: \n Ruta File: $path/$bck_dir \n $id"
-    read -p "ENTER para verificar" read
-    rutaFile="$bck_dir/$id"
-    echo $rutaFile
+    # Verificar si el identificador ya existe en bck    
+    local rutaFile="$bck_dir/$id"    
     if [ -f $rutaFile ]; then
         echo -e "\033[1;33m El identificador $id ya existe en '$PATH/bckdir/files'. \033[0m"
         echo ""
@@ -55,17 +52,62 @@ checkId() {
         sleep 2
         exit 1
     fi
+    echo -e "\033[1;32m Identificador válido \033[0m"
+    copyFile $rutaFile
 }
 
 # Función para copiar el archivo a bck y crear el enlace simbólico
 copyFile() {    
     # Copiar el archivo a bck con el identificador correspondiente
-    echo -e "\033[3;33m Copiando el archivo a bck con el identificador correspondiente.\033[0m"
-    rutaFile="$bck_dir/$id"
+    echo -e "\033[3;33m Copiando el archivo '$path' a bck con el identificador correspondiente: $id \033[0m"
+     
+    # echo $rutaFile
+    # echo "Datos a copiar:  "
+    # echo "Path origen: $path"
+    # echo "Path destino: $rutaFile"
+    # echo "Dato a escribir en mypaths_file: $id , $(basename $path)"    
+    path=$(realpath $(basename $path))
+    # echo "Path absoluto de ruta relativa de entrada: $path"
+    # Verificar si se encontró el archivo
+    if [ ! -z $(basename $path) ]; then
+        echo -e "\033[3;32m Archivo '$(basename $path)' encontrado! \033[0m"
+        path2=$(find $HOME -xdev -path '/root' -prune -o -name "$(basename $path)") 
+        echo $path2 > find.tmp
+           
+        if [ ! -s find.tmp ]; then
+            nLineasEncontradas=$(wc -l < find.tmp)
+            if [ "$num_lineas" -eq 1 ]; then
+                # Guardar la línea como una variable
+                path2=$(head -n 1 "$archivo")
+                echo "Resultado encontrado: $path"
+                if [ $path != $path2]; then
+                    path=$path2
+                    echo "Resultado del path nuevo: $path"
+                fi
+            else
+                # Mostrar un mensaje de advertencia si el archivo tiene más de una línea
+                echo "Hay más de un resultado encontrado para el fichero introducido, verifique la ruta y vuelva a intentarlo de nuevo."
+                tail -n 10 find.tmp
+            fi            
+        else 
+            echo "Sin resultados"
+        fi 
+        rm find.tmp        
+    else
+        
+        echo -e "\033[3;31m ¡Advertencia! \033[0m"
+        echo "El archivo '$path' no se encontró en el sistema."
+        echo "Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción"
+        read -p "ENTER para continuar" continue
+        exit 1        
+    fi
 
-    echo "Datos a copiar:  $path + $rutaFile"
-
-    cp $path/* $rutaFile
+    echo "Valores que de los que haremos backup:"
+    echo "Path origen: $path"
+    echo "Path destino: $rutaFile"
+    echo "Dato a escribir en mypaths_file: $id , $(basename $path)"    
+    
+    cp $path $rutaFile
     if [ "$?" -ne 0 ]; then
         echo -e "\033[1;31m Error al copiar el fichero a bckdir. \033[0m"
         exit 1
@@ -86,4 +128,3 @@ copyFile() {
 # Ejecutar las funciones
 dataEntry 2>&1 | tee -a "$archivo_log"
 checkId 2>&1 | tee -a "$archivo_log"
-copyFile 2>&1 | tee -a "$archivo_log"

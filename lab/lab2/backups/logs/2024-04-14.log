@@ -380,4 +380,1155 @@ ENTER para continuar...........................................
 - Dir. destino: 
 - Fichero destino: 
 ...........................................
-ENTER para continuar
+ENTER para continuar2024-04-14 10:36:38 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: Carpeta de backups no existe. Creándola...
+---------------------------
+Carpeta de backups creada. 
+---------------------------
+Fichero de paths no existe. Creándolo...
+---------------------------
+Fichero de paths creado.
+---------------------------
+[H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[2;35m Variables de entrada en checkId: [0m: 
+ Ruta File: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir 
+ 1
+ENTER para verificar[2;35m Variables de entrada en checkId: [0m: 
+ Ruta File: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt//home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir 
+ 1
+ENTER para verificar/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+2024-04-14 10:39:11 - Opción seleccionada: 
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 10:39:13 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo a bck con el identificador correspondiente.[0m
+Datos a copiar:  /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt + /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[3;33m Copiando el archivo a bck con el identificador correspondiente.[0m
+Datos a copiar:  /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt + /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt/*'cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt/*': Not a directory
+: Not a directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 10:46:42 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 10:47:28 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 10:47:54 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 10:48:40 - Opción seleccionada: [A
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 10:48:46 - Opción seleccionada: 
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 10:50:05 - Opción seleccionada: [A
+
+[1;31m -- 	 Illegal options --[0m
+[1;31m Vuelva a intentarlo de nuevo [0m
+
+2024-04-14 10:51:27 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: 2024-04-14 10:51:55 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo a bck con el identificador correspondiente: 1 [0m
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files/1
+Dato a escribir en mypaths_file:
+[3;33m Copiando el archivo a bck con el identificador correspondiente: 1 [0m
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files/1
+Dato a escribir en mypaths_file:
+f1.txt
+f1.txt
+./functions/bcklink: line 70: originalpath: command not found
+./functions/bcklink: line 70: originalpath: command not found
+cp: cp: cannot stat '../test/f1.txt'cannot stat '../test/f1.txt': No such file or directory: No such file or directory
+
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 10:53:39 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files/1
+Dato a escribir en mypaths_file:
+f1.txt
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/files/1
+Dato a escribir en mypaths_file:
+f1.txt
+./functions/bcklink: line 70: originalpath: command not found
+./functions/bcklink: line 70: originalpath: command not found
+cp: cp: cannot stat '../test/f1.txt'cannot stat '../test/f1.txt': No such file or directory: No such file or directory
+
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:33:51 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cannot stat '../test/f1.txt'cp: cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:41:54 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 11:42:07 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+find: ‘/etc/polkit-1/localauthority’find: ‘/etc/polkit-1/localauthority’: Permission denied
+: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-18’: Permission denied
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-18’: Permission denied
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-1000’find: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-1000’: Permission denied
+: Permission denied
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-1003’: Permission deniedfind: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-1003’: Permission denied
+
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-500’: Permission denied
+find: ‘/mnt/c/$Recycle.Bin/S-1-5-21-396698340-1368267475-1204949903-500’: Permission denied
+find: ‘/mnt/c/MSOCache’: Permission denied
+find: ‘/mnt/c/MSOCache’: Permission denied
+find: ‘/mnt/c/Program Files/Windows Defender Advanced Threat Protection/Classification/Configuration’: Permission denied
+find: ‘/mnt/c/Program Files/Windows Defender Advanced Threat Protection/Classification/Configuration’: Permission denied
+find: ‘/mnt/c/Program Files/WindowsApps’: Permission denied
+find: ‘/mnt/c/Program Files/WindowsApps’: Permission denied
+find: ‘/mnt/c/Program Files (x86)/Google/CrashReports’: Permission deniedfind: ‘/mnt/c/Program Files (x86)/Google/CrashReports’: Permission denied
+
+2024-04-14 11:46:28 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar2024-04-14 11:48:40 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+find: ‘/etc/polkit-1/localauthority’find: ‘/etc/polkit-1/localauthority’: Permission denied
+: Permission denied
+find: find: ‘/etc/ssl/private’: Permission denied
+‘/etc/ssl/private’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/log/private’: Permission deniedfind: ‘/var/log/private’: Permission denied
+
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+cp: cp: cannot stat '../test/f1.txt'cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:50:46 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+find: ‘/etc/polkit-1/localauthority’find: ‘/etc/polkit-1/localauthority’: Permission denied: Permission denied
+
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: find: ‘/var/cache/ldconfig’: Permission denied
+‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/log/private’: Permission deniedfind: ‘/var/log/private’: Permission denied
+
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+./functions/bcklink: line 70: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt: Permission denied
+./functions/bcklink: line 70: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/test/f1.txt: Permission denied
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+cp: cp: cannot stat '../test/f1.txt'cannot stat '../test/f1.txt': No such file or directory: No such file or directory
+
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:51:25 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+find: ‘/etc/polkit-1/localauthority’find: ‘/etc/polkit-1/localauthority’: Permission denied
+: Permission denied
+find: find: ‘/etc/ssl/private’: Permission denied
+‘/etc/ssl/private’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: find: ‘/var/cache/ldconfig’: Permission denied
+‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+cp: cannot stat '../test/f1.txt'cp: cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:52:55 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+cp: cannot stat '../test/f1.txt': No such file or directory
+cp: cannot stat '../test/f1.txt': No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 11:59:51 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+cp: cannot stat '../test/f1.txt'cp: cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 12:01:05 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 12:01:11 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cannot stat '../test/f1.txt'cp: cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 12:03:26 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[3;32m Archivo '../test/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cannot stat '../test/f1.txt'cp: cannot stat '../test/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 12:05:31 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+realpath: ../test/f1.txtrealpath: ../test/f1.txt: No such file or directory
+: No such file or directory
+
+
+basename: missing operandbasename: missing operand
+Try 'basename --help' for more information.
+
+Try 'basename --help' for more information.
+[3;31m ¡Advertencia! [0m
+El archivo '' no se encontró en el sistema.
+[3;31m ¡Advertencia! [0m
+El archivo '' no se encontró en el sistema.
+basename: basename: missing operand
+Try 'basename --help' for more information.
+missing operand
+Try 'basename --help' for more information.
+Los archivos con nombre  encontrados tienen esta ruta:
+Los archivos con nombre  encontrados tienen esta ruta:
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar./functions/bcklink: line 127: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 128: syntax error: unexpected end of file
+2024-04-14 12:06:25 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+realpath: ../test/f1.txtrealpath: ../test/f1.txt: No such file or directory
+: No such file or directory
+
+
+basename: missing operand
+basename: missing operand
+Try 'basename --help' for more information.
+Try 'basename --help' for more information.
+[3;31m ¡Advertencia! [0m
+El archivo '' no se encontró en el sistema.
+[3;31m ¡Advertencia! [0m
+El archivo '' no se encontró en el sistema.
+basename: missing operand
+Try 'basename --help' for more information.
+basename: missing operand
+Try 'basename --help' for more information.
+Los archivos con nombre  encontrados tienen esta ruta:
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+Los archivos con nombre  encontrados tienen esta ruta:
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarENTER para continuar./functions/bcklink: line 127: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 128: syntax error: unexpected end of file
+2024-04-14 12:08:23 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;31m ¡Advertencia! [0m
+El archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' no se encontró en el sistema.
+[3;31m ¡Advertencia! [0m
+El archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' no se encontró en el sistema.
+Los archivos con nombre f1.txt encontrados tienen esta ruta:
+Los archivos con nombre f1.txt encontrados tienen esta ruta:
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar2024-04-14 12:09:10 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;31m ¡Advertencia! [0m
+El archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' no se encontró en el sistema.
+[3;31m ¡Advertencia! [0m
+El archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' no se encontró en el sistema.
+Los archivos con nombre f1.txt encontrados tienen esta ruta:
+Los archivos con nombre f1.txt encontrados tienen esta ruta:
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar2024-04-14 12:10:54 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt'cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 12:12:35 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt'cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt': No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-14 12:14:33 - Opción seleccionada: 0
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+[H[2J[3J2024-04-14 12:14:40 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar./functions/bcklink: line 129: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 130: syntax error: unexpected end of file
+2024-04-14 12:16:26 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarENTER para continuar2024-04-14 12:17:28 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../testf1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../testf1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../testf1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../testf1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , testf1.txt
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../testf1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../testf1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , testf1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/testf1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/testf1.txt' encontrado! [0m
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/testf1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/testf1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar./functions/bcklink: line 129: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 130: syntax error: unexpected end of file
+2024-04-14 12:18:21 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+[3;32m Archivo '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar./functions/bcklink: line 129: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 130: syntax error: unexpected end of file
+2024-04-14 12:19:02 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Datos a copiar:  
+Path origen: ../test/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path absoluto de ruta relativa de entrada: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+[3;32m Archivo 'f1.txt' encontrado! [0m
+[3;32m Archivo 'f1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar./functions/bcklink: line 135: unexpected EOF while looking for matching `"'
+./functions/bcklink: line 136: syntax error: unexpected end of file
+2024-04-14 12:22:43 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+[3;32m Archivo 'f1.txt' encontrado! [0m
+[3;32m Archivo 'f1.txt' encontrado! [0m
+Sin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuarSin resultados
+Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción
+ENTER para continuar2024-04-14 12:25:25 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el path: [H[2J[3J...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar...........................................
+[1;36m Variables de entrada: [0m
+- ID: 1
+- Path: ../test/f1.txt
+- Dir. destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir
+- Fichero registro: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/bckdir/mypaths.txt
+...........................................
+ENTER para continuar[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+[1;32m Identificador válido [0m
+[3;33m Copiando el archivo '../test/f1.txt' a bck con el identificador correspondiente: 1 [0m
+[3;32m Archivo 'f1.txt' encontrado! [0m
+[3;32m Archivo 'f1.txt' encontrado! [0m
+Sin resultados
+Sin resultados
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Valores que de los que haremos backup:
+Path origen: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt
+Path destino: /home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/bckdir/1
+Dato a escribir en mypaths_file: 1 , f1.txt
+Dato a escribir en mypaths_file: 1 , f1.txt
+cp: cp: cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt'cannot stat '/home/pesteban/riesgos_y_seguridad_SI/CyberOpsv1.0/lab/lab2/backups/f1.txt': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
