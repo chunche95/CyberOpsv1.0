@@ -44,16 +44,17 @@ dataEntry() {
 # Función para verificar si el identificador ya existe en bck
 checkId() {    
     # Verificar si el identificador ya existe en bck    
-    local rutaFile="$bck_dir/$id"    
-    if [ -f $rutaFile ]; then
-        echo -e "\033[1;33m El identificador $id ya existe en '$PATH/bckdir/files'. \033[0m"
+    local rutaFile="$bck_dir/files/"
+    local idRutaFile="$rutaFile/$id"    
+    if [ -f $idRutaFile ]; then
+        echo -e "\033[1;33m El identificador $id ya existe en '$rutaFile'. \033[0m"
         echo ""
         echo -e "\033[1;33m Si desea modificar el identificador del fichero $id. Use la opción 'bckmv' del sistema \033[0m"
         sleep 2
         exit 1
     fi
     echo -e "\033[1;32m Identificador válido \033[0m"
-    copyFile $rutaFile
+    copyFile $rutaFile $idRutaFile
 }
 
 # Función para copiar el archivo a bck y crear el enlace simbólico
@@ -74,25 +75,24 @@ copyFile() {
         path2=$(find $HOME -xdev -path '/root' -prune -o -name "$(basename $path)") 
         echo $path2 > find.tmp
            
-        if [ ! -s find.tmp ]; then
+        if [ -s find.tmp ]; then
             nLineasEncontradas=$(wc -l < find.tmp)
-            if [ "$num_lineas" -eq 1 ]; then
+            if [ $nLineasEncontradas > 2 ]; then
                 # Guardar la línea como una variable
-                path2=$(head -n 1 "$archivo")
-                echo "Resultado encontrado: $path"
-                if [ $path != $path2]; then
+                path2=$(tail -n 1 find.tmp)
+                # echo "Resultado encontrado: $path"
+                if [ $path != $path2 ]; then
                     path=$path2
-                    echo "Resultado del path nuevo: $path"
+                    # echo "Resultado del path nuevo: $path"
                 fi
             else
                 # Mostrar un mensaje de advertencia si el archivo tiene más de una línea
-                echo "Hay más de un resultado encontrado para el fichero introducido, verifique la ruta y vuelva a intentarlo de nuevo."
+                echo -e "\033[3;32m Hay más de un resultado encontrado para el fichero introducido, verifique la ruta y vuelva a intentarlo de nuevo. \033[0m"
                 tail -n 10 find.tmp
             fi            
         else 
             echo "Sin resultados"
-        fi 
-        rm find.tmp        
+        fi         
     else
         
         echo -e "\033[3;31m ¡Advertencia! \033[0m"
@@ -102,16 +102,21 @@ copyFile() {
         exit 1        
     fi
 
+    datos="$id,$(basename $path)"
+
     echo "Valores que de los que haremos backup:"
     echo "Path origen: $path"
     echo "Path destino: $rutaFile"
-    echo "Dato a escribir en mypaths_file: $id , $(basename $path)"    
-    
-    cp $path $rutaFile
+    echo "Nuevo nombre del fichero: $idRutaFile"
+    echo "Dato a escribir en mypaths_file: $datos"    
+    cp $path $rutaFile    
     if [ "$?" -ne 0 ]; then
-        echo -e "\033[1;31m Error al copiar el fichero a bckdir. \033[0m"
+        echo -e "\033[1;31m Error al copiar el fichero a bck_dir. \033[0m"
         exit 1
+    else
+        datos >> $mypaths_file
     fi
+    mv $rutaFile/$(basename $path) $rutaFile
     # Crear el enlace simbólico
     ln -s "$bck_dir/$id" "$path" 
     if [ "$?" -ne 0 ]; then
@@ -128,3 +133,4 @@ copyFile() {
 # Ejecutar las funciones
 dataEntry 2>&1 | tee -a "$archivo_log"
 checkId 2>&1 | tee -a "$archivo_log"
+rm find.tmp

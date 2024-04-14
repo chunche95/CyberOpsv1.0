@@ -1,0 +1,115 @@
+2024-04-13 22:24:26 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el ID: Introduzca el path: Introduzca el path: Introduzca el ID: Introduzca el ID: Introduzca el path: Introduzca el path: Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+Introduzca el ID: Introduzca el ID: 2024-04-13 22:26:38 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el ID: Introduzca el path: Introduzca el path:  && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+ && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+...........................................
+[1;35m Variables de entrada: [0m
+
+
+Dir. destino: ../bckdir
+...........................................
+...........................................
+[1;35m Variables de entrada: [0m
+
+
+Dir. destino: ../bckdir
+...........................................
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+cp: cannot stat ''cp: cannot stat '': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-13 22:28:04 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el ID: Introduzca el path: Introduzca el path:  && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+ && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 
+Path: 
+Dir. destino: ../bckdir
+...........................................
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 
+Path: 
+Dir. destino: ../bckdir
+...........................................
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+cp: cannot stat ''cp: cannot stat '': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-13 22:29:27 - Opción seleccionada: 0
+
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+2024-04-13 22:29:31 - Opción seleccionada: 1
+Introduzca el ID: Introduzca el ID: Introduzca el path: Introduzca el path:  && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+ && 
+Se deben proporcionar valores para ID y path.
+Uso: ./functions/bcklink id path
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 
+Path: 
+Dir. destino: ../bckdir
+...........................................
+...........................................
+[1;35m Variables de entrada: [0m
+ID: 
+Path: 
+Dir. destino: ../bckdir
+...........................................
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+ no se ha encontrado en el sistema. Por favor, compruebe la existencia del directorio y vuelva a ejecutar la tarea de nuevo.
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+[1;31m El identificador  ya existe en bck. [0m
+
+Si desea modificar el identificador del fichero . Use la opción 'bckmv' del sistema
+
+cp: cp: cannot stat ''cannot stat '': No such file or directory
+: No such file or directory
+[1;31m Error al copiar el fichero a bckdir. [0m
+[1;31m Error al copiar el fichero a bckdir. [0m
+2024-04-13 22:38:58 - Opción seleccionada: 0
+
+
+[1; 36m-- Gracias por usar el sistema BCK --[0m
+Finalizando el sistema BCK
+

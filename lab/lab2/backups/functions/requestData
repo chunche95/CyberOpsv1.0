@@ -12,8 +12,9 @@
 data() {
     
     # Variables definidas para ejecutar la tarea    
-    bck_dir=$(realpath ../bckdir)  # Ruta absoluta al directorio bckdir
-    mypaths_file="$bck_dir/bckdir/mypaths.txt"
+    bck_dir=$(realpath bck_dir)  # Ruta absoluta al directorio bckdir
+    bck_files="$bck_dir/files"  # Ruta donde almacena las copias de los ficheros
+    mypaths_file="$bck_dir/mypaths.txt" # fichero mypaths que guarda las rutas de los ficheros copiados
 
     # Solicitar los datos al usuarios
     read -p "Introduzca el ID: " id
@@ -25,9 +26,10 @@ data() {
         exit 1
     fi
 
-    checkDir "bck_dir" "mypaths_file"
+    checkDir "bck_dir" "bck_files" "mypaths_file"
 
     export bck_dir
+    export bck_files
     export mypaths_file
     export id
     export path
@@ -36,21 +38,22 @@ data() {
 
 # Función para verificar si el fichero y carpeta de bakcups existen, sino los crea
 checkDir() {    
-    local bck_dir=$1  # Ruta absoluta al directorio bckdir
-    local mypaths_file=$2
+    local bck_dir=$1 
+    local bck_files=$2
+    local mypaths_file=$3
     
     if [ ! -d "$bck_dir" ]; then
         echo "Carpeta de backups no existe. Creándola..."        
         mkdir "$bck_dir"        
-        mkdir "$bck_dir/files"
+        mkdir "$bck_files"
 
         echo "---------------------------"
         echo "Carpeta de backups creada. "
         echo "---------------------------"
     fi
-    if [ ! -f "$bck_dir/$mypaths_file" ]; then
+    if [ ! -f "$mypaths_file" ]; then
         echo "Fichero de paths no existe. Creándolo..."        
-        touch "$bck_dir/$mypaths_file"
+        touch "$mypaths_file"
         echo "---------------------------"
         echo "Fichero de paths creado."
         echo "---------------------------"

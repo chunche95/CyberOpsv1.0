@@ -76,7 +76,7 @@ print_warning() {
 }
 
 # Mensaje de advertencia
-warning_message="Recordatorio: Por favor, use rutas absolutas en el programa para mejorar su experiencia con las tareas de backup."
+warning_message="Recordatorio: Por favor, use rutas absolutas en el programa para mejorar su experiencia con las tareas de backups."
 
 
 # Función para imprimir el menú
