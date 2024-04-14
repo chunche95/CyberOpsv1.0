@@ -1,1 +1,67 @@
 #!/bin/bash
+
+# ██████╗░░█████╗░██╗░░██╗██████╗░███╗░░░███╗
+# ██╔══██╗██╔══██╗██║░██╔╝██╔══██╗████╗░████║
+# ██████╦╝██║░░╚═╝█████═╝░██████╔╝██╔████╔██║
+# ██╔══██╗██║░░██╗██╔═██╗░██╔══██╗██║╚██╔╝██║
+# ██████╦╝╚█████╔╝██║░╚██╗██║░░██║██║░╚═╝░██║
+# ╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝
+
+# bckrm
+# $ bckrm id
+# • Funcionalidad
+# – Elimina el identificador de bck
+# – Si id no existe no se realiza ninguna acción, mostrando el mensaje
+# pertinente
+# – El enlace simbólico que apunta al archivo id en files es sustituido por
+# el fichero original, del que se había realizado la copia
+
+
+# Nombre del archivo de registro
+archivo_log="logs/$(date +"%Y-%m-%d").log"
+
+# Solicitamos datos de entrada
+source functions/requestData
+# Verificar si se proporciona el ID como argumento
+if [ $# -ne 1 ]; then
+    echo "Uso: $0 id"
+    exit 1
+fi
+
+# Asignar el argumento a una variable
+read -p "Escriba el ID a borrar: " id
+id=$id
+
+# Archivo que contiene los IDs y rutas
+mypaths_file=$mypaths_file
+
+# Verificar si el archivo existe
+if [ ! -f "$mypaths_file" ]; then
+    echo "El archivo $mypaths_file no existe."
+    exit 1
+fi
+
+# Buscar el ID en el archivo y obtener la ruta asociada
+file_path=$(awk -F ',' -v id="$id" '$1 == id {print $2}' "$mypaths_file")
+
+# Verificar si se encontró el ID
+if [ -z "$file_path" ]; then
+    echo "El ID $id no existe."
+    exit 1
+fi
+
+# Eliminar el identificador de mypaths.txt
+sed -i "/^$id,/d" "$mypaths_file"
+
+# Verificar si el enlace simbólico existe en la carpeta files y si es así, restaurar el archivo original
+if [ -L "files/$id" ]; then
+    original_file=$(readlink "files/$id")
+    if [ -f "$original_file" ]; then
+        mv "files/$id" "$original_file"
+        echo "Se ha eliminado el identificador $id de bck y se ha restaurado el archivo original: $original_file."
+    else
+        echo "El archivo original asociado al identificador $id no existe en la ruta $original_file."
+    fi
+else
+    echo "No se encontró un enlace simbólico asociado al identificador $id en la carpeta files."
+fi

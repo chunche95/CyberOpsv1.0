@@ -1,1 +1,57 @@
 #!/bin/bash
+
+# ██████╗░░█████╗░██╗░░██╗██████╗░███████╗░██████╗████████╗░█████╗░██████╗░███████╗
+# ██╔══██╗██╔══██╗██║░██╔╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
+# ██████╦╝██║░░╚═╝█████═╝░██████╔╝█████╗░░╚█████╗░░░░██║░░░██║░░██║██████╔╝█████╗░░
+# ██╔══██╗██║░░██╗██╔═██╗░██╔══██╗██╔══╝░░░╚═══██╗░░░██║░░░██║░░██║██╔══██╗██╔══╝░░
+# ██████╦╝╚█████╔╝██║░╚██╗██║░░██║███████╗██████╔╝░░░██║░░░╚█████╔╝██║░░██║███████╗
+# ╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝╚══════╝
+# bckrestore
+# $ backrestore id
+# • Funcionalidad
+# – Crea el enlace simbólico que apunta a id
+# – Si id no existe no se realiza ninguna acción, mostrando el mensaje pertinente
+
+# Nombre del archivo de registro
+archivo_log="logs/$(date +"%Y-%m-%d").log"
+
+# Solicitamos datos de entrada
+source functions/requestData
+
+# Verificar si se proporciona el ID como argumento
+if [ $# -ne 1 ]; then
+    echo "Uso: $0 id"
+    exit 1
+fi
+
+# Asignar el argumento a una variable
+id=$1
+
+# Archivo que contiene los IDs y rutas
+mypaths_file="mypaths.txt"
+
+# Verificar si el archivo existe
+if [ ! -f "$mypaths_file" ]; then
+    echo "El archivo $mypaths_file no existe."
+    exit 1
+fi
+
+# Buscar el ID en el archivo y obtener la ruta asociada
+file_path=$(awk -F ',' -v id="$id" '$1 == id {print $2}' "$mypaths_file")
+
+# Verificar si se encontró el ID
+if [ -z "$file_path" ]; then
+    echo "El ID $id no existe."
+    exit 1
+fi
+
+# Verificar si el archivo asociado al ID existe
+if [ ! -f "$file_path" ]; then
+    echo "El archivo asociado al ID $id no existe en la ruta $file_path."
+    exit 1
+fi
+
+# Crear el enlace simbólico que apunta al archivo asociado al ID
+ln -sf "$file_path" "bckrestore_$id"
+
+echo "Se ha creado el enlace simbólico 'bckrestore_$id' que apunta a $file_path."

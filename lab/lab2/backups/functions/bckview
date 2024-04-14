@@ -14,16 +14,25 @@
 #     • Funcionalidad
 # – Muestra el contenido del fichero mypaths.txt
 
-bckview() {
+
+# Nombre del archivo de registro
+archivo_log="logs/$(date +"%Y-%m-%d").log"
+
+# Solicitamos datos de entrada
+source functions/requestData
+
+# variables globales
+bck_dir=$(realpath bck_dir)  # Ruta absoluta al directorio bckdir
+mypaths_file="$bck_dir/mypaths.txt"
+
+bckview() {    
     # Verificar si existe el archivo mypaths.txt
-    if [ ! -f "mypaths.txt" ]; then
+    if [ ! -f $mypaths_file ]; then
         echo "El archivo mypaths.txt no existe." 
         exit 1
-    fi
-
+    fi    
     # Mostrar el contenido del archivo
-    cat "mypaths.txt"
+    cat $mypaths_file
 }
-archivo.log = $(date +"%Y-%m-%d").log 2>&1 | tee -a archivo.log
 
-bckview 2>&1 | tee -a archivo.log
+bckview 2>&1 | tee -a "$archivo_log"

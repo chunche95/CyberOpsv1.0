@@ -7,7 +7,6 @@
 # ██████╔╝██║░░██║░░░██║░░░██║░░██║
 # ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝
 
-
 # Solicitar los datos al usuario
 data() {
     # Variables definidas para ejecutar la tarea    

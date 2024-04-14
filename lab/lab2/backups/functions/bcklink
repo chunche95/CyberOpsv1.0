@@ -61,30 +61,21 @@ checkId() {
 # Función para copiar el archivo a bck y crear el enlace simbólico
 copyFile() {    
     # Copiar el archivo a bck con el identificador correspondiente
-    echo -e "\033[3;33m Copiando el archivo '$path' a bck con el identificador correspondiente: $id \033[0m"
-     
-    # echo $rutaFile
-    # echo "Datos a copiar:  "
-    # echo "Path origen: $path"
-    # echo "Path destino: $rutaFile"
-    # echo "Dato a escribir en mypaths_file: $id , $(basename $path)"    
+    echo -e "\033[3;33m Copiando el archivo '$path' a bck con el identificador correspondiente: $id \033[0m"    
     path=$(realpath $(basename $path))
-    # echo "Path absoluto de ruta relativa de entrada: $path"
     # Verificar si se encontró el archivo
     if [ ! -z $(basename $path) ]; then
         echo -e "\033[3;32m Archivo '$(basename $path)' encontrado! \033[0m"
-        path2=$(find $HOME -xdev -path '/root' -prune -o -name "$(basename $path)") 
+        # path2=$(find $HOME -xdev -path '/root' -prune -o -name "$(basename $path)") 
+        path2=$(find . -xdev -path '/root' -prune -o -name "$(basename $path)") 
         echo $path2 > find.tmp
-           
         if [ -s find.tmp ]; then
             nLineasEncontradas=$(wc -l < find.tmp)
             if [ $nLineasEncontradas > 2 ]; then
                 # Guardar la línea como una variable
                 path2=$(tail -n 1 find.tmp)
-                # echo "Resultado encontrado: $path"
                 if [ $path != $path2 ]; then
                     path=$path2
-                    # echo "Resultado del path nuevo: $path"
                 fi
             else
                 # Mostrar un mensaje de advertencia si el archivo tiene más de una línea
@@ -94,33 +85,27 @@ copyFile() {
         else 
             echo "Sin resultados"
         fi 
-        rm find.tmp        
+        rm find.tmp
+        rm 2
     else
-        
         echo -e "\033[3;31m ¡Advertencia! \033[0m"
         echo "El archivo '$path' no se encontró en el sistema."
         echo "Por favor, compruebe la ruta y vuelva a ejecutar de nuevo esta opción"
         read -p "ENTER para continuar" continue
         exit 1        
     fi
-
-    datos="$id,$(basename $path)"
-
-    echo "Valores que de los que haremos backup:"
-    echo "Path origen: $path"
-    echo "Path destino: $rutaFile"
-    echo "Nuevo nombre del fichero: $idRutaFile"
-    echo "Dato a escribir en mypaths_file: $datos"    
-    cp $path $rutaFile    
+    datos="$id,$(basename $path)"    
+    mv $path $rutaFile/$id    
     if [ "$?" -ne 0 ]; then
         echo -e "\033[1;31m Error al copiar el fichero a bck_dir. \033[0m"
         exit 1
     else
-        datos >> $mypaths_file
-    fi
-    mv $rutaFile/$(basename $path) $rutaFile
-    # Crear el enlace simbólico
-    ln -s "$bck_dir/$id" "$path" 
+        echo $datos >> $mypaths_file
+    fi    
+    # Crear el enlace simbólico    
+    echo "Ruta:$rutaFile "
+    echo "Path:$path"
+    ln -s $idRutaFile $(basename $path)
     if [ "$?" -ne 0 ]; then
         echo -e "\033[1;31m Error al crear el enlace simbólico. \033[0m"
         exit 1
@@ -133,5 +118,5 @@ copyFile() {
 }
 
 # Ejecutar las funciones
-dataEntry 2>&1 | tee -a "$archivo_log"
+# dataEntry 2>&1 | tee -a "$archivo_log"
 checkId 2>&1 | tee -a "$archivo_log"

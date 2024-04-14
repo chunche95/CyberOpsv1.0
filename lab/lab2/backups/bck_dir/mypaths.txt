@@ -1,0 +1,8 @@
+2,f1.txt
+2,./test/f1.txt
+1000, /usr/home.txt
+11, /bin/gost
+222, /file.bat
+22, /tmp.txt
+222212, sh.py
+0000002, mon.r

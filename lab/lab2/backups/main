@@ -120,16 +120,33 @@ bad_option() {
     echo ""
 }
 
+bcklink() {
+    ./functions/bcklink 
+}
+bckview() {
+    ./functions/bckview 
+}
+bckmv() {
+    ./functions/bckmv 
+}
+bckrestore() {
+    ./functions/bckrestore 
+}
+bckrm() {
+    ./functions/bckrm 
+}
+
 # Función para ejecutar la opcion seleccionada
 execute_option() {
-    archivo_log="logs/$(date +"%Y-%m-%d").log"    
+    archivo_log="logs/$(date +"%Y-%m-%d").log" 
+    local option=$1
     case $option in
-        1) ./functions/bcklink 2>&1 | tee -a $archivo_log;;
-        2) ./functions/bckview 2>&1 | tee -a $archivo_log;;
-        3) ./functions/bckmv 2>&1 | tee -a $archivo_log;;
-        4) ./functions/bckrestore 2>&1 | tee -a $archivo_log;;
-        5) ./functions/bckrm 2>&1 | tee -a $archivo_log;;
-        0) exit_program 2>&1 | tee -a $archivo_log; exit;;
+        1) echo ""; bcklink 2>&1 | tee -a $archivo_log;;
+        2) echo ""; bckview 2>&1 | tee -a $archivo_log;;
+        3) echo ""; bckmv 2>&1 | tee -a $archivo_log;;
+        4) echo ""; bckrestore 2>&1 | tee -a $archivo_log;;
+        5) echo ""; bckrm 2>&1 | tee -a $archivo_log;;        
+        0) exit_program 2>&1 | tee -a $archivo_log; exit;;        
         *) bad_option 2>&1 | tee -a $archivo_log;;
     esac
 }
@@ -147,7 +164,7 @@ main() {
     while true; do
         clear
         print_menu
-        read -p "   Ingrese una opcion: " option
+        read -p "Ingrese una opcion: " option
         log_result "Opción seleccionada: $option"        
         execute_option $option        
         read -p "Presione ENTER para continuar ..." backmenu

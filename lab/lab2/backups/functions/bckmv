@@ -1,1 +1,72 @@
 #!/bin/bash
+
+
+
+# ██████╗░░█████╗░██╗░░██╗███╗░░░███╗██╗░░░██╗
+# ██╔══██╗██╔══██╗██║░██╔╝████╗░████║██║░░░██║
+# ██████╦╝██║░░╚═╝█████═╝░██╔████╔██║╚██╗░██╔╝
+# ██╔══██╗██║░░██╗██╔═██╗░██║╚██╔╝██║░╚████╔╝░
+# ██████╦╝╚█████╔╝██║░╚██╗██║░╚═╝░██║░░╚██╔╝░░
+# ╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░╚═╝░░░
+
+# bckmv
+#     • Sintaxis
+#       $ bckmv old_id new_id
+#     • Funcionalidad
+# – Cambia el el identificador old_id por el identificador new_id
+# – Si old_id no existe no se realiza ninguna acción, mostrando el mensaje pertinente
+# – Si new_id ya existe no se realiza ninguna acción, mostrando el mensaje pertinente
+# – El cambio tiene que tener efecto en:
+# ∗ El contenido del fichero mypaths.txt, actualizando el id
+# ∗ El fichero id en el directorio files
+# ∗ El enlace simbólico del sistema que apuntaba a old_id tiene que pasar a apuntar a new_id
+
+
+# Nombre del archivo de registro
+archivo_log="logs/$(date +"%Y-%m-%d").log"
+
+# Solicitamos datos de entrada
+source functions/requestData
+
+nuevosDatos() {	
+
+    read -p "Antiguo ID: " old_id
+    read -p "Nuevo ID: " new_id
+    local old_id
+    local new_id
+}
+
+bckmv() {
+    nuevosDatos
+    old_id=$old_id
+    new_id=$new_id
+    mypaths_file=$(realpath mypaths.txt)
+    files_dir=$(realpath bck_dir)
+    
+    # Verificar los argumentos
+    if [ $# -ne 2 ]; then
+        echo "Uso: $0 old_id new_id"
+        exit 1
+    fi
+
+    # Verificar si el nuevo ID ya existe en el archivo
+    if grep -q "^$new_id," "$mypaths_file"; then
+        echo "El nuevo ID ya existe. No se puede realizar el reemplazo."
+        exit 1
+    fi
+    # Buscar el ID antiguo y reemplazarlo con el nuevo ID
+    mypaths_file="$files_dir/mypaths.txt"
+    echo ">$mypaths_file"
+    resultado=$(grep -q "^$old_id," $mypaths_file)
+    if $resultado ; then
+        sed -i "s/^$old_id,/$new_id,/" "$mypaths_file"
+        echo "Cambio valido: true"
+    else
+        echo "Cambio valido: false"
+    fi
+    # Actualizar el enlace simbólico
+    ln -sf "$new_filename" "$files_dir/$old_id"
+}
+
+# Uso: bckmv old_id new_id
+bckmv "$1" "$2"
